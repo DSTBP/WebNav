@@ -625,6 +625,12 @@
         "desc": "有趣的小工具集合"
       },
       {
+        "name": "GetShell — 网安软件资源",
+        "url": "https://get-shell.com/",
+        "img": "getshell.png",
+        "desc": "收录大量网络安全相关的优质工具&漏洞信息等知识资源"
+      },
+      {
         "name": "SpiderBox",
         "url": "https://spiderbox.cn/",
         "img": "spiderbox.png",
