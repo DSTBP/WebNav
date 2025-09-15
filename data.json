@@ -2310,6 +2310,18 @@
         "desc": "注册有免费 50GB 可供使用，月租 12 元 300GB，质量一般"
       },
       {
+        "name": "Cloudfisher",
+        "url": "https://cloudfisher.net/web/#/login?code=y03TeY8Y",
+        "img": "cloudfisher.png",
+        "desc": "月租 15 元 300GB，年付 60 元 148GB，质量较高"
+      },
+      {
+        "name": "红杏云",
+        "url": "https://hongxingyun.club/web/#/login?code=BqrmEics",
+        "img": "hongxingyun.png",
+        "desc": "月租 12 元 222GB，月付 25 元 555GB，质量较高"
+      },
+      {
         "name": "FlowerCloud",
         "url": "https://api-flowercloud.com/cart.php",
         "img": "flowercloud.png",
