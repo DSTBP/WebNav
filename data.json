@@ -291,6 +291,12 @@
         "desc": "语雀笔记"
       },
       {
+        "name": "InfiniCLOUD",
+        "url": "https://ajiro.infini-cloud.net/dav/",
+        "img": "InfiniCLOUD.png",
+        "desc": "InfiniCLOUD 文献云网盘"
+      },
+      {
         "name": "gmail邮箱",
         "url": "https://mail.google.com/mail/u/0/#inbox",
         "img": "gmail.png",
