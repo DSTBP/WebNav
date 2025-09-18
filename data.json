@@ -1181,6 +1181,12 @@
         "desc": "集合学术GPT、中英文文献查询、论文写作、查重降重、专利检索、期刊检索、院校查询、文献管理等众多功能的科研导航网站"
       },
       {
+        "name": "Zotero 插件商店",
+        "url": "https://zotero-chinese.com/plugins/",
+        "img": "zotero.png",
+        "desc": "文献管理工具 Zotero 中文社区"
+      },
+      {
         "name": "教育漏洞报告平台",
         "url": "https://src.sjtu.edu.cn/",
         "img": "sjtu.png",
