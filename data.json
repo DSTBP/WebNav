@@ -359,6 +359,12 @@
         "desc": "支持通过浏览器访问，实现打开本地 SVG 文件在线编辑"
       },
       {
+        "name": "Markdown 微信编辑器",
+        "url": "https://editor.mdnice.com/",
+        "img": "mdnice.png",
+        "desc": "拥有良好的兼容性、海量主题样式、免费的图床、强大的技术团队，提供文章一键排版，同时支持知乎、掘金、微信订阅号等多个平台"
+      },
+      {
         "name": "照片转电子扫描件/复印件",
         "url": "https://tugaigai.com/image_scanner",
         "img": "tugaigai.png",
