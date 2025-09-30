@@ -1369,6 +1369,12 @@
         "desc": "加州大学伯克利分校推出的AI模型评估平台，基于让用户对不同AI模型的回答进行匿名投票，衡量模型的表现，可在 leaderboard 看到排行榜"
       },
       {
+        "name": "GPT 合租平台",
+        "url": "https://aizex.net/",
+        "img": "aizex.png",
+        "desc": "一家提供号池类型、均衡负载使用的面板产品，主要用于 GPT4 合租"
+      },
+      {
         "name": "DeepSeek",
         "url": "https://chat.deepseek.com/",
         "img": "deepseek.png",
