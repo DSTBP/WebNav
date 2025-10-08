@@ -395,6 +395,12 @@
         "desc": "利用许多开源项目构建的新一代转换器，支持文档、图片、电子书、影音"
       },
       {
+        "name": "记灵-音频转文字",
+        "url": "https://remeins.com/index/app/voice2text",
+        "img": "remeins.png",
+        "desc": "提取视频、音频中的文字，将其转换为文本文件，完全免费使用，支持mp3、mp4、wav等格式"
+      },
+      {
         "name": "在线PDF工具",
         "url": "https://tools.pdf24.org/zh/",
         "img": "pdf24.png",
