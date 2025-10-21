@@ -925,6 +925,12 @@
         "desc": "支持格式化论文翻译，保留公式、表格等信息"
       },
       {
+        "name": "Drawio 流程图绘制",
+        "url": "https://draw.io/",
+        "img": "draw.png",
+        "desc": "开源、免费、简洁、方便的流程图绘制软件"
+      },
+      {
         "name": "Mermaid 绘图工具",
         "url": "https://mermaid-live.nodejs.cn/",
         "img": "mermaid.png",
