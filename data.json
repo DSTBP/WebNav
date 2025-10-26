@@ -1151,8 +1151,8 @@
         "desc": "成立于 2010 年。它以“关注黑客与极客”为口号，内容覆盖信息安全资讯、漏洞分析、攻防实战、CTF 比赛"
       },
       {
-        "name": "CTF 导航——移动安全",
-        "url": "https://www.ctfiot.com/yidonganquan",
+        "name": "CTF 导航",
+        "url": "https://www.ctfiot.com",
         "img": "ctfiot.png",
         "desc": "移动安全、IOT安全、ICS安全、区块链安全"
       },
@@ -1314,7 +1314,7 @@
       },
       {
         "name": "历史车轮",
-        "url": "https://www.lishichelun.com/tool",
+        "url": "https://www.lishichelun.com",
         "img": "lishichelun.png",
         "desc": "用时间轴的形式展示历史上的人物生平和事件"
       },
@@ -2125,15 +2125,9 @@
         "desc": "风靡一时的人生重开模拟器"
       },
       {
-        "name": "图种制作",
-        "url": "https://madisonwirtanen.github.io/js-seed-map/",
-        "img": "madisonwirtanen.png",
-        "desc": "图种制作工具, 将压缩包与图片合成一张新图片, 部署于 GitHub Pages"
-      },
-      {
         "name": "114514论证器",
-        "url": "https://madisonwirtanen.github.io/homo/",
-        "img": "madisonwirtanen.png",
+        "url": "https://lab.magiconch.com/homo/",
+        "img": "magiconch.png",
         "desc": "一个将任意数字分解成 114514 构成的公式的工具, 部署于 GitHub Pages"
       },
       {
