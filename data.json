@@ -2344,6 +2344,44 @@
         "desc": "一种免费服务，用于在线接收手机短信验证码，不需要注册"
       }
     ],
+    "代理池": [
+      {
+        "name": "公共代理池",
+        "url": "https://proxy.scdn.io/",
+        "img": "scdn.png",
+        "desc": "永久免费HTTP/HTTPS/SOCKS代理池，智能验证全网公开代理，IP质量不佳"
+      },
+      {
+        "name": "快代理",
+        "url": "https://www.kuaidaili.com/free/",
+        "img": "kuaidaili.png",
+        "desc": "国内老牌代理服务商，提供HTTP/HTTPS代理，支持按匿名度筛选IP。免费IP有效期较短（通常1-2小时），需定时更新"
+      },
+      {
+        "name": "89免费代理",
+        "url": "https://www.89ip.cn/",
+        "img": "89ip.png",
+        "desc": "界面简洁，IP来源透明，标注了每个IP的归属地和运营商。无效 IP 较高，需过滤"
+      },
+      {
+        "name": "闪臣",
+        "url": "https://sch.shanchendaili.com",
+        "img": "shanchendaili.png",
+        "desc": "高质量企业代理IP资源提供商，10分钟 0.02/个"
+      },
+      {
+        "name": "小幻代理",
+        "url": "https://ip.ihuan.me/",
+        "img": "ihuan.png",
+        "desc": "提供短时效高匿IP，支持按ASN编号筛选。该网站需要手动刷新页面获取最新IP"
+      },
+      {
+        "name": "云代理",
+        "url": "http://www.ip3366.net/",
+        "img": "ip3366.png",
+        "desc": "同时提供免费和付费IP，标注了每个IP的响应速度。优先选择响应时间<1秒的IP"
+      }
+    ],
     "梯子平台": [
       {
         "name": "iKuuu VPN",
