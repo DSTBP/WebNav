@@ -359,6 +359,12 @@
         "desc": "支持通过浏览器访问，实现打开本地 SVG 文件在线编辑"
       },
       {
+        "name": "技术公众号排版器",
+        "url": "https://editor.huasheng.ai/",
+        "img": "huasheng.png",
+        "desc": "Markdown 语法实时预览、代码高亮与复制、支持 LaTeX 公式语法，适合发布数学、物理类干货内容，适合技术博主"
+      },
+      {
         "name": "Markdown 微信编辑器",
         "url": "https://editor.mdnice.com/",
         "img": "mdnice.png",
