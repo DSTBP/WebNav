@@ -2550,6 +2550,12 @@
         "desc": "学术文献数据库，主要提供计算机科学、电机工程学和电子学等相关领域文献"
       },
       {
+        "name": "USENIX",
+        "url": "https://www.usenix.org/conferences/all",
+        "img": "usenix.png",
+        "desc": "计算机安全领域四大顶级会议 USENIX 全部文献"
+      },
+      {
         "name": "Web Of Science",
         "url": "https://webofscience.clarivate.cn/",
         "img": "webofscience.png",
