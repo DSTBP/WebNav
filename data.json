@@ -1259,6 +1259,12 @@
         "desc": "Zlibrary Z-library图书馆起始页面，防丢失：https://zlibrary.sodanav.com/、https://zlibxxs.xxsnav.com/"
       },
       {
+        "name": "安娜的档案",
+        "url": "https://zh.annas-archive.org/",
+        "img": "annas.png",
+        "desc": "全球最大的开源学术资源聚合平台，整合了读秀、Z-Library、Library Genesis和Sci-Hub等知名资源库"
+      },
+      {
         "name": "Library Genesis",
         "url": "https://libgen.li/",
         "img": "libgen.png",
@@ -1311,6 +1317,18 @@
         "url": "https://www.dayi.org.cn/",
         "img": "dayi.png",
         "desc": "中国医药信息查询平台，提供最权威医药、疾病信息查询"
+      },
+      {
+        "name": "默沙东诊疗手册",
+        "url": "https://www.msdmanuals.cn/",
+        "img": "msdmanuals.png",
+        "desc": "一个涵盖了医学所有领域成千上万主题的广泛医学信息来源"
+      },
+      {
+        "name": "MBA智库百科",
+        "url": "https://wiki.mbalib.com/wiki/",
+        "img": "mbalib.png",
+        "desc": "全球专业中文经管百科，专注于经济管理领域的自由百科全书"
       },
       {
         "name": "识典古籍",
@@ -1397,6 +1415,12 @@
         "url": "https://aizex.net/",
         "img": "aizex.png",
         "desc": "一家提供号池类型、均衡负载使用的面板产品，主要用于 GPT4 合租"
+      },
+      {
+        "name": "学术搜索引擎",
+        "url": "https://consensus.app/",
+        "img": "consensus.png",
+        "desc": "人工智能在论文库中寻找见解的搜索引擎，信息来源于更为专业、可信的论文库"
       },
       {
         "name": "DeepSeek",
