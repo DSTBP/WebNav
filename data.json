@@ -347,6 +347,12 @@
         "desc": "智能压缩Webp、JPEG和PNG图片"
       },
       {
+        "name": "图像叠加",
+        "url": "https://overlayimages.com/zh/",
+        "img": "overlayimages.png",
+        "desc": "将多张图像合并成精美布局（水平、垂直或网格）"
+      },
+      {
         "name": "图片工具箱",
         "url": "https://www.iloveimg.com/zh-cn/",
         "img": "iloveimg.png",
