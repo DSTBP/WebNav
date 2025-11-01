@@ -497,6 +497,12 @@
         "desc": "kalvinbg 印章生成器。支持正圆、椭圆、方正印章"
       },
       {
+        "name": "单词生成器",
+        "url": "https://wordswithletters.org/zh",
+        "img": "wordswithletters.png",
+        "desc": "查找带有您输入的特定字母的单词，更好的设计缩写"
+      },
+      {
         "name": "文本转语音",
         "url": "https://ttsmaker.cn",
         "img": "ttsmaker.png",
