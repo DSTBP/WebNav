@@ -527,10 +527,16 @@
         "desc": "输入视频地址，解析下载视频/音频。多种画质分辨率和格式可以按需选择"
       },
       {
+        "name": "B站字幕下载",
+        "url": "https://www.feiyudo.com/caption/subtitle/bilibili",
+        "img": "feiyudo.png",
+        "desc": "在线的字幕下载工具，支持一键提取哔哩哔哩字幕，在几秒钟内下载 .srt 格式哔哩哔哩视频的字幕"
+      },
+      {
         "name": "城通网盘下载加速",
         "url": "https://www.umpsa.top/",
         "img": "umpsa.png",
-        "desc": "能达到2M/s，打开需要下载的文件，点击【客户端下载】，找到对应的 ctfile://xxxxxx 地址。"
+        "desc": "能达到2M/s，打开需要下载的文件，点击【客户端下载】，找到对应的 ctfile://xxxxxx 地址"
       },
       {
         "name": "音乐解密下载",
