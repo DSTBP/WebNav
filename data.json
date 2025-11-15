@@ -805,12 +805,6 @@
         "desc": "在线的正则表达式测试和学习工具"
       },
       {
-        "name": "国密 HASH 相关工具库",
-        "url": "https://const.net.cn/tool/",
-        "img": "const.png",
-        "desc": "SM2、SM4、SM3、MD5、AES GCM 等工具"
-      },
-      {
         "name": "CMD5",
         "url": "https://www.cmd5.com/",
         "img": "cmd5.png",
@@ -1489,22 +1483,10 @@
         "desc": "Kimi AI 擅长长文本处理、多语言对话、文件解析、PPT生成"
       },
       {
-        "name": "EasyChat",
-        "url": "https://origin.eqing.tech/",
-        "img": "easychat.png",
-        "desc": "最简单的ChatGPT使用方式，支持以各种身份询问"
-      },
-      {
         "name": "OpenAI",
         "url": "https://chatgpt.com/",
         "img": "chatgpt.png",
         "desc": "ChatGPT 主站，需要科学上网"
-      },
-      {
-        "name": "Theb.ai",
-        "url": "https://beta.theb.ai/home",
-        "img": "thebai.png",
-        "desc": "ChatGPT 国内平替网站"
       },
       {
         "name": "DatuChat",
@@ -2167,12 +2149,6 @@
         "desc": "一个可以不去台球厅就可以打斯诺克的网站"
       },
       {
-        "name": "Steam 游戏库吐槽姬",
-        "url": "https://vapor.onex.email/",
-        "img": "vapor.png",
-        "desc": "Steam 游戏库终极审判，AI 法官在此！"
-      },
-      {
         "name": "Life Restart",
         "url": "https://liferestart.syaro.io/public/",
         "img": "liferestart.png",
@@ -2360,8 +2336,8 @@
       },
       {
         "name": "猜中国省份",
-        "url": "http://vultr.youmu.moe/quiz/",
-        "img": "youmu.png",
+        "url": "https://ekvis.com/zh/g-cn-01/",
+        "img": "ekvis.png",
         "desc": "看看你对中国地图有多了解"
       }
     ],
@@ -2487,7 +2463,7 @@
       },
       {
         "name": "Bywave",
-        "url": "https://by.ltd",
+        "url": "https://bywa-1.art/",
         "img": "bywave.png",
         "desc": "质量优，https://github.com/winston779/bywave"
       }
