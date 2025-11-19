@@ -2596,6 +2596,12 @@
         "url": "https://dl.acm.org/",
         "img": "acm.png",
         "desc": "美国计算机协会数字图书馆全文数据库，所有 ICPS 论文都可免费获取"
+      },
+      {
+        "name": "DOI 查询",
+        "url": "http://www.chinadoi.cn/",
+        "img": "wanfangdata.png",
+        "desc": "DOI 解析与 DOI 查询服务"
       }
     ],
     "查重降重平台": [
