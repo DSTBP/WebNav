@@ -1435,10 +1435,22 @@
         "desc": "一家提供号池类型、均衡负载使用的面板产品，主要用于 GPT4 合租"
       },
       {
-        "name": "学术搜索引擎",
+        "name": "Consensus 学术搜索引擎",
         "url": "https://consensus.app/",
         "img": "consensus.png",
         "desc": "人工智能在论文库中寻找见解的搜索引擎，信息来源于更为专业、可信的论文库"
+      },
+      {
+        "name": "Notebooklm",
+        "url": "https://notebooklm.google.com/",
+        "img": "notebooklm.png",
+        "desc": "Google 推出的一款基于 AI 的智能笔记工具，旨在帮助用户高效处理文档信息并获取洞察"
+      },
+      {
+        "name": "Gemini",
+        "url": "https://gemini.google.com/",
+        "img": "gemini.png",
+        "desc": "Google 旗下的 AI 助理。 在写作、规划和开展头脑风暴等方面获得帮助"
       },
       {
         "name": "DeepSeek",
