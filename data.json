@@ -2486,6 +2486,56 @@
         "desc": "质量优，https://github.com/winston779/bywave"
       }
     ],
+    "大模型 API 中转站": [
+      {
+        "name": "中转站监测",
+        "url": "https://check.linux.do/",
+        "img": "vercel.png",
+        "desc": "实时追踪各大 AI 模型对话接口的可用性、延迟与官方服务状态"
+      },
+      {
+        "name": "OpenClaudeCode",
+        "url": "https://www.openclaudecode.cn/",
+        "img": "openclaudecode.png",
+        "desc": "统一的大模型接口网关"
+      },
+      {
+        "name": "Privnode",
+        "url": "https://privnode.com/",
+        "img": "privnode.png",
+        "desc": "低价、一站式聚合"
+      },
+      {
+        "name": "Ikuncode",
+        "url": "https://api.ikuncode.cc/",
+        "img": "openclaudecode.png",
+        "desc": "ClaudeCode 专业中转服务"
+      },
+      {
+        "name": "RightCode",
+        "url": "https://www.right.codes/",
+        "img": "rightcode.png",
+        "desc": "企业级 AI Agent 分发平台"
+      },
+      {
+        "name": "YesCode",
+        "url": "https://co.yes.vg/",
+        "img": "yescode.png",
+        "desc": "为 Claude Code 和 Codex 等 AI 编程助手优化的高性能 API 服务"
+      },
+      {
+        "name": "88Code",
+        "url": "https://88code.org/",
+        "img": "88code.png",
+        "desc": "平价 AI 编码中转站"
+      },
+      {
+        "name": "Packy",
+        "url": "https://www.packyapi.com/",
+        "img": "packy.png",
+        "desc": "以一套域名、密钥与风控策略连接全球大模型资源，保障可观测、可拓展、可控"
+      }
+    ],
     "站长工具": [
       {
         "name": "Whois 查询",
