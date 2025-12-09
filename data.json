@@ -1127,6 +1127,12 @@
         "desc": "一个网上可搜索的整数数列资料库，常用于解析数论"
       },
       {
+        "name": "LINUX DO",
+        "url": "https://linux.do/",
+        "img": "linuxdo.png",
+        "desc": "一个面向科技爱好者、开发者及Al技术从业者的中文技术社区，涵盖Linux系统、软件开发、人工智能、自动化运维等多个领域"
+      },
+      {
         "name": "Hello 算法",
         "url": "https://www.hello-algo.com/",
         "img": "hello-algo.png",
