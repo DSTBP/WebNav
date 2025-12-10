@@ -2540,6 +2540,12 @@
         "url": "https://www.packyapi.com/",
         "img": "packy.png",
         "desc": "以一套域名、密钥与风控策略连接全球大模型资源，保障可观测、可拓展、可控"
+      },
+      {
+        "name": "DuckCoding",
+        "url": "https://duckcoding.com/",
+        "img": "openclaudecode.png",
+        "desc": "按量计费，专为 Claude Code 、 CodeX 、 Gemini CLI 用户提供的高质量 API 服务"
       }
     ],
     "站长工具": [
