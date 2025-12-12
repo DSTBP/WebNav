@@ -2558,6 +2558,18 @@
         "url": "https://duckcoding.com/",
         "img": "openclaudecode.png",
         "desc": "按量计费，专为 Claude Code 、 CodeX 、 Gemini CLI 用户提供的高质量 API 服务"
+      },
+      {
+        "name": "APIKEY-公益站",
+        "url": "https://welfare.apikey.cc/console",
+        "img": "welfare.png",
+        "desc": "更好的价格，更好的稳定性"
+      },
+      {
+        "name": "薄荷公益站",
+        "url": "https://x666.me/",
+        "img": "openclaudecode.png",
+        "desc": "提供稳定、快速、高质量的 AI 接口支持，让您的创意轻松实现"
       }
     ],
     "站长工具": [
