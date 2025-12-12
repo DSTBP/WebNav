@@ -1593,6 +1593,12 @@
         "desc": "免费素材图片服务"
       },
       {
+        "name": "2DWallpapers",
+        "url": "https://www.2dwallpapers.com/",
+        "img": "2dwallpapers.png",
+        "desc": "一个免费的二次元、动漫、游戏壁纸下载网站"
+      },
+      {
         "name": "航拍素材",
         "url": "https://unsplash.com/",
         "img": "unsplash.png",
