@@ -325,6 +325,12 @@
         "url": "https://www.zowebatxp.me/zh-hans",
         "img": "okx.png",
         "desc": "欧易数字货币"
+      },
+      {
+        "name": "Fiat24",
+        "url": "https://www.fiat24.com/my/dashboard",
+        "img": "fiat24.png",
+        "desc": "提供合规的瑞士银行卡，为用户创建链上银行账户"
       }
     ],
     "网页工具": [
