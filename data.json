@@ -325,6 +325,12 @@
         "url": "https://www.zowebatxp.me/zh-hans",
         "img": "okx.png",
         "desc": "欧易数字货币"
+      },
+      {
+        "name": "Fiat24",
+        "url": "https://www.fiat24.com/my/dashboard",
+        "img": "fiat24.png",
+        "desc": "提供合规的瑞士银行卡，为用户创建链上银行账户"
       }
     ],
     "网页工具": [
@@ -1587,6 +1593,12 @@
         "desc": "免费素材图片服务"
       },
       {
+        "name": "2DWallpapers",
+        "url": "https://www.2dwallpapers.com/",
+        "img": "2dwallpapers.png",
+        "desc": "一个免费的二次元、动漫、游戏壁纸下载网站"
+      },
+      {
         "name": "航拍素材",
         "url": "https://unsplash.com/",
         "img": "unsplash.png",
@@ -2564,6 +2576,18 @@
         "url": "https://duckcoding.com/",
         "img": "openclaudecode.png",
         "desc": "按量计费，专为 Claude Code 、 CodeX 、 Gemini CLI 用户提供的高质量 API 服务"
+      },
+      {
+        "name": "APIKEY-公益站",
+        "url": "https://welfare.apikey.cc/console",
+        "img": "welfare.png",
+        "desc": "更好的价格，更好的稳定性"
+      },
+      {
+        "name": "薄荷公益站",
+        "url": "https://x666.me/",
+        "img": "openclaudecode.png",
+        "desc": "提供稳定、快速、高质量的 AI 接口支持，让您的创意轻松实现"
       }
     ],
     "站长工具": [
