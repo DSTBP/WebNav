@@ -2598,6 +2598,12 @@
         "desc": "IP 查询 IP 反查域名 Latency Ping Trace"
       },
       {
+        "name": "检测 IP 纯净度",
+        "url": "https://ippure.com/",
+        "img": "shadersmods.png",
+        "desc": "致力打造最专业、易用的 IP 纯净度检测平台"
+      },
+      {
         "name": "Whois 查询",
         "url": "https://toolwa.com/whois/aznthx.cn/",
         "img": "toolwa.png",
