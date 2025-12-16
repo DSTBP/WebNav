@@ -2480,6 +2480,12 @@
         "desc": "月租 39 元 150GB，质量优"
       },
       {
+        "name": "SpeedCat",
+        "url": "https://www.speedcat.ws/user/shop",
+        "img": "speedcat.png",
+        "desc": "月租 40 元 200GB，质量优"
+      },
+      {
         "name": "一元机场",
         "url": "https://一元机场.ink",
         "img": "unknown.png",
@@ -2561,6 +2567,12 @@
       }
     ],
     "站长工具": [
+      {
+        "name": "IP 质量检测",
+        "url": "https://ping0.cc/",
+        "img": "ping0.png",
+        "desc": "IP 查询 IP 反查域名 Latency Ping Trace"
+      },
       {
         "name": "Whois 查询",
         "url": "https://toolwa.com/whois/aznthx.cn/",
