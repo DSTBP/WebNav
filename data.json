@@ -1217,6 +1217,12 @@
         "desc": "密码应用,软件破解,软件安全,游戏外挂与反外挂_(゜-゜)つロ 逆向"
       },
       {
+        "name": "Kaggle",
+        "url": "https://www.kaggle.com/datasets/",
+        "img": "kaggle.png",
+        "desc": "一个举办机器学习竞赛的网站，但同样是经典数据集集成地"
+      },
+      {
         "name": "中文查找英文文献",
         "url": "https://www.x-mol.com/",
         "img": "x-mol.png",
