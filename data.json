@@ -1217,6 +1217,12 @@
         "desc": "密码应用,软件破解,软件安全,游戏外挂与反外挂_(゜-゜)つロ 逆向"
       },
       {
+        "name": "Kaggle",
+        "url": "https://www.kaggle.com/datasets/",
+        "img": "kaggle.png",
+        "desc": "一个举办机器学习竞赛的网站，但同样是经典数据集集成地"
+      },
+      {
         "name": "中文查找英文文献",
         "url": "https://www.x-mol.com/",
         "img": "x-mol.png",
@@ -2492,6 +2498,12 @@
         "desc": "月租 39 元 150GB，质量优"
       },
       {
+        "name": "SpeedCat",
+        "url": "https://www.speedcat.ws/user/shop",
+        "img": "speedcat.png",
+        "desc": "月租 40 元 200GB，质量优"
+      },
+      {
         "name": "一元机场",
         "url": "https://一元机场.ink",
         "img": "unknown.png",
@@ -2585,6 +2597,18 @@
       }
     ],
     "站长工具": [
+      {
+        "name": "IP 质量检测",
+        "url": "https://ping0.cc/",
+        "img": "ping0.png",
+        "desc": "IP 查询 IP 反查域名 Latency Ping Trace"
+      },
+      {
+        "name": "检测 IP 纯净度",
+        "url": "https://ippure.com/",
+        "img": "shadersmods.png",
+        "desc": "致力打造最专业、易用的 IP 纯净度检测平台"
+      },
       {
         "name": "Whois 查询",
         "url": "https://toolwa.com/whois/aznthx.cn/",
