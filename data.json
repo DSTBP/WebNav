@@ -2746,28 +2746,28 @@
     ],
     "资源种子": [
       {
-        "name": "SpeedAI",
-        "url": "https://kuaipaper.com/home",
-        "img": "SpeedAI.png",
-        "desc": "优化文本内容，降低AI生成痕迹，使文章更具人文特色"
+        "name": "「阅读」APP 自用书源",
+        "url": "https://yuedu.xiu2.xyz/",
+        "img": "xiu2.png",
+        "desc": "自用的一些「阅读」小说书源，一部分是网上搜集/他人推荐，一部分是自己写的书源规则"
       },
       {
-        "name": "知网查重",
-        "url": "https://cx.cnki.net/main.html#/detectionResult",
-        "img": "cnki.png",
-        "desc": "单价2元/千字符，支持识别中文、英文、中英文混合文本"
+        "name": "「阅读」APP 源",
+        "url": "https://legado.aoaostar.com/",
+        "img": "legado.png",
+        "desc": "一些「阅读」小说书源、订阅源、主题、排版配置"
       },
       {
-        "name": "PaperPass",
-        "url": "https://www.paperpass.com/panel/index",
-        "img": "paperpass.png",
-        "desc": "免费中文论文查重降重，提供职称、课题、高校毕业论文检测服务"
+        "name": "开源阅读",
+        "url": "https://source.zgqinc.gq/",
+        "img": "zgqinc.png",
+        "desc": "书源、图源、订阅源、规则、直播源、各种源 大型整合"
       },
       {
-        "name": "PaperYY",
-        "url": "https://staticxin.paperyy.com/page/aigc/index",
-        "img": "paperyy.png",
-        "desc": "提供 AIGC 免费论文检测与智能降重服务，精准识别ChatGPT等AI生成内容"
+        "name": "Yiove 书源",
+        "url": "https://shuyuan.yiove.com/normal",
+        "img": "yiove.png",
+        "desc": "Yiove 书源仓库是一个免费网站！不会有任何有关书源收费的行为"
       }
     ]
   }
