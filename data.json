@@ -1737,6 +1737,12 @@
         "desc": "一个生成 Notion 风格头像的在线工具"
       },
       {
+        "name": "拼豆底稿生成器",
+        "url": "https://perlerbeads.zippland.com/",
+        "img": "vercel.png",
+        "desc": "上传图片，调整精细度，一键生成像素画图纸，简单实用的像素画生成工具"
+      },
+      {
         "name": "思维导图流程图",
         "url": "https://www.processon.com/diagrams",
         "img": "processon.png",
