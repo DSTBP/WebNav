@@ -2536,12 +2536,6 @@
         "desc": "实时追踪各大 AI 模型对话接口的可用性、延迟与官方服务状态"
       },
       {
-        "name": "OpenClaudeCode",
-        "url": "https://www.openclaudecode.cn/",
-        "img": "openclaudecode.png",
-        "desc": "统一的大模型接口网关"
-      },
-      {
         "name": "Privnode",
         "url": "https://privnode.com/",
         "img": "privnode.png",
