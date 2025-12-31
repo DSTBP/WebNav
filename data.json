@@ -413,6 +413,12 @@
         "desc": "免费的！一键放大图像和照片，几秒就可完成增强并下载"
       },
       {
+        "name": "GIF制作工具",
+        "url": "https://ezgif.com/",
+        "img": "ezgif.png",
+        "desc": "Ezgif是一个无需下载安装、完全基于网页操作的在线 GIF 动图编辑工具"
+      },
+      {
         "name": "音频MIDI",
         "url": "https://midi.martinic.com/zh/audio-to-midi",
         "img": "martinic.png",
