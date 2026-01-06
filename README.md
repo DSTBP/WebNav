@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./favicon.ico">
+<img src="./favicon.png">
 <h1>WebNav</h1>
 <p>一个简单美观的个人网址导航主页</p>
 <p>依托 GitHubPages 和 Workflows 无服务器部署</p>
@@ -9,6 +9,7 @@
 <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank"><strong>WebStackPage</strong></a>
 </p>
 </div>
+
 
 ## 项目简介
 
