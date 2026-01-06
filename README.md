@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./favicon.png">
+<img width="100" height="100" src="./favicon.png">
 <h1>WebNav</h1>
 <p>一个简单美观的个人网址导航主页</p>
 <p>依托 GitHubPages 和 Workflows 无服务器部署</p>
@@ -7,8 +7,8 @@
 <a href="https://github.com/geneasy/geneasy" target="_blank"><strong>GenEasy</strong></a> & 
 <a href="https://github.com/imsyy/OneNav" target="_blank"><strong>OneNav</strong></a> & 
 <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank"><strong>WebStackPage</strong></a>
-</p>
 </div>
+
 
 
 ## 项目简介
