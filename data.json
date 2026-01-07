@@ -1713,6 +1713,12 @@
         "desc": "连笔英文艺术签名设计 英文字体在线生成器 Sign Generator"
       },
       {
+        "name": "Google Fonts",
+        "url": "https://fonts.google.com/",
+        "img": "googlefont.png",
+        "desc": "一个免费的在线字体库，提供了超过1000种字体样式，用户可以轻松地将这些字体添加到他们的网页中"
+      },
+      {
         "name": "Slackmojis",
         "url": "https://slackmojis.com/",
         "img": "slackmojis.png",
