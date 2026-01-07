@@ -991,6 +991,12 @@
         "desc": "官方 Mermaid 代码绘制图表"
       },
       {
+        "name": "Overleaf",
+        "url": "https://www.overleaf.com/project",
+        "img": "overleaf.png",
+        "desc": "一个在线的LaTeX编辑器，它允许用户使用编码的方式来排版学术风格的文档，包括文字文稿、slides、CV、学术海报等"
+      },
+      {
         "name": "Mermaid 在线绘图工具",
         "url": "https://www.jyshare.com/front-end/9729/",
         "img": "jyshare.png",
