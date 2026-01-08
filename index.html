@@ -13,19 +13,15 @@
     <link rel="shortcut icon" href="./favicon.ico" />
 
     <!-- 样式表链接 -->
-    <link rel="stylesheet" href="./css/style.min.css" />
-    <link rel="stylesheet" href="./css/dark.min.css" />
-    <link rel="stylesheet" href="./css/animation.min.css" />
-    <link rel="stylesheet" href="./css/mobile.min.css" />
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./asserts/css/app.css" />
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" />
     <link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/css/iziToast.min.css" />
-    <link rel="stylesheet" href="./css/background.css" />
 
     <!-- 核心脚本 -->
-    <script src="./js/lozad.min.js"></script>
-    <script src="./js/jquery.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/lozad"></script>
+    <script src="https://cdn.staticfile.net/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/js/iziToast.min.js"></script>
     
     <!-- 社交媒体/分享预览元信息 -->
@@ -245,7 +241,7 @@
 
                             <li>
                                 <input hidden type="radio" name="type" id="type-csdn"
-                                    value="https://juejin.cn/search?query=" data-placeholder="CSDN search" /><label
+                                    value="https://so.csdn.net/so/search?q=" data-placeholder="CSDN search" /><label
                                     for="type-csdn"><span style="color: #fb5430">CSDN</span></label>
                             </li>
 
@@ -319,211 +315,9 @@
     <button id="back-to-top" style="display:none;position:fixed;right:30px;bottom:40px;z-index:9999;width:48px;height:48px;border:none;border-radius:50%;background:#97D2F8;color:#fff;font-size:24px;box-shadow:0 2px 8px rgba(0,0,0,0.15);cursor:pointer;transition:background 0.3s;" title="返回顶部">
         <i class="fa fa-arrow-up"></i>
     </button>
-    <script>
-        /**
-         * 切换夜间/日间模式
-         */
-        function switchNightMode() {
-            const body = document.body;
-            const isDark = body.classList.contains('dark-theme');
-            if (isDark) {
-                body.classList.remove('dark-theme');
-                localStorage.setItem('darkMode', 'false');
-                showModeToast('已切换为日间模式');
-            } else {
-                body.classList.add('dark-theme');
-                localStorage.setItem('darkMode', 'true');
-                showModeToast('已切换为夜间模式');
-            }
-        }
 
-        /**
-         * 显示模式切换提示
-         * @param {string} msg - 要显示的消息
-         */
-        let toastInstance = null;
-        function showModeToast(msg) {
-            if (toastInstance) {
-                iziToast.hide({}, toastInstance);
-            }
-            toastInstance = iziToast.success({
-                title: msg,
-                position: 'topRight',
-                timeout: 1200
-            });
-        }
-
-        /**
-         * 页面加载完成后执行的主逻辑
-         */
-        document.addEventListener('DOMContentLoaded', function () {
-            // 1. 初始化主题：页面加载时根据 localStorage 自动切换夜间/日间模式
-            if (localStorage.getItem('darkMode') === 'true') {
-                document.body.classList.add('dark-theme');
-            }
-
-            // 2. 初始化设置面板功能
-            const settingsBtn = document.getElementById('settings-btn');
-            const mobileSettingsBtn = document.getElementById('mobile-settings-btn');
-            const closeSettingsBtn = document.getElementById('close-settings-btn');
-            const settingsPanel = document.getElementById('settings-panel');
-            const settingsOverlay = document.getElementById('settings-overlay');
-
-            // 桌面端设置按钮点击事件
-            if (settingsBtn) {
-                settingsBtn.addEventListener('click', function() {
-                    settingsPanel.classList.add('is-visible');
-                    settingsOverlay.classList.add('is-visible');
-                });
-            }
-
-            // 手机端设置按钮点击事件
-            if (mobileSettingsBtn) {
-                mobileSettingsBtn.addEventListener('click', function() {
-                    settingsPanel.classList.add('is-visible');
-                    settingsOverlay.classList.add('is-visible');
-                });
-            }
-
-            // 关闭设置面板
-            if (closeSettingsBtn) {
-                closeSettingsBtn.addEventListener('click', function() {
-                    settingsPanel.classList.remove('is-visible');
-                    settingsOverlay.classList.remove('is-visible');
-                });
-            }
-
-            // 点击遮罩层关闭设置面板
-            if (settingsOverlay) {
-                settingsOverlay.addEventListener('click', function() {
-                    settingsPanel.classList.remove('is-visible');
-                    settingsOverlay.classList.remove('is-visible');
-                });
-            }
-
-            // 3. 加载并渲染动态内容
-            fetch('./data.json')
-                .then(response => response.json())
-                .then(data => {
-                    // 动态生成链接内容区
-                    const linksContainer = document.getElementById('links-container');
-                    Object.entries(data.links).forEach(([category, items]) => {
-                        const section = document.createElement('div');
-                        section.innerHTML = `
-                            <h4 class="text-gray">
-                                <i class="fa-solid fa-tags" style="margin-right: 7px; color: rgb(194, 195, 199);" id="${category.replace(' ', '')}"></i><span class="category-color">${category}</span>
-                            </h4>
-                            <div class="row" id="${category}-links"></div>
-                            <br/>`;
-                        linksContainer.appendChild(section);
-                        const row = document.getElementById(`${category}-links`);
-                        items.forEach(item => {
-                            const col = document.createElement('div');
-                            col.className = 'col-sm-3';
-                            col.innerHTML = `
-                                <div class="xe-widget xe-conversations box2 label-info" 
-                                    onclick="window.open('${item.url}', '_blank')" 
-                                    data-toggle="tooltip" 
-                                    data-placement="bottom" 
-                                    title="${item.url}">
-                                    <div class="xe-comment-entry">
-                                        <a class="xe-user-img">
-                                            <img data-src="./images/logos/${item.img}" 
-                                                class="lozad img-circle" 
-                                                width="40"
-                                                src="./images/loading.svg" 
-                                                alt="${item.name}" />
-                                        </a>
-                                        <div class="xe-comment">
-                                            <a href="#" class="xe-user-name overflowClip_1">
-                                                <strong>${item.name}</strong>
-                                            </a>
-                                            <p class="overflowClip_2">${item.desc}</p>
-                                        </div>
-                                    </div>
-                                </div>`;
-                            row.appendChild(col);
-                        });
-                    });
-
-                    // 初始化图片懒加载
-                    if (typeof lozad !== 'undefined') {
-                        lozad('.lozad', { rootMargin: '200px 0px', threshold: 0.1 }).observe();
-                    }
-
-                    // 保存原始HTML，便于站内搜索后恢复
-                    const originalLinksHTML = linksContainer.innerHTML;
-                    const searchInput = document.getElementById('search-text');
-
-                    // 站内搜索逻辑
-                    searchInput.addEventListener('input', function () {
-                        const keyword = this.value.trim().toLowerCase();
-                        const type = document.querySelector('input[name="type"]:checked').value;
-                        if (type !== 'site-search') return; // 只在站内搜索时生效
-                        if (!keyword) {
-                            // 无关键词时恢复原始分组
-                            linksContainer.innerHTML = originalLinksHTML;
-                        } else {
-                            // 关键词过滤，收集所有匹配的卡片
-                            const parser = new DOMParser();
-                            const doc = parser.parseFromString(originalLinksHTML, 'text/html');
-                            const widgets = Array.from(doc.querySelectorAll('.xe-widget'));
-                            const matched = widgets.filter(item => {
-                                const name = item.querySelector('.xe-user-name strong').textContent.toLowerCase();
-                                const desc = item.querySelector('.xe-comment p').textContent.toLowerCase();
-                                return name.includes(keyword) || desc.includes(keyword);
-                            });
-                            // 只显示匹配项，重新排列
-                            linksContainer.innerHTML = '';
-                            const row = document.createElement('div');
-                            row.className = 'row';
-                            matched.forEach(item => {
-                                const col = document.createElement('div');
-                                col.className = 'col-sm-3';
-                                col.innerHTML = item.outerHTML;
-                                row.appendChild(col);
-                            });
-                            linksContainer.appendChild(row);
-                        }
-                        // 重新初始化图片懒加载
-                        if (typeof lozad !== 'undefined') {
-                            lozad('.lozad', { rootMargin: '200px 0px', threshold: 0.1 }).observe();
-                        }
-                    });
-
-                    // 切换搜索类型时，清空输入框并恢复原始内容
-                    document.querySelectorAll('input[name="type"]').forEach(input => {
-                        input.addEventListener('change', function () {
-                            if (document.querySelector('input[name="type"]:checked').value !== 'site-search') {
-                                searchInput.value = '';
-                                linksContainer.innerHTML = originalLinksHTML;
-                                if (typeof lozad !== 'undefined') {
-                                    lozad('.lozad', { rootMargin: '200px 0px', threshold: 0.1 }).observe();
-                                }
-                            }
-                        });
-                    });
-                })
-                .catch(error => console.error('数据加载失败:', error));
-
-            // 返回顶部按钮逻辑
-            const backToTopBtn = document.getElementById('back-to-top');
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 300) {
-                    backToTopBtn.style.display = 'block';
-                } else {
-                    backToTopBtn.style.display = 'none';
-                }
-            });
-            backToTopBtn.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        });
-    </script>
-
-    <!-- 搜索功能脚本 -->
-    <script src="./js/search.js"></script>
-    <script src="./js/background.js"></script>
+    <!-- 应用主文件（整合了搜索、背景设置、主题切换等所有功能） -->
+    <script src="./asserts/js/app.js"></script>
 
     <!-- 设置面板 -->
     <div id="settings-panel" class="settings-panel">
@@ -549,7 +343,7 @@
         </div>
     </div>
     <div id="settings-overlay" class="settings-overlay"></div>
-    <script src="sidebar.min.js"></script>
+    <script src="./asserts/js/sidebar.min.js"></script>
 </body>
 
 </html>
