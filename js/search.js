@@ -65,20 +65,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const keyword = searchInput.value.trim();
         const actionUrl = getActionUrl();
 
-        // 站内搜索：阻止表单提交，不跳转
-        if (actionUrl === 'site-search') {
-            event.preventDefault();
-            return false;
-        }
-
         // 对于外部搜索，阻止默认提交并手动处理
-        event.preventDefault();
-        if (keyword === '') {
-            searchInput.focus();
-            return;
+        if (actionUrl !== 'site-search') {
+            event.preventDefault();
+            if (keyword === '') {
+                searchInput.focus();
+                return;
+            }
+            const url = actionUrl + encodeURIComponent(keyword);
+            shouldOpenInNewWindow() ? window.open(url, '_blank') : window.location.href = url;
         }
-        const url = actionUrl + encodeURIComponent(keyword);
-        shouldOpenInNewWindow() ? window.open(url, '_blank') : window.location.href = url;
+        // 对于站内搜索，不执行任何操作，其逻辑由 input 事件处理
     }
 
     // --- 初始化 ---
