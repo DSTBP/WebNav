@@ -44,8 +44,29 @@ const Utils = {
     // 懒加载初始化
     initLazyLoad: () => {
         if (typeof lozad !== 'undefined') {
-            lozad('.lozad', { rootMargin: '200px 0px', threshold: 0.1 }).observe();
+            lozad('.lozad', { rootMargin: '100px 0px', threshold: 0.01 }).observe();
         }
+    },
+
+    // 防抖函数
+    debounce: (fn, delay = 300) => {
+        let timer = null;
+        return function(...args) {
+            clearTimeout(timer);
+            timer = setTimeout(() => fn.apply(this, args), delay);
+        };
+    },
+
+    // 节流函数
+    throttle: (fn, delay = 200) => {
+        let last = 0;
+        return function(...args) {
+            const now = Date.now();
+            if (now - last > delay) {
+                fn.apply(this, args);
+                last = now;
+            }
+        };
     }
 };
 
@@ -323,6 +344,7 @@ const SettingsPanelModule = {
 const ContentModule = {
     linksContainer: null,
     originalHTML: '',
+    itemsCache: [],
 
     init() {
         this.linksContainer = Utils.$('links-container');
@@ -338,10 +360,20 @@ const ContentModule = {
             const data = await response.json();
             this._renderLinks(data);
             this.originalHTML = this.linksContainer.innerHTML;
+            this._cacheItems();
             this._setupSiteSearch();
         } catch (error) {
             console.error('数据加载失败:', error);
         }
+    },
+
+    // 缓存所有链接卡片信息
+    _cacheItems() {
+        this.itemsCache = Array.from(this.linksContainer.querySelectorAll('.xe-widget')).map(el => ({
+            html: el.outerHTML,
+            name: el.querySelector('.xe-user-name strong')?.textContent.toLowerCase() || '',
+            desc: el.querySelector('.xe-comment p')?.textContent.toLowerCase() || ''
+        }));
     },
 
     // 渲染链接
@@ -363,7 +395,7 @@ const ContentModule = {
                 col.className = 'col-sm-3';
                 col.innerHTML = `
                     <div class="xe-widget xe-conversations box2 label-info"
-                        onclick="window.open('${item.url}', '_blank')"
+                        data-url="${item.url}"
                         data-toggle="tooltip"
                         data-placement="bottom"
                         title="${item.url}">
@@ -387,7 +419,19 @@ const ContentModule = {
             });
         });
 
+        // 使用事件委托处理卡片点击
+        this.linksContainer.addEventListener('click', this._handleCardClick.bind(this));
+
         Utils.initLazyLoad();
+    },
+
+    // 卡片点击处理
+    _handleCardClick(e) {
+        const card = e.target.closest('.xe-widget');
+        if (card) {
+            const url = card.getAttribute('data-url');
+            if (url) window.open(url, '_blank');
+        }
     },
 
     // 站内搜索
@@ -395,8 +439,8 @@ const ContentModule = {
         const searchInput = Utils.$('search-text');
         if (!searchInput) return;
 
-        // 输入时搜索
-        searchInput.addEventListener('input', () => {
+        // 防抖搜索
+        const debouncedSearch = Utils.debounce(() => {
             const keyword = searchInput.value.trim().toLowerCase();
             const type = document.querySelector('input[name="type"]:checked')?.value;
 
@@ -408,7 +452,9 @@ const ContentModule = {
                 this._filterContent(keyword);
             }
             Utils.initLazyLoad();
-        });
+        }, 300);
+
+        searchInput.addEventListener('input', debouncedSearch);
 
         // 切换搜索类型时重置
         Utils.$$('input[name="type"]').forEach(input => {
@@ -422,30 +468,29 @@ const ContentModule = {
         });
     },
 
-    // 过滤内容
+    // 过滤内容 - 使用缓存而不是DOMParser
     _filterContent(keyword) {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(this.originalHTML, 'text/html');
-        const widgets = Array.from(doc.querySelectorAll('.xe-widget'));
+        const matched = this.itemsCache.filter(item =>
+            item.name.includes(keyword) || item.desc.includes(keyword)
+        );
 
-        const matched = widgets.filter(item => {
-            const name = item.querySelector('.xe-user-name strong')?.textContent.toLowerCase() || '';
-            const desc = item.querySelector('.xe-comment p')?.textContent.toLowerCase() || '';
-            return name.includes(keyword) || desc.includes(keyword);
-        });
-
-        this.linksContainer.innerHTML = '';
+        const fragment = document.createDocumentFragment();
         const row = document.createElement('div');
         row.className = 'row';
 
         matched.forEach(item => {
             const col = document.createElement('div');
             col.className = 'col-sm-3';
-            col.innerHTML = item.outerHTML;
+            col.innerHTML = item.html;
             row.appendChild(col);
         });
 
-        this.linksContainer.appendChild(row);
+        fragment.appendChild(row);
+        this.linksContainer.innerHTML = '';
+        this.linksContainer.appendChild(fragment);
+
+        // 为新卡片添加点击事件委托
+        this.linksContainer.addEventListener('click', this._handleCardClick.bind(this));
     }
 };
 
@@ -455,10 +500,11 @@ const BackToTopModule = {
         const btn = Utils.$('back-to-top');
         if (!btn) return;
 
-        // 滚动显示/隐藏
-        window.addEventListener('scroll', () => {
-            btn.style.display = window.scrollY > 300 ? 'block' : 'none';
-        });
+        // 节流滚动事件
+        const throttledScroll = Utils.throttle(() => {
+            btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+        }, 200);
+        window.addEventListener('scroll', throttledScroll);
 
         // 点击返回顶部
         btn.addEventListener('click', () => {
@@ -476,4 +522,14 @@ document.addEventListener('DOMContentLoaded', () => {
     SearchModule.init();
     ContentModule.init();
     BackToTopModule.init();
+
+    // 延迟加载非关键脚本（今日诗词）
+    if (document.getElementById('jinrishici-sentence')) {
+        setTimeout(() => {
+            const script = document.createElement('script');
+            script.src = 'https://sdk.jinrishici.com/v2/browser/jinrishici.js';
+            script.async = true;
+            document.head.appendChild(script);
+        }, 2000);
+    }
 });
