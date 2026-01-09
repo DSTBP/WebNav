@@ -72,20 +72,56 @@ const Utils = {
 
 // ==================== 主题模块 ====================
 const ThemeModule = {
-    STORAGE_KEY: 'darkMode',
+    STORAGE_KEY: 'theme-preference',
+    mediaQuery: null,
 
     init() {
-        // 初始化主题
-        if (Utils.storage.get(this.STORAGE_KEY) === 'true') {
-            document.body.classList.add('dark-theme');
+        this.mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        const systemHandler = this._handleSystemChange.bind(this);
+        if (this.mediaQuery.addEventListener) {
+            this.mediaQuery.addEventListener('change', systemHandler);
+        } else {
+            this.mediaQuery.addListener(systemHandler);
+        }
+
+        const stored = this._getStoredTheme();
+        const initialTheme = stored ?? (this.mediaQuery.matches ? 'dark' : 'light');
+        this.applyTheme(initialTheme, false);
+
+        requestAnimationFrame(() => document.body.classList.add('theme-ready'));
+    },
+
+    _getStoredTheme() {
+        let value = Utils.storage.get(this.STORAGE_KEY);
+        if (value === null || typeof value === 'undefined') {
+            const legacy = Utils.storage.get('darkMode');
+            if (legacy !== null && typeof legacy !== 'undefined') {
+                value = legacy === 'true' ? 'dark' : 'light';
+            }
+        }
+        if (value === 'dark' || value === 'light') return value;
+        if (value === 'true') return 'dark';
+        if (value === 'false') return 'light';
+        return null;
+    },
+
+    applyTheme(theme, persist = true) {
+        document.body.setAttribute('data-theme', theme);
+        if (persist) {
+            Utils.storage.set(this.STORAGE_KEY, theme);
+            Utils.storage.remove('darkMode');
         }
     },
 
     toggle() {
-        const body = document.body;
-        const isDark = body.classList.toggle('dark-theme');
-        Utils.storage.set(this.STORAGE_KEY, String(isDark));
-        Utils.toast.show(isDark ? '已切换为夜间模式' : '已切换为日间模式');
+        const nextTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        this.applyTheme(nextTheme);
+        Utils.toast.show(nextTheme === 'dark' ? '已切换为夜间模式' : '已切换为日间模式');
+    },
+
+    _handleSystemChange(event) {
+        if (this._getStoredTheme()) return;
+        this.applyTheme(event.matches ? 'dark' : 'light', false);
     }
 };
 
