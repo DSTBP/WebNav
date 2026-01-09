@@ -381,10 +381,14 @@ const ContentModule = {
     linksContainer: null,
     originalHTML: '',
     itemsCache: [],
+    _cardClickHandler: null,
 
     init() {
         this.linksContainer = Utils.$('links-container');
         if (!this.linksContainer) return;
+
+        this._cardClickHandler = this._handleCardClick.bind(this);
+        this.linksContainer.addEventListener('click', this._cardClickHandler);
 
         this._loadData();
     },
@@ -396,69 +400,90 @@ const ContentModule = {
             const data = await response.json();
             this._renderLinks(data);
             this.originalHTML = this.linksContainer.innerHTML;
-            this._cacheItems();
             this._setupSiteSearch();
         } catch (error) {
             console.error('数据加载失败:', error);
         }
     },
 
-    // 缓存所有链接卡片信息
-    _cacheItems() {
-        this.itemsCache = Array.from(this.linksContainer.querySelectorAll('.xe-widget')).map(el => ({
-            html: el.outerHTML,
-            name: el.querySelector('.xe-user-name strong')?.textContent.toLowerCase() || '',
-            desc: el.querySelector('.xe-comment p')?.textContent.toLowerCase() || ''
-        }));
-    },
-
-    // 渲染链接
+    // 渲染链接（使用片段减少回流）
     _renderLinks(data) {
-        Object.entries(data.links).forEach(([category, items]) => {
-            const section = document.createElement('div');
-            section.innerHTML = `
-                <h4 class="text-gray">
-                    <i class="fa-solid fa-tags" style="margin-right: 7px; color: rgb(194, 195, 199);" id="${category.replace(' ', '')}"></i>
-                    <span class="category-color">${category}</span>
-                </h4>
-                <div class="row" id="${category}-links"></div>
-                <br/>`;
-            this.linksContainer.appendChild(section);
+        const links = data?.links || {};
+        const fragment = document.createDocumentFragment();
+        this.itemsCache = [];
 
-            const row = Utils.$(`${category}-links`);
-            items.forEach(item => {
-                const col = document.createElement('div');
-                col.className = 'col-sm-3';
-                col.innerHTML = `
-                    <div class="xe-widget xe-conversations box2 label-info"
-                        data-url="${item.url}"
-                        data-toggle="tooltip"
-                        data-placement="bottom"
-                        title="${item.url}">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="./images/logos/${item.img}"
-                                    class="lozad img-circle"
-                                    width="40"
-                                    src="./images/loading.svg"
-                                    alt="${item.name}" />
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>${item.name}</strong>
-                                </a>
-                                <p class="overflowClip_2">${item.desc}</p>
-                            </div>
-                        </div>
-                    </div>`;
-                row.appendChild(col);
-            });
+        Object.entries(links).forEach(([category, items]) => {
+            fragment.appendChild(this._buildCategorySection(category, items));
         });
 
-        // 使用事件委托处理卡片点击
-        this.linksContainer.addEventListener('click', this._handleCardClick.bind(this));
+        this.linksContainer.innerHTML = '';
+        this.linksContainer.appendChild(fragment);
 
         Utils.initLazyLoad();
+    },
+
+    _buildCategorySection(category, items = []) {
+        const section = document.createElement('section');
+        const anchorId = category.replace(/\s+/g, '');
+        section.innerHTML = `
+            <h4 class="text-gray">
+                <i class="fa-solid fa-tags" style="margin-right: 7px; color: rgb(194, 195, 199);" id="${anchorId}"></i>
+                <span class="category-color">${category}</span>
+            </h4>
+            <div class="row" id="${anchorId}-links"></div>
+            <br/>`;
+        const row = section.querySelector('.row');
+        row.innerHTML = this._buildCardsHTML(items);
+        return section;
+    },
+
+    _buildCardsHTML(items = []) {
+        if (!Array.isArray(items)) return '';
+        return items.map(item => this._registerCard(item)).join('');
+    },
+
+    _registerCard(item = {}) {
+        const name = item.name || '';
+        const desc = item.desc || '';
+        const cardHTML = this._createCardHTML({
+            name,
+            desc,
+            url: item.url || '#',
+            img: item.img || 'default.svg'
+        });
+        this.itemsCache.push({
+            html: cardHTML,
+            name: name.toLowerCase(),
+            desc: desc.toLowerCase()
+        });
+        return cardHTML;
+    },
+
+    _createCardHTML({ name, desc, url, img }) {
+        return `
+            <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info"
+                    data-url="${url}"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="${url}">
+                    <div class="xe-comment-entry">
+                        <a class="xe-user-img">
+                            <img data-src="./images/logos/${img}"
+                                class="lozad img-circle"
+                                width="40"
+                                src="./images/loading.svg"
+                                alt="${name}" />
+                        </a>
+                        <div class="xe-comment">
+                            <a href="#" class="xe-user-name overflowClip_1">
+                                <strong>${name}</strong>
+                            </a>
+                            <p class="overflowClip_2">${desc}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
     },
 
     // 卡片点击处理
@@ -510,23 +535,8 @@ const ContentModule = {
             item.name.includes(keyword) || item.desc.includes(keyword)
         );
 
-        const fragment = document.createDocumentFragment();
-        const row = document.createElement('div');
-        row.className = 'row';
-
-        matched.forEach(item => {
-            const col = document.createElement('div');
-            col.className = 'col-sm-3';
-            col.innerHTML = item.html;
-            row.appendChild(col);
-        });
-
-        fragment.appendChild(row);
-        this.linksContainer.innerHTML = '';
-        this.linksContainer.appendChild(fragment);
-
-        // 为新卡片添加点击事件委托
-        this.linksContainer.addEventListener('click', this._handleCardClick.bind(this));
+        const cardsHTML = matched.map(item => item.html).join('');
+        this.linksContainer.innerHTML = `<div class="row">${cardsHTML}</div>`;
     }
 };
 
