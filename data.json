@@ -431,6 +431,12 @@
         "desc": "利用许多开源项目构建的新一代转换器，支持文档、图片、电子书、影音"
       },
       {
+        "name": "Markdown To Excel",
+        "url": "https://tableconvert.com/zh-cn/markdown-to-excel",
+        "img": "tableconvert.png",
+        "desc": "免费在线表格转换器在线将 Markdown 转换为 Excel"
+      },
+      {
         "name": "记灵-音频转文字",
         "url": "https://remeins.com/index/app/voice2text",
         "img": "remeins.png",
