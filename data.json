@@ -1467,6 +1467,12 @@
         "url": "https://www.yankong.org/review",
         "img": "yankong.png",
         "desc": "免费,导师评价,导师推荐,导师点评,选导师,科研,分享,教授,交流,研究生,博士生"
+      },
+      {
+        "name": "Reddit",
+        "url": "https://www.reddit.com/",
+        "img": "reddit.png",
+        "desc": "全球最大的社交新闻聚合网站，用户可以分享、讨论和投票各种话题（贴吧、知乎、微博聚合体）"
       }
     ],
     "AI站点": [
