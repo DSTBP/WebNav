@@ -1473,6 +1473,12 @@
         "url": "https://www.yankong.org/review",
         "img": "yankong.png",
         "desc": "免费,导师评价,导师推荐,导师点评,选导师,科研,分享,教授,交流,研究生,博士生"
+      },
+      {
+        "name": "Reddit",
+        "url": "https://www.reddit.com/",
+        "img": "reddit.png",
+        "desc": "全球最大的社交新闻聚合网站，用户可以分享、讨论和投票各种话题（贴吧、知乎、微博聚合体）"
       }
     ],
     "AI站点": [
@@ -1925,7 +1931,7 @@
         "desc": "现有的Minecraft外观最大的收藏之一。有超过200万种皮肤可供选择"
       },
       {
-        "name": "MC皮肤管理站",
+        "name": "Littleskin MC 皮肤管理站",
         "url": "https://littleskin.cn/",
         "img": "littleskin.png",
         "desc": "快速、可靠的 Minecraft 皮肤站"
