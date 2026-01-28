@@ -7,10 +7,10 @@
 /* ==================== CSS 变量定义 ==================== */
 :root {
     /* 主题色 - 简约黑白灰 */
-    --primary-gradient: linear-gradient(135deg, #6a85b6 0%, #8ba3c7 100%);
-    --primary-color: #6a85b6;
-    --primary-dark: #5873a0;
-    --secondary-color: #34495e;
+    --primary-gradient: linear-gradient(135deg, #758a99 0%, #9aaab5 100%);
+    --primary-color: #758a99;      /* 主灰 */
+    --primary-dark: #5d6f7c;       /* 深一点的灰 */
+    --secondary-color: #9aaab5;    /* 浅一点的灰 */
     --accent-color: #000000;
 
     /* 文字颜色 */
@@ -350,10 +350,14 @@ body[data-theme="dark"] .menu-item a:hover {
 }
 
 #search-text:focus + button {
-    transform: translateY(-2px); /* 保持和输入框一样的上移距离 */
-    box-shadow: var(--shadow-primary); /* 加上阴影，更有悬浮感 */
-    /* 如果觉得按钮太亮，可以在聚焦时稍微加深一点背景，可选 */
-    /* filter: brightness(1.05); */
+    transform: translateY(-2px);
+    /* 如果希望按钮此刻也有阴影，可以加上下面这行 (可选) */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 当输入框聚焦，且鼠标同时悬停在按钮上时，合并两个动画(上浮+缩放) */
+#search-text:focus + button:hover {
+    transform: translateY(-2px) scale(1.05);
 }
 
 body[data-theme="dark"] #search-text:focus {
