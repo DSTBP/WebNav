@@ -1163,75 +1163,32 @@ body[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
 
 /* ==================== 页脚样式 ==================== */
 .main-footer {
-    width: 100%;
-    padding: 40px 20px 30px; /* 上边距大一点，与内容拉开距离 */
     text-align: center;
-    margin-top: auto; /* 如果布局允许，这将推到底部 */
-}
-
-.footer-inner {
-    display: inline-block;
-    padding: 15px 30px;
-    border-radius: var(--radius-xl);
+    padding: 30px 0 40px; /* 上下留出空间 */
+    width: 100%;
     
-    /* 核心样式：跟随主题的磨砂玻璃背景 */
-    background: var(--surface-nav); /* 复用顶部栏的半透明背景变量 */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    
-    /* 极淡的边框，增加精致感 */
-    border: 1px solid var(--border-light);
-    box-shadow: var(--shadow-sm);
-    
-    transition: all 0.3s ease;
-}
-
-.footer-inner:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-    background: var(--surface-popover); /* 悬停时稍微实一点 */
+    /* 文字样式 */
+    color: var(--text-secondary); /* 使用次级文字颜色，自动适配夜间模式 */
+    font-size: 1.3rem;
+    line-height: 1.8;
 }
 
 .main-footer p {
-    margin: 5px 0;
-    color: var(--text-secondary);
-    font-size: 13px;
-    line-height: 1.6;
+    margin: 0;
 }
 
-/* 页脚链接样式 */
 .main-footer a {
     color: var(--text-primary);
     font-weight: 500;
     margin: 0 4px;
-    position: relative;
-    text-decoration: none;
-    transition: color 0.2s;
 }
 
 .main-footer a:hover {
-    color: var(--primary-color); /* 日间模式悬停色 */
+    color: var(--primary-color); /* 悬停颜色 */
+    text-decoration: underline !important;
 }
 
-/* 夜间模式下链接悬停变亮白 */
+/* 夜间模式微调（可选，如果变量设置得好其实不需要） */
 body[data-theme="dark"] .main-footer a:hover {
     color: #fff;
-}
-
-.footer-links .separator {
-    margin: 0 5px;
-    color: var(--border-dark);
-    font-size: 11px;
-}
-
-/* 移动端适配 */
-@media (max-width: 768px) {
-    .main-footer {
-        padding: 20px 15px 80px; /* 底部留多点空间给回顶按钮 */
-    }
-    
-    .footer-inner {
-        width: 100%;
-        padding: 15px;
-    }
 }
