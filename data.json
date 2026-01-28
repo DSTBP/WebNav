@@ -685,6 +685,12 @@
         "desc": "Convert curl syntax to Python, Ansible URI, MATLAB, Node.js, PHP, Strest, Go, Dart, JSON, Elixir, Rust"
       },
       {
+        "name": "NirSoft",
+        "url": "https://www.nirsoft.net/utils/",
+        "img": "nirsoft.png",
+        "desc": "实用工具软件集合，从Win11到Win10通吃，包括密码恢复工具、网络监控工具、Web 浏览器工具、视频/音频工具、磁盘工具等等"
+      },
+      {
         "name": "爬虫工具库",
         "url": "https://spidertools.cn/",
         "img": "spidertools.png",
