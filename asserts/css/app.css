@@ -88,44 +88,57 @@
 
 :root[data-theme="dark"],
 body[data-theme="dark"] {
-    --text-primary: #f4f7ff;
-    --text-secondary: #a3afc3;
-    --text-gray: #7c859e;
-    --bg-primary: #0d141f;
-    --bg-white: rgba(18, 23, 35, 0.95);
+    /* 文字颜色：稍微调暖一点的灰白，不再冷冰冰 */
+    --text-primary: #e6e6e6;
+    --text-secondary: #a0a0a0;
+    --text-gray: #888888;
     
-    /* ========== 关键修改：夜间顶部栏变量 ========== */
-    /* 提亮一点底色 (19,25,37 -> 28,34,45) 以避免“死黑” */
-    /* 降低不透明度 (0.85 -> 0.65) */
-    --surface-nav: rgba(28, 34, 45, 0.65);
+    /* 背景色基础：保持或微调 */
+    --bg-primary: #3b3b3b;
+    --bg-white: rgba(60, 60, 60, 0.95); /* 从蓝黑改为中性深灰 */
     
-    --surface-input: rgba(22, 29, 43, 0.5);
-    --surface-popover: rgba(21, 27, 40, 0.85);
-    --surface-panel: rgba(16, 22, 33, 0.8);
-    --card-surface: rgba(255, 255, 255, 0.08); 
+    /* ========== 关键修改：夜间顶部栏变量 (去蓝、提亮) ========== */
+    
+    /* 顶部导航栏：使用纯中性灰，R=G=B，比背景(#3b3b3b)略亮且透明 */
+    /* 原来是偏蓝的 28, 34, 45，现在改为 65, 65, 65 */
+    --surface-nav: rgba(65, 65, 65, 0.75);
+    
+    /* 搜索框：改为通透的淡灰色，完全去除蓝色倾向 */
+    --surface-input: rgba(80, 80, 80, 0.4);
+    
+    /* 弹窗/下拉菜单：实心的中灰 */
+    --surface-popover: rgba(70, 70, 70, 0.95);
+    
+    /* 侧边栏/分类面板：柔和的中灰 */
+    --surface-panel: rgba(65, 65, 65, 0.85);
+    
+    /* 链接卡片：使用白色透明度来实现“淡”的效果，最百搭 */
+    --card-surface: rgba(255, 255, 255, 0.06); 
     --card-surface-hover: rgba(255, 255, 255, 0.12);
     
-    /* 夜间边框发光感 */
-    --border-light: rgba(255, 255, 255, 0.08); 
+    /* 边框颜色：更亮的灰线，增加轮廓感 */
+    --border-light: rgba(255, 255, 255, 0.1); 
     --border-lighter: rgba(255, 255, 255, 0.05);
-    --border-dark: rgba(255, 255, 255, 0.12);
+    --border-dark: rgba(255, 255, 255, 0.15);
     
-    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.55);
-    --shadow-lg: 0 18px 36px rgba(0, 0, 0, 0.6);
-    --shadow-primary: 0 12px 32px rgba(0, 0, 0, 0.65);
-    --shadow-primary-lg: 0 18px 44px rgba(0, 0, 0, 0.7);
-    --scrollbar-thumb: rgba(255, 255, 255, 0.28);
-    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.45);
+    /* 阴影：保持不变，或者稍微淡化 */
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 18px 36px rgba(0, 0, 0, 0.5);
+    --shadow-primary: 0 12px 32px rgba(0, 0, 0, 0.5);
+    --shadow-primary-lg: 0 18px 44px rgba(0, 0, 0, 0.6);
+    
+    --scrollbar-thumb: rgba(255, 255, 255, 0.2);
+    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.35);
 
-    /* 夜间背景纹理 */
+    /* 夜间背景纹理：保持原有的 #3b3b3b 基调，因为它是中性灰 */
     --app-bg-complex:
-        radial-gradient(at 50% 0, transparent, #080808),
+        radial-gradient(at 50% 0, transparent, #1a1a1a),
         repeating-conic-gradient(
-            hsla(0, 0%, 0%, .235) 0% 25%,
+            hsla(0, 0%, 100%, .03) 0% 25%, /* 纹理微调为极淡的白噪点 */
             transparent 0% 50%
         ) 0 0 / 0.375em 0.375em,
-        #3b3b3b;
+        #3b3b3b; /* 你的基础背景色 */
 }
 
 /* ==================== 基础样式 ==================== */
