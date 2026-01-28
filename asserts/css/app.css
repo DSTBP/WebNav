@@ -21,21 +21,28 @@
 
     /* 背景色 */
     --bg-primary: #fafafa;
-    --bg-white: rgba(255, 255, 255, 0.95);
+    --bg-white: rgba(245, 247, 250, 0.95); /* 全局白底改为柔和的灰白 */
     
     /* ========== 关键修改：日间顶部栏变量 ========== */
-    /* 降低不透明度 (0.72 -> 0.6)，让背景透出来 */
-    /* 使用纯白，配合高模糊度 */
-    --surface-nav: rgba(255, 255, 255, 0.6); 
+    /* 顶部导航栏：使用淡灰蓝白，降低纯白刺眼感，融合背景 */
+    --surface-nav: rgba(245, 247, 250, 0.75); 
     
-    --surface-input: rgba(255, 255, 255, 0.7);
-    --surface-popover: rgba(255, 255, 255, 0.9);
-    --surface-panel: rgba(255, 255, 255, 0.85);
-    --card-surface: rgba(255, 255, 255, 0.85);
-    --card-surface-hover: rgba(255, 255, 255, 0.95);
+    /* 搜索框：降低透明度，底色调柔 */
+    --surface-input: rgba(245, 247, 250, 0.6);
     
-    /* 边框颜色 - 更淡 */
-    --border-light: rgba(0, 0, 0, 0.06); 
+    /* 弹窗/下拉菜单：稍微实一点，但保持色调一致 */
+    --surface-popover: rgba(245, 247, 250, 0.95);
+    
+    /* 侧边栏/分类面板：柔和底色 */
+    --surface-panel: rgba(245, 247, 250, 0.85);
+    
+    /* 链接卡片：默认状态更通透、更柔和 */
+    --card-surface: rgba(245, 247, 250, 0.7);
+    /* 卡片悬停：悬停时再变亮一点，形成对比 */
+    --card-surface-hover: rgba(255, 255, 255, 0.9);
+    
+    /* 边框颜色 - 稍微加深一点点，因为背景不再是纯白，边框需要一点存在感 */
+    --border-light: rgba(0, 0, 0, 0.08);
     --border-lighter: rgba(0, 0, 0, 0.04);
     --border-dark: rgba(0, 0, 0, 0.1);
 
@@ -324,7 +331,7 @@ body[data-theme="dark"] .menu-item a:hover {
     padding: 9pt;
     width: 100%;
     font-size: 1pc;
-    border: 1px solid var(--border-light);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     /* 搜索框背景也稍微透明一点 */
     background: var(--surface-input);
     color: var(--text-primary);
