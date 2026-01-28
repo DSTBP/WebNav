@@ -1,7 +1,7 @@
 /**
  * WebNav - 统一样式文件
  * 整合了所有样式：基础、暗色主题、动画、响应式
- * @version 2.1
+ * @version 2.2 (CSS 渐变纹理背景版)
  */
 
 /* ==================== CSS 变量定义 ==================== */
@@ -56,7 +56,6 @@
     --transition-cubic: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     /* 主题扩展变量 */
-    --app-bg: #f4f6fb;
     --surface-nav: rgba(255, 255, 255, 0.72);
     --surface-input: rgba(255, 255, 255, 0.78);
     --surface-popover: rgba(255, 255, 255, 0.9);
@@ -66,6 +65,18 @@
     --theme-transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     --scrollbar-thumb: rgba(0, 0, 0, 0.35);
     --scrollbar-thumb-hover: rgba(0, 0, 0, 0.55);
+
+    /* ========== 关键修改：日间模式背景 (CSS纹理合成) ========== */
+    /* 1. 顶部光照晕影 (Radial Gradient) */
+    /* 2. 细微网格纹理 (Repeating Conic Gradient) */
+    /* 3. 底色 (#f2f4f8) */
+    --app-bg-complex: 
+        radial-gradient(at 50% 0, rgba(0,0,0,0.02), transparent 70%),
+        repeating-conic-gradient(
+            rgba(0, 0, 0, 0.03) 0% 25%,
+            transparent 0% 50%
+        ) 0 0 / 0.5em 0.5em,
+        #f2f4f8;
 }
 
 
@@ -78,17 +89,18 @@ body[data-theme="dark"] {
     --bg-white: rgba(18, 23, 35, 0.95);
     --bg-white-light: rgba(24, 30, 46, 0.72);
     --bg-white-lighter: rgba(27, 34, 50, 0.92);
-    --app-bg: var(--bg-primary);
-    --app-texture: url(https://img.imsyy.top/bg/dark/black-paper.png);
+    
+    /* 组件颜色 */
     --surface-nav: rgba(19, 25, 37, 0.85);
     --surface-input: rgba(22, 29, 43, 0.7);
     --surface-popover: rgba(21, 27, 40, 0.92);
     --surface-panel: rgba(16, 22, 33, 0.92);
-    --card-surface: rgba(255, 255, 255, 0.2);
-    --card-surface-hover: rgba(255, 255, 255, 0.3);
+    --card-surface: rgba(255, 255, 255, 0.12); /* 稍微调亮一点以适配新背景 */
+    --card-surface-hover: rgba(255, 255, 255, 0.18);
     --border-light: rgba(255, 255, 255, 0.08);
     --border-lighter: rgba(255, 255, 255, 0.05);
     --border-dark: rgba(255, 255, 255, 0.12);
+    
     --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.45);
     --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.55);
     --shadow-lg: 0 18px 36px rgba(0, 0, 0, 0.6);
@@ -96,6 +108,18 @@ body[data-theme="dark"] {
     --shadow-primary-lg: 0 18px 44px rgba(0, 0, 0, 0.7);
     --scrollbar-thumb: rgba(255, 255, 255, 0.28);
     --scrollbar-thumb-hover: rgba(255, 255, 255, 0.45);
+
+    /* ========== 关键修改：夜间模式背景 (提取自 style.css) ========== */
+    /* 1. 顶部暗光晕影 */
+    /* 2. 碳纤维/网格纹理 */
+    /* 3. 深灰底色 (#3b3b3b) */
+    --app-bg-complex:
+        radial-gradient(at 50% 0, transparent, #080808),
+        repeating-conic-gradient(
+            hsla(0, 0%, 0%, .235) 0% 25%,
+            transparent 0% 50%
+        ) 0 0 / 0.375em 0.375em,
+        #3b3b3b;
 }
 
 /* ==================== 基础样式 ==================== */
@@ -108,13 +132,15 @@ html { height: 100%; }
 body {
     height: 100%;
     font-family: system-ui, -apple-system, sans-serif !important;
-    background-color: var(--app-bg) !important;
+    /* 移除简单的 background-color，改用下面的伪元素渲染 */
+    background: transparent !important; 
     color: var(--text-primary);
-    transition: background var(--theme-transition), color var(--theme-transition);
+    transition: color var(--theme-transition);
     position: relative;
     overflow-x: hidden;
 }
 
+/* 核心背景渲染层：使用 fixed 伪元素提升滚动性能 */
 body::before {
     content: '';
     position: fixed;
@@ -123,12 +149,14 @@ body::before {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-image: var(--app-texture);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    
+    /* 应用复杂的背景变量 */
+    background: var(--app-bg-complex);
+    
+    /* 确保背景覆盖并固定 */
+    background-attachment: fixed;
     pointer-events: none;
-    transition: background-image 0.3s ease;
+    transition: background 0.35s ease; /* 背景切换动画 */
 }
 
 body:not(.theme-ready) {
@@ -730,7 +758,7 @@ label {
 
 /* ==================== 暗色主题 ==================== */
 body[data-theme="dark"] {
-    background-color: var(--bg-primary);
+    background-color: transparent; /* 由伪元素处理背景 */
     color: var(--text-primary);
 }
 
