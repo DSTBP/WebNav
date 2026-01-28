@@ -1,7 +1,7 @@
 /**
  * WebNav 应用主文件
- * 整合了搜索、背景设置、主题切换、内容加载等所有功能
- * @version 2.0
+ * 整合了搜索、主题切换、内容加载等所有功能
+ * @version 2.1 (移除背景设置模块)
  */
 
 // ==================== 工具函数模块 ====================
@@ -225,7 +225,6 @@ const SearchModule = {
 
         // 表单提交
         this.elements.form.addEventListener('submit', (e) => {
-            // 阻止表单默认提交行为
             e.preventDefault();
 
             const keyword = this.elements.input.value.trim();
@@ -249,133 +248,6 @@ const SearchModule = {
     }
 };
 
-// ==================== 背景设置模块 ====================
-const BackgroundModule = {
-    STORAGE_KEY: 'backgroundSettings',
-    BING_API_URL: 'https://bing.img.run/rand.php',
-    elements: null,
-
-    init() {
-        this.elements = {
-            panel: Utils.$('settings-panel'),
-            overlay: Utils.$('settings-overlay'),
-            urlInput: Utils.$('bg-image-url'),
-            opacitySlider: Utils.$('bg-opacity-slider'),
-            opacityVal: Utils.$('bg-opacity-value'),
-            applyBtn: Utils.$('apply-bg-btn'),
-            resetBtn: Utils.$('reset-bg-btn'),
-            body: document.body
-        };
-
-        if (!this.elements.panel) return;
-
-        this._applySettings();
-        this._bindEvents();
-    },
-
-    // 获取设置
-    _getSettings() {
-        return Utils.storage.get(this.STORAGE_KEY, { url: '', opacity: 0.9 });
-    },
-
-    // 应用设置
-    _applySettings() {
-        const { url, opacity } = this._getSettings();
-
-        // 背景图
-        if (url) {
-            const finalUrl = (url === 'bing_daily') ? this.BING_API_URL : url;
-            this.elements.body.style.backgroundImage = `url('${finalUrl}')`;
-            this.elements.body.classList.add('with-custom-bg');
-        } else {
-            this.elements.body.style.backgroundImage = '';
-            this.elements.body.classList.remove('with-custom-bg');
-        }
-
-        // 透明度
-        this.elements.body.style.setProperty('--content-opacity', opacity);
-        if (this.elements.opacitySlider) this.elements.opacitySlider.value = opacity;
-        if (this.elements.opacityVal) this.elements.opacityVal.textContent = `${Math.round(opacity * 100)}%`;
-        if (this.elements.urlInput) {
-            this.elements.urlInput.value = (url && url !== 'bing_daily') ? url : '';
-        }
-    },
-
-    // 保存设置
-    _saveSettings(patch) {
-        const newSettings = { ...this._getSettings(), ...patch };
-        Utils.storage.set(this.STORAGE_KEY, newSettings);
-        this._applySettings();
-    },
-
-    // 切换面板显示
-    _togglePanel(show) {
-        const method = show ? 'add' : 'remove';
-        this.elements.panel.classList[method]('is-visible');
-        this.elements.overlay.classList[method]('is-visible');
-    },
-
-    // 绑定事件
-    _bindEvents() {
-        // 关闭面板（由 SettingsPanelModule 统一处理）
-        this.elements.overlay?.addEventListener('click', () => this._togglePanel(false));
-
-        // 透明度实时预览
-        this.elements.opacitySlider?.addEventListener('input', (e) => {
-            const val = e.target.value;
-            this.elements.body.style.setProperty('--content-opacity', val);
-            this.elements.opacityVal.textContent = `${Math.round(val * 100)}%`;
-        });
-
-        // 透明度松手保存
-        this.elements.opacitySlider?.addEventListener('change', (e) => {
-            this._saveSettings({ opacity: parseFloat(e.target.value) });
-        });
-
-        // 应用背景
-        this.elements.applyBtn?.addEventListener('click', () => {
-            this._saveSettings({
-                url: this.elements.urlInput.value.trim() || 'bing_daily',
-                opacity: parseFloat(this.elements.opacitySlider.value)
-            });
-            this._togglePanel(false);
-        });
-
-        // 重置
-        this.elements.resetBtn?.addEventListener('click', () => {
-            Utils.storage.remove(this.STORAGE_KEY);
-            window.location.reload();
-        });
-    }
-};
-
-// ==================== 设置面板模块（统一管理） ====================
-const SettingsPanelModule = {
-    init() {
-        const settingsBtn = Utils.$('settings-btn');
-        const mobileSettingsBtn = Utils.$('mobile-settings-btn');
-        const closeBtn = Utils.$('close-settings-btn');
-        const panel = Utils.$('settings-panel');
-        const overlay = Utils.$('settings-overlay');
-
-        if (!panel) return;
-
-        const togglePanel = (show) => {
-            const method = show ? 'add' : 'remove';
-            panel.classList[method]('is-visible');
-            overlay.classList[method]('is-visible');
-        };
-
-        // 打开设置面板
-        settingsBtn?.addEventListener('click', () => togglePanel(true));
-        mobileSettingsBtn?.addEventListener('click', () => togglePanel(true));
-
-        // 关闭设置面板
-        closeBtn?.addEventListener('click', () => togglePanel(false));
-        overlay?.addEventListener('click', () => togglePanel(false));
-    }
-};
-
 // ==================== 内容加载模块 ====================
 const ContentModule = {
     linksContainer: null,
@@ -393,7 +265,6 @@ const ContentModule = {
         this._loadData();
     },
 
-    // 加载数据
     async _loadData() {
         try {
             const response = await fetch('./data.json');
@@ -406,7 +277,6 @@ const ContentModule = {
         }
     },
 
-    // 渲染链接（使用片段减少回流）
     _renderLinks(data) {
         const links = data?.links || {};
         const fragment = document.createDocumentFragment();
@@ -486,7 +356,6 @@ const ContentModule = {
             </div>`;
     },
 
-    // 卡片点击处理
     _handleCardClick(e) {
         const card = e.target.closest('.xe-widget');
         if (card) {
@@ -495,12 +364,10 @@ const ContentModule = {
         }
     },
 
-    // 站内搜索
     _setupSiteSearch() {
         const searchInput = Utils.$('search-text');
         if (!searchInput) return;
 
-        // 防抖搜索
         const debouncedSearch = Utils.debounce(() => {
             const keyword = searchInput.value.trim().toLowerCase();
             const type = document.querySelector('input[name="type"]:checked')?.value;
@@ -517,7 +384,6 @@ const ContentModule = {
 
         searchInput.addEventListener('input', debouncedSearch);
 
-        // 切换搜索类型时重置
         Utils.$$('input[name="type"]').forEach(input => {
             input.addEventListener('change', () => {
                 if (document.querySelector('input[name="type"]:checked')?.value !== 'site-search') {
@@ -529,23 +395,16 @@ const ContentModule = {
         });
     },
 
-    // 过滤内容 - 性能优化版
     _filterContent(keyword) {
-        // 1. 筛选匹配项
         const matched = this.itemsCache.filter(item =>
             item.name.includes(keyword) || item.desc.includes(keyword)
         );
 
-        // 2. 【关键修改】限制渲染数量
-        // 如果匹配结果超过 60 个，只渲染前 60 个。
-        // 渲染 500+ 个 DOM 节点是导致输入卡顿的元凶。
         const MAX_DISPLAY = 60;
         const displayItems = matched.slice(0, MAX_DISPLAY);
 
-        // 3. 生成 HTML
         let cardsHTML = displayItems.map(item => item.html).join('');
 
-        // 4. 如果结果被截断，可以加个提示 (可选)
         if (matched.length > MAX_DISPLAY) {
             cardsHTML += `
                 <div class="col-sm-12" style="padding: 20px; text-align: center; color: var(--text-secondary);">
@@ -554,7 +413,6 @@ const ContentModule = {
             `;
         }
         
-        // 5. 如果没有结果
         if (matched.length === 0) {
              cardsHTML = `
                 <div class="col-sm-12" style="padding: 40px; text-align: center;">
@@ -574,13 +432,11 @@ const BackToTopModule = {
         const btn = Utils.$('back-to-top');
         if (!btn) return;
 
-        // 节流滚动事件
         const throttledScroll = Utils.throttle(() => {
             btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
         }, 200);
         window.addEventListener('scroll', throttledScroll);
 
-        // 点击返回顶部
         btn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
@@ -589,15 +445,12 @@ const BackToTopModule = {
 
 // ==================== 应用初始化 ====================
 document.addEventListener('DOMContentLoaded', () => {
-    // 按依赖顺序初始化各模块
     ThemeModule.init();
-    SettingsPanelModule.init();
-    BackgroundModule.init();
     SearchModule.init();
     ContentModule.init();
     BackToTopModule.init();
 
-    // 延迟加载非关键脚本（今日诗词）
+    // 延迟加载非关键脚本
     if (document.getElementById('jinrishici-sentence')) {
         setTimeout(() => {
             const script = document.createElement('script');

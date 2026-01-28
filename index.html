@@ -2,7 +2,6 @@
 <html lang="zh-CN">
 
 <head>
-    <!-- 头部元信息：定义文档类型、字符集、兼容模式、视口、作者、标题、关键词和描述 -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,19 +11,16 @@
     <meta name="description" content="一个简洁、优雅的个人网址导航页面" />
     <link rel="shortcut icon" href="./favicon.ico" />
 
-    <!-- 样式表链接 -->
     <link rel="stylesheet" href="./asserts/css/app.css" />
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" />
     <link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css" />
 
-    <!-- 核心脚本：defer使其不阻塞HTML解析 -->
     <script defer src="https://fastly.jsdelivr.net/npm/lozad"></script>
     <script defer src="https://cdn.staticfile.net/jquery/3.6.0/jquery.min.js"></script>
     <script defer src="https://fastly.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>
     
-    <!-- 社交媒体/分享预览元信息 -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="DSTBP - WebNav" />
     <meta property="og:description" content="个人网址集" />
@@ -35,11 +31,8 @@
 </head>
 
 <body class="page-body">
-    <!-- 页面容器 -->
     <div class="page-container">
-        <!-- 主内容区 -->
         <div class="main-content">
-            <!-- 顶部导航栏 -->
             <nav class="navbar user-info-navbar" id="navbar" role="navigation">
                 <ul class="user-info-menu left-links list-inline list-unstyled">
                     <li class="menu-item">
@@ -60,21 +53,12 @@
                             <span>Check</span>
                         </a>
                     </li>
-                    <!-- 设置按钮 -->
-                    <li class="menu-item">
-                        <a id="settings-btn" style="cursor: pointer;">
-                            <i class="fa-solid fa-cog"></i>
-                            <span>背景设置</span>
-                        </a>
-                    </li>
-                    <!-- 夜间模式切换按钮 -->
                     <li class="menu-item night-mode-btn">
                         <a onclick="switchNightMode()" style="cursor: pointer;">
                             <i class="fa-solid fa-circle-half-stroke"></i>
                             <span>夜间模式</span>
                         </a>
                     </li>
-                    <!-- 今日诗词 - 移动端隐藏 - 延迟加载 -->
                     <li class="menu-item desktop-only">
                         <i class="fa-solid fa-message" style="margin-right: 6px"></i>
                         <span id="jinrishici-sentence">正在加载今日诗词....</span>
@@ -82,7 +66,6 @@
                 </ul>
             </nav>
 
-            <!-- 搜索框区域 -->
             <div id="search" class="s-search">
                 <div id="search-list" class="hide-type-list">
                     <div class="s-type">
@@ -96,7 +79,6 @@
                         </div>
                     </div>
 
-                    <!-- 搜索分组：常用 -->
                     <div class="search-group group-a">
                         <span class="type-text">常用</span>
                         <ul class="search-type">
@@ -137,7 +119,6 @@
                         </ul>
                     </div>
 
-                    <!-- 搜索分组：搜索 -->
                     <div class="search-group group-b">
                         <span class="type-text">搜索</span>
                         <ul class="search-type">
@@ -179,7 +160,6 @@
                         </ul>
                     </div>
                     
-                    <!-- 搜索分组：工具 -->
                     <div class="search-group group-c">
                         <span class="type-text">工具</span>
                         <ul class="search-type">
@@ -202,7 +182,6 @@
                         </ul>
                     </div>
 
-                    <!-- 搜索分组：社区 -->
                     <div class="search-group group-d">
                         <span class="type-text">社区</span>
                         <ul class="search-type">
@@ -252,7 +231,6 @@
                         </ul>
                     </div>
 
-                    <!-- 搜索分组：生活 -->
                     <div class="search-group group-e">
                         <span class="type-text">生活</span>
                         <ul class="search-type">
@@ -288,29 +266,23 @@
                                     value="https://www.douyin.com/search/" data-placeholder="搜索你感兴趣的内容" /><label
                                     for="type-douyin"><span style="color: #2e1a2d">抖音</span></label>
                             </li>
-                            <!-- <li><input hidden type="radio" name="type" id="type-快递100" value="http://www.kuaidi100.com/?"
-                                data-placeholder="快递100"><label for="type-快递100"><span style="color:#3278e6">快递100</span></label></li> -->
                         </ul>
                     </div>
                 </div>
 
-                <!-- 搜索表单 -->
                 <form action="?s=" method="get" target="_blank" id="super-search-fm">
                     <input type="text" id="search-text" placeholder="输入关键字搜索" style="outline: 0"
                         autocomplete="off" /><button type="submit"><i class="fa fa-search"></i></button>
                 </form>
-                <!-- 在新标签页打开选项 -->
                 <div class="set-check hidden-xs">
                     <input type="checkbox" id="set-search-blank" class="bubble-3" autocomplete="off" />
                 </div>
             </div>
 
-            <!-- 链接内容区 (将由JS动态生成) -->
             <div id="links-container"></div>
         </div>
     </div>
 
-    <!-- 返回顶部按钮 -->
     <button id="back-to-top" class="liquid-button" type="button" title="返回顶部" aria-label="返回顶部">
         <span class="visually-hidden">返回顶部</span>
         <div id="back-to-top-liquid" class="liquid-button__liquid" aria-hidden="true">
@@ -322,36 +294,9 @@
         </div>
     </button>
 
-    <!-- 应用主文件（defer不阻塞HTML解析，但保证顺序） -->
     <script defer src="./asserts/js/app.js"></script>
     <script type="module" src="./asserts/js/back-to-top-liquid.js"></script>
 
-    <!-- 设置面板 -->
-    <div id="settings-panel" class="settings-panel">
-        <div class="settings-panel-header">
-            <h4>背景设置</h4>
-            <button id="close-settings-btn" class="close-btn">&times;</button>
-        </div>
-        <div class="settings-panel-body">
-            <div class="setting-item">
-                <label for="bg-image-url">自定义背景</label>
-                <input type="text" id="bg-image-url" placeholder="输入图片 URL 或留空">
-            </div>
-            <div class="setting-item">
-                <label for="bg-opacity-slider">内容区域不透明度: <span id="bg-opacity-value">90%</span></label>
-                <input type="range" id="bg-opacity-slider" min="0.1" max="1" step="0.01" value="0.9">
-            </div>
-            <div class="setting-item">
-                <button id="apply-bg-btn">应用背景 (留空则使用必应壁纸)</button>
-            </div>
-            <div class="setting-item">
-                <button id="reset-bg-btn">恢复默认</button>
-            </div>
-        </div>
-    </div>
-    <div id="settings-overlay" class="settings-overlay"></div>
-
-    <!-- 侧边栏脚本：async不阻塞，不保证顺序 -->
     <script async src="./asserts/js/sidebar.min.js"></script>
 </body>
 
