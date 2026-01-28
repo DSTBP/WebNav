@@ -1175,6 +1175,12 @@
         "desc": "动画图解、一键运行的数据结构与算法教程"
       },
       {
+        "name": "CodeDex",
+        "url": "https://www.codedex.io/home",
+        "img": "codedex.png",
+        "desc": "Codédex 是一个学习编程的平台，提供Python、HTML、CSS 和JavaScript 等语言的课程，支持各年龄段用户自主学习和实践"
+      },
+      {
         "name": "看雪论坛",
         "url": "https://bbs.kanxue.com/",
         "img": "kanxue.png",
