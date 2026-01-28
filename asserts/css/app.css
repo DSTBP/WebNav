@@ -1,60 +1,61 @@
 /**
  * WebNav - 统一样式文件
  * 整合了所有样式：基础、暗色主题、动画、响应式
- * @version 2.4 (全浅色系/高级灰风格优化版)
+ * @version 3.0 (黑白灰纯净版 - 去除蓝灰)
  */
 
 /* ==================== CSS 变量定义 ==================== */
 :root {
-    /* 主题色 - 保持品牌色，但日间模式下更柔和 */
-    --primary-gradient: linear-gradient(135deg, #34495e 0%, #41586e 100%); /* 稍微提亮的主题色 */
-    --primary-color: #34495e;
-    --primary-dark: #2c3e50;
-    --secondary-color: #5d6d7e;
+    /* ========== 主题色系：纯粹黑白灰 ========== */
+    /* 渐变：改为经典的深灰到黑，不再有蓝色 */
+    --primary-gradient: linear-gradient(135deg, #434343 0%, #1a1a1a 100%);
+    
+    /* 主色：纯深灰 */
+    --primary-color: #333333;
+    --primary-dark: #000000;
+    --secondary-color: #555555;
     --accent-color: #000000;
 
-    /* 文字颜色 */
-    --text-primary: #2c3e50; /* 深灰蓝，比纯黑更柔和 */
-    --text-secondary: #607d8b; /* 蓝灰色，提升质感 */
-    --text-gray: #95a5a6;
-    --text-light: #bdc3c7;
+    /* 文字颜色 - 纯中性灰 */
+    --text-primary: #2c2c2c;
+    --text-secondary: #5a5a5a;
+    --text-gray: #888888;
+    --text-light: #cccccc;
 
-    /* 背景色 - 日间浅色系 */
-    --bg-primary: #f5f7fa;
-    --bg-white: rgba(255, 255, 255, 0.85); /* 侧边栏/卡片背景 */
+    /* 背景色 */
+    --bg-primary: #f5f5f7;
+    --bg-white: rgba(255, 255, 255, 0.95);
     
-    /* ========== 组件颜色：日间玻璃质感 ========== */
-    /* 顶部栏/侧边栏：极浅的半透明白，通透感强 */
-    --surface-nav: rgba(255, 255, 255, 0.65); 
-    
-    /* 输入框：比导航栏稍实一点 */
+    /* ========== 组件表面颜色 (日间 - 磨砂白) ========== */
+    /* 顶部栏：纯白高透 */
+    --surface-nav: rgba(255, 255, 255, 0.7); 
+    /* 输入框：稍微实一点 */
     --surface-input: rgba(255, 255, 255, 0.75);
-    
-    /* 弹窗/面板：高不透明度 */
+    /* 弹窗/面板：高亮白 */
     --surface-popover: rgba(255, 255, 255, 0.95);
     --surface-panel: rgba(255, 255, 255, 0.9);
     
-    /* 卡片：很浅的半透明白 */
-    --card-surface: rgba(255, 255, 255, 0.7); 
+    /* 卡片背景：通透的白 */
+    --card-surface: rgba(255, 255, 255, 0.8);
     --card-surface-hover: rgba(255, 255, 255, 0.95);
     
-    /* 边框 - 极淡 */
-    --border-light: rgba(0, 0, 0, 0.05); 
-    --border-lighter: rgba(0, 0, 0, 0.03);
-    --border-dark: rgba(0, 0, 0, 0.08);
+    /* 边框颜色 - 纯灰 */
+    --border-light: rgba(0, 0, 0, 0.08); 
+    --border-lighter: rgba(0, 0, 0, 0.05);
+    --border-dark: rgba(0, 0, 0, 0.15);
 
-    /* 阴影 - 柔和扩散 */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.03);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
-    --shadow-primary: 0 4px 12px rgba(44, 62, 80, 0.1);
-    --shadow-primary-lg: 0 8px 20px rgba(44, 62, 80, 0.15);
+    /* 阴影 - 纯黑投影 */
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+    --shadow-primary: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-primary-lg: 0 6px 16px rgba(0, 0, 0, 0.2);
 
     /* 圆角 */
-    --radius-sm: 6px;
-    --radius-md: 8px;
-    --radius-lg: 12px;
-    --radius-xl: 16px; /* 更圆润 */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 10px;
 
     /* 间距 */
     --spacing-xs: 6px;
@@ -64,68 +65,62 @@
     --spacing-xl: 30px;
 
     /* 过渡 */
-    --transition-base: all 0.25s ease;
-    --transition-cubic: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --transition-base: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    --transition-cubic: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* 主题扩展变量 */
     --theme-transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    --scrollbar-thumb: rgba(0, 0, 0, 0.3);
+    --scrollbar-thumb-hover: rgba(0, 0, 0, 0.5);
 
-    /* 滚动条 */
-    --scrollbar-thumb: rgba(0, 0, 0, 0.2);
-    --scrollbar-thumb-hover: rgba(0, 0, 0, 0.4);
-
-    /* 日间背景纹理 (保持不变) */
+    /* 日间背景纹理 (对应 style.css 的亮色逻辑) */
     --app-bg-complex: 
-        radial-gradient(at 50% 0, rgba(0,0,0,0.02), transparent 70%),
+        radial-gradient(at 50% 0, rgba(0,0,0,0.03), transparent 70%),
         repeating-conic-gradient(
-            rgba(0, 0, 0, 0.03) 0% 25%,
+            rgba(0, 0, 0, 0.04) 0% 25%,
             transparent 0% 50%
         ) 0 0 / 0.5em 0.5em,
         #f2f4f8;
 }
 
+
 :root[data-theme="dark"],
 body[data-theme="dark"] {
-    /* 文字颜色 - 稍微柔和的白，不刺眼 */
-    --text-primary: #ecf0f1;
-    --text-secondary: #bdc3c7;
-    --text-gray: #95a5a6;
+    /* 文字颜色 - 亮银灰 */
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --text-gray: #707070;
+    --bg-primary: #3b3b3b; /* 对应 style.css 的底色 */
+    --bg-white: rgba(40, 40, 40, 0.95);
     
-    /* 背景色 - 基础深灰 */
-    --bg-primary: #3b3b3b;
-    --bg-white: rgba(255, 255, 255, 0.1);
+    /* ========== 组件表面颜色 (夜间 - 磨砂黑) ========== */
+    /* 顶部栏：深黑半透，与背景的 #3b3b3b 拉开层次 */
+    --surface-nav: rgba(20, 20, 20, 0.7);
+    /* 输入框：更深的黑 */
+    --surface-input: rgba(10, 10, 10, 0.6);
+    /* 弹窗：亮一点的灰 */
+    --surface-popover: rgba(45, 45, 45, 0.95);
+    --surface-panel: rgba(40, 40, 40, 0.9);
     
-    /* ========== 组件颜色：夜间高级灰 (关键修改) ========== */
-    /* 顶部栏/侧边栏：不再是深蓝黑，改为半透明的“中灰色” */
-    /* 配合模糊效果，会呈现出一种透亮的深灰玻璃感 */
-    --surface-nav: rgba(80, 80, 80, 0.6); 
+    /* 卡片背景：微透的深黑，不再用蓝灰 */
+    --card-surface: rgba(0, 0, 0, 0.2); 
+    --card-surface-hover: rgba(0, 0, 0, 0.4);
     
-    /* 输入框：更浅一点的灰，提升可读性 */
-    --surface-input: rgba(100, 100, 100, 0.4);
-    
-    /* 弹窗/面板 */
-    --surface-popover: rgba(60, 60, 60, 0.9);
-    --surface-panel: rgba(60, 60, 60, 0.85);
-    
-    /* 卡片：非常通透的白雾色 */
-    --card-surface: rgba(255, 255, 255, 0.06); 
-    --card-surface-hover: rgba(255, 255, 255, 0.12);
-    
-    /* 边框 - 亮白色微光 */
-    --border-light: rgba(255, 255, 255, 0.08); 
+    /* 边框 - 亮灰细线 */
+    --border-light: rgba(255, 255, 255, 0.1); 
     --border-lighter: rgba(255, 255, 255, 0.05);
-    --border-dark: rgba(255, 255, 255, 0.12);
+    --border-dark: rgba(255, 255, 255, 0.15);
     
-    /* 阴影 */
-    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.4);
-    --shadow-primary: 0 4px 12px rgba(0, 0, 0, 0.4);
-    --shadow-primary-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
-
-    /* 滚动条 */
+    /* 阴影 - 纯黑 */
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 18px 36px rgba(0, 0, 0, 0.7);
+    --shadow-primary: 0 12px 32px rgba(0, 0, 0, 0.7);
+    
     --scrollbar-thumb: rgba(255, 255, 255, 0.2);
     --scrollbar-thumb-hover: rgba(255, 255, 255, 0.4);
 
-    /* 夜间背景纹理 (保持不变) */
+    /* 夜间背景纹理 (提取自 style.css) */
     --app-bg-complex:
         radial-gradient(at 50% 0, transparent, #080808),
         repeating-conic-gradient(
@@ -133,6 +128,10 @@ body[data-theme="dark"] {
             transparent 0% 50%
         ) 0 0 / 0.375em 0.375em,
         #3b3b3b;
+        
+    /* 修正渐变色：夜间模式的主题色改为亮白渐变，或者保持深色但反差更大 */
+    /* 这里为了“摒弃蓝灰”，我们使用纯黑背景下的高亮对比 */
+    --primary-gradient: linear-gradient(135deg, #505050 0%, #2b2b2b 100%);
 }
 
 /* ==================== 基础样式 ==================== */
@@ -140,12 +139,11 @@ html { height: 100%; }
 
 * {
     user-select: none;
-    box-sizing: border-box;
 }
 
 body {
     height: 100%;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
     background: transparent !important; 
     color: var(--text-primary);
     transition: color var(--theme-transition);
@@ -165,7 +163,7 @@ body::before {
     background: var(--app-bg-complex);
     background-attachment: fixed;
     pointer-events: none;
-    transition: background 0.5s ease; /* 背景切换更柔和 */
+    transition: background 0.35s ease;
 }
 
 body:not(.theme-ready) {
@@ -193,7 +191,6 @@ label {
 .col-sm-3 {
     width: 20% !important;
     float: left !important;
-    padding: 0 10px; /* 增加一点间距 */
 }
 
 .page-container {
@@ -223,24 +220,25 @@ label {
     padding-right: 60px;
 }
 
-/* ==================== 顶部导航栏 (浅色系风格优化) ==================== */
+/* ==================== 顶部导航栏 (纯净版) ==================== */
 .user-info-navbar {
     background: var(--surface-nav);
-    
     min-height: 0;
     padding: 0;
     margin: 0 !important;
     margin-bottom: var(--spacing-xl) !important;
     border-radius: 0 !important;
     
-    /* 极简边框和阴影 */
+    /* 阴影更淡 */
     box-shadow: var(--shadow-sm);
+    
+    /* 边框 */
     border: none;
     border-bottom: 1px solid var(--border-light);
     
-    /* 强力磨砂玻璃效果 */
-    backdrop-filter: blur(20px) saturate(110%);
-    -webkit-backdrop-filter: blur(20px) saturate(110%);
+    /* 磨砂效果 */
+    backdrop-filter: blur(20px) saturate(100%); /* 降低饱和度，保持黑白灰质感 */
+    -webkit-backdrop-filter: blur(20px) saturate(100%);
     
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
@@ -262,11 +260,11 @@ label {
 
 .menu-item a {
     padding: 10px 16px;
-    border-radius: var(--radius-xl); /* 更圆润 */
+    border-radius: var(--radius-md);
     background: transparent;
-    border: 1px solid transparent;
+    border: 1px solid transparent; /* 预留边框位置避免抖动 */
     will-change: transform, background;
-    transition: all 0.25s ease;
+    transition: background 0.2s, color 0.2s, transform 0.2s, border-color 0.2s;
     color: var(--text-primary);
     font-weight: 500;
     display: flex;
@@ -275,16 +273,17 @@ label {
 }
 
 .menu-item a:hover {
-    background: rgba(0,0,0,0.04);
-    border-color: var(--border-light);
+    /* 悬停效果：日间为浅灰，夜间为半透白 */
+    background: rgba(128, 128, 128, 0.1);
     color: var(--primary-color);
+    border-color: var(--border-light);
     transform: translateY(-1px);
 }
 
-/* 夜间模式下悬停 */
 body[data-theme="dark"] .menu-item a:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     color: #fff;
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .menu-item a:active {
@@ -308,10 +307,15 @@ body[data-theme="dark"] .menu-item a:hover {
     font-size: 1.75rem;
 }
 
-/* ==================== 搜索框区域 ==================== */
+.menu-item.desktop-only i {
+    font-size: 1.75rem;
+    margin-right: var(--spacing-xs);
+}
+
+/* ==================== 搜索框区域 (去蓝化) ==================== */
 #search {
     max-width: 700px;
-    margin: 60px auto 30px; /* 增加底部间距 */
+    margin: 60px auto 20px;
 }
 
 #search form {
@@ -324,57 +328,59 @@ body[data-theme="dark"] .menu-item a:hover {
 
 #search-text {
     flex: 1;
-    border-radius: 18px 0 0 18px !important;
+    border-radius: 15px 0 0 15px !important;
     margin: 0;
-    height: 52px !important;
-    padding: 9pt 15px;
+    height: 50px !important;
+    padding: 9pt;
     width: 100%;
-    font-size: 1.1rem;
-    
-    /* 搜索框颜色 */
+    font-size: 1pc;
     border: 1px solid var(--border-light);
     background: var(--surface-input);
     color: var(--text-primary);
-    
     box-shadow: var(--shadow-md);
-    backdrop-filter: blur(12px); /* 搜索框也加毛玻璃 */
-    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    transition: box-shadow 0.2s, transform 0.2s, background-color var(--theme-transition), color var(--theme-transition), border-color var(--theme-transition);
 }
 
 #search-text:focus {
     outline: none;
     box-shadow: var(--shadow-primary);
     transform: translateY(-2px);
-    background: var(--surface-popover); /* 聚焦时更实 */
-    border-color: var(--border-dark);
+    background: var(--bg-white);
+    border-color: rgba(0,0,0,0.2);
+}
+
+body[data-theme="dark"] #search-text:focus {
+    background: rgba(20, 20, 20, 0.9);
+    border-color: rgba(255,255,255,0.3);
 }
 
 #search-text:hover {
     box-shadow: var(--shadow-lg);
 }
 
+/* 搜索按钮 */
 #search button {
-    border-radius: 0 18px 18px 0;
+    border-radius: 0 15px 15px 0;
     margin: 0;
-    height: 52px !important;
-    width: 64px !important;
-    min-width: 64px !important;
+    height: 50px !important;
+    width: 60px !important;
+    min-width: 60px !important;
     position: static;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    /* 引用新的黑灰渐变 */
     background: var(--primary-gradient);
     border: 0;
     transition: var(--transition-cubic);
-    box-shadow: var(--shadow-md);
 }
 
 #search button:hover {
-    filter: brightness(1.1);
+    /* 悬停时加深 */
+    filter: brightness(1.2);
     cursor: pointer;
-    transform: scale(1.02);
-    box-shadow: var(--shadow-lg);
+    transform: scale(1.05);
 }
 
 #search button i {
@@ -418,25 +424,25 @@ body[data-theme="dark"] .menu-item a:hover {
 .s-type-list {
     display: none;
     position: absolute;
-    top: 36px;
-    padding: 8px 0;
-    width: 75px;
+    top: 31px;
+    padding: 6px 0;
+    width: 70px;
     background: var(--surface-popover);
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-md);
     border: 1px solid var(--border-light);
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(12px);
 }
 
 .s-type-list:before {
     position: absolute;
     top: -16px;
-    left: 28px;
+    left: 24px;
     content: '';
     display: block;
     width: 0;
     height: 0;
-    border: 8px solid transparent;
+    border: 10px solid transparent;
     border-bottom-color: var(--surface-popover);
 }
 
@@ -446,16 +452,16 @@ body[data-theme="dark"] .menu-item a:hover {
 
 .s-type-list label {
     display: block;
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 0;
-    padding: 8px 0;
+    padding: 6px 0;
     cursor: pointer;
     transition: var(--transition-base);
-    border-radius: 6px;
-    margin: 4px 6px;
-    color: var(--text-secondary);
+    border-radius: 5px;
+    margin: 2px 5px;
+    color: var(--text-primary);
 }
 
 .s-type-list label:hover {
@@ -472,7 +478,6 @@ body[data-theme="dark"] .menu-item a:hover {
     line-height: 31px;
     font-weight: 600;
     color: var(--text-primary);
-    opacity: 0.8;
 }
 
 .type-text:after {
@@ -498,28 +503,28 @@ body[data-theme="dark"] .menu-item a:hover {
 
 .search-type li label {
     display: inline-block;
-    padding: 0 12px;
+    padding: 0 11px;
     font-size: 14px;
-    line-height: 32px;
-    border-radius: 12px 12px 0 0;
+    line-height: 31px;
+    border-radius: 8px 8px 0 0;
     cursor: pointer;
     transition: var(--transition-base);
-    background: rgba(255,255,255,0.3); /* 更通透的标签背景 */
-    margin: 0 4px;
-    color: var(--text-secondary);
+    background: rgba(128,128,128,0.1);
     border: 1px solid transparent;
+    margin: 0 2px;
+    color: var(--text-secondary);
 }
 
 body[data-theme="dark"] .search-type li label {
     background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.05);
 }
 
 .search-type input:checked + label,
 .search-type input:hover + label {
     background: var(--primary-gradient) !important;
-    color: #fff !important;
-    box-shadow: var(--shadow-sm);
-    transform: translateY(-2px);
+    color: #fff;
+    border-color: transparent;
 }
 
 .search-type input:checked + label span {
@@ -541,64 +546,72 @@ body[data-theme="dark"] .search-type li label {
     transition: var(--transition-base);
 }
 
-/* ==================== 链接卡片 (更轻盈) ==================== */
+/* ==================== 链接卡片 (纯净版) ==================== */
 .box2 {
-    height: 90px;
+    height: 86px;
     cursor: pointer;
     border-radius: var(--radius-xl);
     padding: 0 var(--spacing-xl);
-    
     background: var(--card-surface);
     border: 1px solid var(--border-light);
     margin: 20px 0 0 0;
     
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
     
     box-shadow: var(--shadow-sm);
     position: relative;
     will-change: transform, box-shadow;
     transform: translate3d(0, 0, 0); 
     
-    backdrop-filter: blur(8px); /* 卡片磨砂 */
+    backdrop-filter: blur(5px);
 }
 
 .box2:hover {
-    transform: translateY(-6px);
+    transform: translateY(-4px);
     background: var(--card-surface-hover);
-    box-shadow: var(--shadow-primary-lg);
+    box-shadow: var(--shadow-primary);
     border-color: var(--border-dark);
 }
 
-/* 移除之前的黑色遮罩 hover 效果，改为纯粹的颜色变化，更干净 */
+/* 移除之前的蓝色阴影，夜间模式悬停时用白色光晕 */
+body[data-theme="dark"] .box2:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
 .box2::before {
-    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.02);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: inherit;
+}
+
+.box2:hover::before {
+    opacity: 1;
 }
 
 .xe-comment-entry img {
     float: left;
     display: block;
-    margin-right: 15px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-.box2:hover .xe-comment-entry img {
-    transform: rotate(360deg);
+    margin-right: 10px;
 }
 
 .xe-comment {
     transform: translateY(-50%);
     position: absolute;
-    margin-left: 55px; /* 调整间距 */
+    margin-left: 50px;
     top: 50%;
-    width: calc(100% - 85px); /* 防止文字溢出 */
 }
 
 .xe-comment p {
     margin-bottom: 0;
-    font-size: 13px;
-    color: var(--text-gray);
-    line-height: 1.4;
+    margin-right: 15px;
 }
 
 .xe-widget.xe-conversations {
@@ -608,11 +621,9 @@ body[data-theme="dark"] .search-type li label {
     padding: 15px;
 }
 
-/* 卡片标题 */
+/* 卡片标题颜色 */
 .xe-user-name strong {
     color: var(--text-primary) !important;
-    font-size: 15px;
-    font-weight: 600;
 }
 
 .overflowClip_1 {
@@ -621,6 +632,7 @@ body[data-theme="dark"] .search-type li label {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+    margin-right: 4px;
 }
 
 .overflowClip_2 {
@@ -632,9 +644,7 @@ body[data-theme="dark"] .search-type li label {
 }
 
 .img-circle {
-    padding: 0; /* 移除内边距 */
-    width: 40px;
-    height: 40px;
+    padding: 7px 0;
 }
 
 .visually-hidden {
@@ -651,9 +661,9 @@ body[data-theme="dark"] .search-type li label {
 
 /* ==================== 液态金属按钮基础 ==================== */
 .liquid-button {
-    --liquid-size: 56px; /* 稍微调小一点 */
-    --liquid-core-size: 42px;
-    --liquid-icon-size: 20px;
+    --liquid-size: 60px;
+    --liquid-core-size: 46px;
+    --liquid-icon-size: 22px;
     border: none;
     background: transparent;
     padding: 0;
@@ -681,9 +691,9 @@ body[data-theme="dark"] .search-type li label {
     transform: translate(-50%, -50%);
     width: var(--liquid-core-size);
     height: var(--liquid-core-size);
-    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%); /* 蓝色系内核 */
+    background: linear-gradient(#333, #000); /* 纯黑 */
     border-radius: 50%;
-    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2);
     z-index: 0;
 }
 
@@ -709,11 +719,11 @@ body[data-theme="dark"] .search-type li label {
     content: "";
     position: absolute;
     inset: 0;
-    padding: 2px;
+    padding: 3px;
     border-radius: inherit;
-    /* 蓝色系流光 */
-    background: conic-gradient(from 180deg, #4facfe, #00f2fe, #43e97b, #4facfe); 
-    filter: grayscale(0.5);
+    /* 渐变环改为灰白，去彩色 */
+    background: conic-gradient(from 180deg, #999, #fff, #666, #fff, #999);
+    filter: grayscale(1);
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
     mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
@@ -728,7 +738,7 @@ body[data-theme="dark"] .search-type li label {
 .liquid-button__icon {
     width: var(--liquid-icon-size);
     height: var(--liquid-icon-size);
-    fill: #fff;
+    fill: #d5d5d5;
 }
 
 /* ==================== 返回顶部按钮 ==================== */
@@ -759,33 +769,28 @@ body[data-theme="dark"] .search-type li label {
 }
 
 .panel-body {
-    border-radius: var(--radius-lg);
+    border-radius: 4px;
     background: var(--surface-panel);
     padding: 15px var(--spacing-xl) !important;
     margin: var(--spacing-xl) var(--spacing-xl) var(--spacing-xl) 0;
     font-size: 1.45rem;
     color: var(--text-primary);
     line-height: 24px;
-    border: 1px solid var(--border-light);
-    backdrop-filter: blur(10px);
 }
 
 .panel-body h4 {
     font-weight: 700;
     font-size: 1.75rem;
     margin: 16px 0;
-    color: var(--text-primary);
 }
 
 .panel-body i {
     margin-right: var(--spacing-sm);
-    color: var(--secondary-color) !important;
 }
 
 .tooltip-inner {
     border-radius: 4px !important;
     padding: 6px 10px !important;
-    background-color: rgba(0,0,0,0.8);
 }
 
 ::-webkit-scrollbar {
@@ -807,7 +812,7 @@ body[data-theme="dark"] .search-type li label {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -843,8 +848,8 @@ body[data-theme="dark"] .search-type li label {
 }
 
 #search button:hover::before {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
 }
 
 .logo-env:hover .logo i {
@@ -862,7 +867,6 @@ body[data-theme="dark"] .search-type li label {
 }
 
 /* ==================== 响应式设计 ==================== */
-/* 桌面端导航栏布局 */
 @media screen and (min-width: 769px) {
     .navbar.user-info-navbar .user-info-menu {
         justify-content: flex-start;
@@ -878,14 +882,12 @@ body[data-theme="dark"] .search-type li label {
     }
 }
 
-/* 中等屏幕 */
 @media (max-width: 1200px) {
     .col-sm-3 {
         width: 25% !important;
     }
 }
 
-/* 平板 */
 @media (max-width: 900px) {
     .main-content > #search,
     .main-content > #links-container {
@@ -905,16 +907,7 @@ body[data-theme="dark"] .search-type li label {
 
     #search-text {
         border-radius: 12px;
-        height: 48px !important;
-    }
-    
-    #search button {
-        height: 48px !important;
-        border-radius: 0 12px 12px 0;
-    }
-    
-    #search-text {
-        border-radius: 12px 0 0 12px !important;
+        height: 45px;
     }
 
     .box2 {
@@ -924,7 +917,6 @@ body[data-theme="dark"] .search-type li label {
 
     .navbar.user-info-navbar {
         padding: 6px 15px;
-        /* 移动端背景稍微实一点 */
         background: var(--surface-nav);
         backdrop-filter: blur(16px);
         border-bottom: 1px solid var(--border-light);
@@ -968,8 +960,7 @@ body[data-theme="dark"] .search-type li label {
         font-size: 0.85rem;
         text-align: center;
         border-radius: 8px;
-        /* 移动端按钮：半透明白 */
-        background: rgba(255, 255, 255, 0.2); 
+        background: rgba(255, 255, 255, 0.4); 
         border: 1px solid var(--border-light);
         transition: all 0.3s ease;
         white-space: nowrap;
@@ -979,11 +970,6 @@ body[data-theme="dark"] .search-type li label {
         justify-content: center;
         min-width: 25px;
         min-height: 25px;
-    }
-    
-    body[data-theme="dark"] .navbar.user-info-navbar .user-info-menu .menu-item a {
-        background: rgba(255, 255, 255, 0.05);
-        border-color: rgba(255, 255, 255, 0.1);
     }
 
     .navbar.user-info-navbar .user-info-menu .menu-item a:hover {
@@ -1004,6 +990,23 @@ body[data-theme="dark"] .search-type li label {
 
     .navbar.user-info-navbar .user-info-menu .menu-item.desktop-only {
         display: none !important;
+    }
+
+    body[data-theme="dark"] .navbar.user-info-navbar {
+        background: var(--surface-nav);
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    body[data-theme="dark"] .navbar.user-info-navbar .user-info-menu .menu-item a {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid var(--border-light);
+        color: #e2e8f0;
+    }
+
+    body[data-theme="dark"] .navbar.user-info-navbar .user-info-menu .menu-item a:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0.2);
+        color: #ffffff;
     }
 }
 
