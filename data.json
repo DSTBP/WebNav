@@ -599,6 +599,12 @@
         "desc": "独一无二的简历生成器，保护你的隐私。安全、可定制可移植、开源且永久免费"
       },
       {
+        "name": "美国地址生成器",
+        "url": "https://www.meiguodizhi.com/usa-address/montana",
+        "img": "meiguodizhi.png",
+        "desc": "免费的美国地址生成器，快速生成真实可用的美国地址，支持50个州和华盛顿特区。适用于测试、开发和数据填充等用途"
+      },
+      {
         "name": "草料二维码",
         "url": "https://cli.im/",
         "img": "cli.png",
