@@ -52,7 +52,7 @@
     --spacing-xl: 30px;
 
     /* 过渡 */
-    --transition-base: all 0.3s ease;
+    --transition-base: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
     --transition-cubic: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     /* 背景透明度 */
@@ -513,16 +513,20 @@ label {
     cursor: pointer;
     border-radius: var(--radius-xl);
     padding: 0 var(--spacing-xl);
-    /* 日间模式下提高对比度 */
     background: var(--card-surface);
     border: 1px solid var(--border-light);
     margin: 20px 0 0 0;
-    will-change: transform, box-shadow;
-    transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
-    /* 加强阴影以提高卡片可见性 */
+    
+    /* 优化 1: 显式声明过渡属性，移除 all */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    
     box-shadow: var(--shadow-lg);
     position: relative;
-    transform: translateZ(0);
+    
+    /* 优化 2: 告诉浏览器这个元素会变化，提前提升到合成层 (硬件加速) */
+    will-change: transform, box-shadow;
+    /* 这是一个 hack，强制开启 GPU 加速，防止闪烁 */
+    transform: translate3d(0, 0, 0);
 }
 
 .box2:hover {
@@ -541,7 +545,7 @@ label {
     bottom: 0;
     background: rgba(0, 0, 0, 0.03);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
     border-radius: inherit;
 }
 

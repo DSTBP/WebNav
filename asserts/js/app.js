@@ -513,7 +513,7 @@ const ContentModule = {
                 this._filterContent(keyword);
             }
             Utils.initLazyLoad();
-        }, 300);
+        }, 200);
 
         searchInput.addEventListener('input', debouncedSearch);
 
@@ -529,13 +529,41 @@ const ContentModule = {
         });
     },
 
-    // 过滤内容 - 使用缓存而不是DOMParser
+    // 过滤内容 - 性能优化版
     _filterContent(keyword) {
+        // 1. 筛选匹配项
         const matched = this.itemsCache.filter(item =>
             item.name.includes(keyword) || item.desc.includes(keyword)
         );
 
-        const cardsHTML = matched.map(item => item.html).join('');
+        // 2. 【关键修改】限制渲染数量
+        // 如果匹配结果超过 60 个，只渲染前 60 个。
+        // 渲染 500+ 个 DOM 节点是导致输入卡顿的元凶。
+        const MAX_DISPLAY = 60;
+        const displayItems = matched.slice(0, MAX_DISPLAY);
+
+        // 3. 生成 HTML
+        let cardsHTML = displayItems.map(item => item.html).join('');
+
+        // 4. 如果结果被截断，可以加个提示 (可选)
+        if (matched.length > MAX_DISPLAY) {
+            cardsHTML += `
+                <div class="col-sm-12" style="padding: 20px; text-align: center; color: var(--text-secondary);">
+                    <p>... 还有 ${matched.length - MAX_DISPLAY} 个结果，请优化关键词 ...</p>
+                </div>
+            `;
+        }
+        
+        // 5. 如果没有结果
+        if (matched.length === 0) {
+             cardsHTML = `
+                <div class="col-sm-12" style="padding: 40px; text-align: center;">
+                    <i class="fa-solid fa-ghost" style="font-size: 3rem; color: var(--text-light); margin-bottom: 15px;"></i>
+                    <p>没有找到相关内容</p>
+                </div>
+            `;
+        }
+
         this.linksContainer.innerHTML = `<div class="row">${cardsHTML}</div>`;
     }
 };
