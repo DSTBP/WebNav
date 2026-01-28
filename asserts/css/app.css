@@ -110,12 +110,29 @@ html { height: 100%; }
 
 body {
     height: 100%;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
     background-color: var(--app-bg) !important;
-    background-image: var(--app-texture);
-    background-attachment: fixed;
     color: var(--text-primary);
-    transition: background var(--theme-transition), color var(--theme-transition), background-image var(--theme-transition);
+    transition: background var(--theme-transition), color var(--theme-transition);
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: var(--app-texture);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    /* 如果有自定义背景图，这里也会生效 */
+    transition: background-image 0.3s ease;
 }
 
 body:not(.theme-ready) {
@@ -229,7 +246,8 @@ label {
     border-radius: 0 !important;
     box-shadow: var(--shadow-sm);
     border-bottom: 1px solid var(--border-light);
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .list-inline {
@@ -530,7 +548,7 @@ label {
 }
 
 .box2:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     background: var(--card-surface-hover);
     box-shadow: var(--shadow-primary-lg);
     border-color: var(--border-dark);
@@ -1161,10 +1179,20 @@ body[data-theme="dark"] .setting-item input[type="range"]::-moz-range-thumb {
 }
 
 /* 自定义背景 */
-body.with-custom-bg {
+/* body.with-custom-bg {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+} */
+
+/* 自定义背景时 body 样式 */
+body.with-custom-bg::before {
+    /* 确保自定义背景也应用到伪元素上 */
+    background-image: inherit; 
+}
+/* 此时 body 自身不需要背景图 */
+body.with-custom-bg {
+    background-image: none !important;
 }
 
 body.with-custom-bg .page-container {
