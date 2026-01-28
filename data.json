@@ -2584,6 +2584,24 @@
     ],
     "大模型 API 中转站": [
       {
+        "name": "APIKEY-公益站",
+        "url": "https://welfare.apikey.cc/console",
+        "img": "welfare.png",
+        "desc": "更好的价格，更好的稳定性"
+      },
+      {
+        "name": "Wong-公益站",
+        "url": "https://wzw.pp.ua",
+        "img": "openclaudecode.png",
+        "desc": "更好稳定性的公益站，只支持 LinuxDo 注册用户使用"
+      },
+      {
+        "name": "薄荷公益站",
+        "url": "https://x666.me/",
+        "img": "openclaudecode.png",
+        "desc": "提供稳定、快速、高质量的 AI 接口支持，让您的创意轻松实现"
+      },
+      {
         "name": "中转站监测",
         "url": "https://check.linux.do/",
         "img": "vercel.png",
@@ -2614,12 +2632,6 @@
         "desc": "为 Claude Code 和 Codex 等 AI 编程助手优化的高性能 API 服务"
       },
       {
-        "name": "88Code",
-        "url": "https://88code.org/",
-        "img": "claude.png",
-        "desc": "平价 AI 编码中转站"
-      },
-      {
         "name": "Packy",
         "url": "https://www.packyapi.com/",
         "img": "packy.png",
@@ -2630,18 +2642,6 @@
         "url": "https://duckcoding.com/",
         "img": "openclaudecode.png",
         "desc": "按量计费，专为 Claude Code 、 CodeX 、 Gemini CLI 用户提供的高质量 API 服务"
-      },
-      {
-        "name": "APIKEY-公益站",
-        "url": "https://welfare.apikey.cc/console",
-        "img": "welfare.png",
-        "desc": "更好的价格，更好的稳定性"
-      },
-      {
-        "name": "薄荷公益站",
-        "url": "https://x666.me/",
-        "img": "openclaudecode.png",
-        "desc": "提供稳定、快速、高质量的 AI 接口支持，让您的创意轻松实现"
       }
     ],
     "站长工具": [
