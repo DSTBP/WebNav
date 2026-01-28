@@ -113,7 +113,7 @@ body[data-theme="dark"] {
     --surface-panel: rgba(65, 65, 65, 0.85);
     
     /* 链接卡片：使用白色透明度来实现“淡”的效果，最百搭 */
-    --card-surface: rgba(255, 255, 255, 0.06);
+    --card-surface: rgba(255, 255, 255, 0.06); 
     --card-surface-hover: rgba(255, 255, 255, 0.12);
     
     /* 边框颜色：更亮的灰线，增加轮廓感 */
@@ -1159,26 +1159,4 @@ body[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
     #back-to-top {
         display: none !important;
     }
-}
-
-body[data-theme="dark"] .sidebar-menu,
-body[data-theme="dark"] .main-menu,
-body[data-theme="dark"] .left-bar,
-body[data-theme="dark"] aside,
-body[data-theme="dark"] .sidebar-nav {
-    /* 强制使用去蓝后的中性灰背景 */
-    background: var(--surface-panel) !important;
-    /* 强制去除可能存在的深蓝边框 */
-    border-right: 1px solid var(--border-light) !important;
-    /* 确保文字颜色正确 */
-    color: var(--text-primary) !important;
-    /* 确保模糊效果一致 */
-    backdrop-filter: blur(12px) !important;
-}
-
-/* 如果侧边栏里面有激活的选项，也去掉蓝色背景 */
-body[data-theme="dark"] .sidebar-menu li.active > a,
-body[data-theme="dark"] .main-menu li.active > a {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-left-color: #fff !important; /* 或者是你的主色调 */
 }
