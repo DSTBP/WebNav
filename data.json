@@ -1481,6 +1481,12 @@
         "desc": "免费,导师评价,导师推荐,导师点评,选导师,科研,分享,教授,交流,研究生,博士生"
       },
       {
+        "name": "Greasyfork",
+        "url": "https://greasyfork.org/zh-CN/scripts",
+        "img": "greasyfork.png",
+        "desc": "一个开源的用户脚本分享平台，提供大量免费的浏览器扩展脚本"
+      },
+      {
         "name": "Reddit",
         "url": "https://www.reddit.com/",
         "img": "reddit.png",
