@@ -265,15 +265,15 @@ const ContentModule = {
         this._loadData();
     },
 
-    async _loadData() {
-        try {
-            const response = await fetch('./data.json');
-            const data = await response.json();
-            this._renderLinks(data);
+    _loadData() {
+        if (window.NAV_DATA) {
+            // 直接使用数据，无需等待网络请求
+            this._renderLinks(window.NAV_DATA);
             this.originalHTML = this.linksContainer.innerHTML;
             this._setupSiteSearch();
-        } catch (error) {
-            console.error('数据加载失败:', error);
+        } else {
+            console.error('未找到数据配置 data.js');
+            Utils.toast.show('数据加载失败', 'error');
         }
     },
 
