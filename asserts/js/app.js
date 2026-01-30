@@ -254,15 +254,26 @@ const ContentModule = {
     originalHTML: '',
     itemsCache: [],
     _cardClickHandler: null,
+    _showPersonalSite: false,
 
     init() {
         this.linksContainer = Utils.$('links-container');
         if (!this.linksContainer) return;
 
+        // 检查 URL 参数，判断是否显示个人站点
+        this._showPersonalSite = this._checkPersonalSiteParam();
+
         this._cardClickHandler = this._handleCardClick.bind(this);
         this.linksContainer.addEventListener('click', this._cardClickHandler);
 
         this._loadData();
+    },
+
+    // 检查是否应该显示个人站点
+    _checkPersonalSiteParam() {
+        const params = new URLSearchParams(window.location.search);
+        const selfParam = params.get('self');
+        return selfParam && selfParam.toLowerCase() === 'dstbp';
     },
 
     _loadData() {
@@ -283,6 +294,10 @@ const ContentModule = {
         this.itemsCache = [];
 
         Object.entries(links).forEach(([category, items]) => {
+            // 如果不显示个人站点且分类是"个人站点"，则跳过
+            if (!this._showPersonalSite && category === '个人站点') {
+                return;
+            }
             fragment.appendChild(this._buildCategorySection(category, items));
         });
 
