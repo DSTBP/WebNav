@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>死链检测 - DSTBP Navigation</title>
+    <title>链接检测 - DSTBP Navigation</title>
     <meta name="keywords" content="导航页, 链接检测, WebNav" />
     <meta name="description" content="WebNav 链接可用性检测工具" />
     <link rel="shortcut icon" href="./favicon.ico" />
@@ -21,7 +21,6 @@
     <script src="./asserts/js/data.js"></script>
 
     <style>
-        /* 针对检测页面的补充样式 */
         .checker-panel {
             margin-top: 20px;
             background: var(--bg-card, #fff);
@@ -31,7 +30,6 @@
             transition: background 0.3s;
         }
         
-        /* 适配暗色模式的卡片背景 */
         body[data-theme="dark"] .checker-panel {
             background: #2d2d2d;
             border: 1px solid #444;
@@ -86,13 +84,23 @@
             white-space: nowrap;
         }
         
-        /* 筛选按钮组 */
         .filter-group .btn.active {
             box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
             opacity: 1;
         }
         .filter-group .btn {
             opacity: 0.8;
+        }
+
+        /* 并行检测时闪烁动画 */
+        @keyframes pulse-blue {
+            0% { box-shadow: 0 0 0 0 rgba(74, 107, 255, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(74, 107, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(74, 107, 255, 0); }
+        }
+        
+        .checking-active #startCheck {
+            animation: pulse-blue 2s infinite;
         }
     </style>
 </head>
@@ -110,7 +118,7 @@
                     </li>
                     <li class="menu-item">
                         <span style="font-size: 18px; font-weight: bold; padding-left: 10px;">
-                            <i class="fas fa-check-circle" style="color: var(--primary-color);"></i> 链接检测工具
+                            <i class="fas fa-rocket" style="color: var(--primary-color);"></i> 极速死链检测
                         </span>
                     </li>
                 </ul>
@@ -128,12 +136,15 @@
                 <div class="checker-panel">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4 class="text-gray"><i class="fa-solid fa-sliders"></i> 控制台</h4>
+                            <h4 class="text-gray"><i class="fa-solid fa-gauge-high"></i> 控制台</h4>
                             <hr>
                             <div class="btn-group" role="group">
-                                <button id="startCheck" class="btn btn-primary"><i class="fa fa-play"></i> 开始检测</button>
+                                <button id="startCheck" class="btn btn-primary"><i class="fa fa-bolt"></i> 开始极速检测</button>
                                 <button id="stopCheck" class="btn btn-danger" disabled><i class="fa fa-stop"></i> 停止</button>
                             </div>
+                            <span class="text-muted" style="margin-left: 10px; font-size: 12px;">
+                                <i class="fa fa-info-circle"></i> 并行数: 20
+                            </span>
                             <div class="btn-group pull-right filter-group">
                                 <button class="btn btn-default active" data-filter="all">全部</button>
                                 <button class="btn btn-success" data-filter="success">正常</button>
@@ -190,7 +201,7 @@
                 </div>
 
                 <div class="checker-panel">
-                    <h4 class="text-gray"><i class="fa-solid fa-list"></i> 检测结果</h4>
+                    <h4 class="text-gray"><i class="fa-solid fa-list-ul"></i> 检测结果</h4>
                     <div class="table-responsive">
                         <table class="table table-hover table-striped">
                             <thead>
@@ -209,10 +220,10 @@
                         </table>
                     </div>
                     <div id="loading-text" class="text-center text-muted" style="display: none; padding: 20px;">
-                        <i class="fa fa-spinner fa-spin"></i> 正在检测中...
+                        <i class="fa fa-spinner fa-spin"></i> 正在全速检测中...
                     </div>
                     <div id="empty-text" class="text-center text-muted" style="padding: 40px;">
-                        点击"开始检测"按钮启动任务
+                        点击"开始极速检测"启动任务
                     </div>
                 </div>
                 
