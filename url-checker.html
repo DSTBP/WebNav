@@ -14,51 +14,173 @@
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" />
     <link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-awesome/6.0.0/css/all.min.css" />
-    
+
     <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css" />
     <script defer src="https://fastly.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>
 
     <script src="./asserts/js/data.js"></script>
 
     <style>
-        .checker-panel {
-            margin-top: 20px;
-            background: var(--bg-card, #fff);
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            transition: background 0.3s;
+        /* ==================== 核心布局修正：强制页脚沉底 ==================== */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
         }
-        
-        body[data-theme="dark"] .checker-panel {
-            background: #2d2d2d;
-            border: 1px solid #444;
+
+        .page-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .main-footer {
+            margin-top: auto;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* ==================== 顶部导航栏对齐修正 ==================== */
+        .navbar.user-info-navbar {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center;
+            position: relative;
+            padding: 0 !important;
+            margin: 0 !important;
+            margin-bottom: var(--spacing-xl) !important;
+            width: 100%;
+            border: none;
+        }
+
+        .navbar-inner-container {
+            width: 100%;
+            max-width: 1200px; 
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            height: 70px;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .user-info-menu.left-links {
+            justify-content: flex-start;
+            margin: 0 !important;
+            padding: 0 !important;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            float: none !important;
+        }
+
+        .user-info-menu.left-links .menu-item {
+            padding: 0 var(--spacing-lg) !important;
+            padding-left: 0 !important;
+            float: none !important;
+        }
+
+        .user-info-menu.right-links {
+            margin: 0 !important;
+            padding: 0 !important;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            float: none !important;
+        }
+
+        .user-info-menu.right-links .menu-item {
+            padding: 0 var(--spacing-lg) !important;
+            padding-right: 0 !important;
+            float: none !important;
+        }
+
+        .navbar-title {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            white-space: nowrap;
+        }
+
+        /* ==================== 检测页面原有样式 ==================== */
+        .checker-panel {
+            margin: var(--spacing-lg) auto;
+            max-width: 1200px;
+            background: var(--surface-panel);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
+            backdrop-filter: blur(8px);
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+            width: 100%; 
+        }
+
+        .checker-panel h4 {
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: var(--spacing-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
         }
 
         .stat-card {
             text-align: center;
-            padding: 15px;
-            border-radius: 8px;
-            background: rgba(0,0,0,0.03);
-            margin-bottom: 15px;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            background: var(--card-surface);
+            margin-bottom: var(--spacing-lg);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(5px);
         }
-        
-        body[data-theme="dark"] .stat-card {
-            background: rgba(255,255,255,0.05);
+
+        .stat-card:hover {
+            background: var(--card-surface-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--border-dark);
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            font-weight: 500;
         }
 
         .stat-number {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--primary-color, #4a6bff);
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .status-badge {
             display: inline-block;
-            padding: 4px 8px;
-            border-radius: 4px;
+            padding: 4px 12px;
+            border-radius: 20px;
             font-size: 12px;
+            font-weight: 500;
             color: #fff;
+            transition: all 0.2s ease;
         }
         .status-success { background-color: #28a745; }
         .status-error { background-color: #dc3545; }
@@ -66,15 +188,19 @@
         .status-suspicious { background-color: #fd7e14; }
 
         .progress {
-            height: 20px;
-            margin: 20px 0;
-            background-color: #e9ecef;
+            height: 8px;
+            margin: var(--spacing-lg) 0;
+            background-color: var(--border-light);
             border-radius: 10px;
             overflow: hidden;
+            box-shadow: var(--shadow-sm);
         }
-        
-        body[data-theme="dark"] .progress {
-            background-color: #444;
+
+        .progress-bar {
+            background: var(--primary-gradient) !important;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+            font-size: 0 !important;
         }
 
         .url-cell {
@@ -83,154 +209,407 @@
             text-overflow: ellipsis;
             white-space: nowrap;
         }
-        
-        .filter-group .btn.active {
-            box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
-            opacity: 1;
-        }
-        .filter-group .btn {
-            opacity: 0.8;
+
+        .control-section {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
         }
 
-        /* 并行检测时闪烁动画 */
-        @keyframes pulse-blue {
-            0% { box-shadow: 0 0 0 0 rgba(74, 107, 255, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(74, 107, 255, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(74, 107, 255, 0); }
+        .control-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .control-buttons .btn {
+            border-radius: var(--radius-lg);
+            padding: 10px 20px;
+            font-weight: 500;
+            transition: var(--transition-cubic);
+            border: none;
+        }
+
+        .control-buttons .btn-primary {
+            background: var(--primary-gradient);
+            color: #fff;
+        }
+
+        .control-buttons .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .control-buttons .btn-danger {
+            background: #dc3545;
+            color: #fff;
+        }
+
+        .control-buttons .btn-danger:hover:not(:disabled) {
+            background: #c82333;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .control-buttons .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .parallel-info {
+            color: var(--text-secondary);
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+
+        .filter-buttons .btn {
+            padding: 8px 16px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            background: var(--card-surface);
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .filter-buttons .btn:hover {
+            background: var(--card-surface-hover);
+            border-color: var(--border-dark);
+        }
+
+        .filter-buttons .btn.active {
+            background: var(--primary-gradient);
+            color: #fff;
+            border-color: transparent;
+            box-shadow: var(--shadow-md);
+        }
+
+        .table-responsive {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: var(--spacing-lg) 0;
+        }
+
+        .table {
+            margin: 0;
+            background: transparent;
+        }
+
+        .table thead {
+            background: var(--surface-input);
+            backdrop-filter: blur(8px);
+        }
+
+        .table thead th {
+            color: var(--text-primary);
+            font-weight: 600;
+            border: none;
+            border-bottom: 1px solid var(--border-light);
+            padding: var(--spacing-md) var(--spacing-lg);
+        }
+
+        .table tbody tr {
+            transition: all 0.2s ease;
+            border-color: var(--border-light);
+        }
+
+        .table tbody tr:hover {
+            background: var(--card-surface-hover);
+            box-shadow: inset 0 0 0 1px var(--border-light);
+        }
+
+        .table tbody td {
+            color: var(--text-primary);
+            padding: var(--spacing-md) var(--spacing-lg);
+            border-color: var(--border-light);
+            vertical-align: middle;
+        }
+
+        .loading-text {
+            text-align: center;
+            padding: var(--spacing-xl);
+            color: var(--text-secondary);
+            font-size: 1.3rem;
+        }
+
+        .loading-text i {
+            margin-right: 10px;
+        }
+
+        .empty-text {
+            text-align: center;
+            padding: var(--spacing-xl) * 2;
+            color: var(--text-secondary);
+            font-size: 1.3rem;
+        }
+
+        @keyframes pulse-glow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(117, 138, 153, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(117, 138, 153, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(117, 138, 153, 0);
+            }
+        }
+
+        .checking-active #startCheck {
+            animation: pulse-glow 2s infinite;
+        }
+
+        @media (max-width: 1240px) {
+            .navbar-inner-container {
+                padding: 0 var(--spacing-md);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .checker-panel {
+                padding: var(--spacing-md);
+                margin: var(--spacing-md);
+            }
+
+            .control-section {
+                flex-direction: column;
+            }
+
+            .control-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .control-buttons .btn {
+                width: 100%;
+            }
+
+            .filter-buttons {
+                justify-content: space-between;
+            }
+
+            .stat-card {
+                margin-bottom: var(--spacing-md);
+            }
+
+            .stat-number {
+                font-size: 1.8rem;
+            }
+
+            .table {
+                font-size: 0.9rem;
+            }
+
+            .table thead th,
+            .table tbody td {
+                padding: var(--spacing-sm) var(--spacing-md);
+            }
+            
+            .navbar-title {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .checker-panel {
+                padding: var(--spacing-md);
+            }
+
+            .control-buttons,
+            .filter-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .control-buttons .btn,
+            .filter-buttons .btn {
+                width: 100%;
+            }
+
+            .stat-number {
+                font-size: 1.5rem;
+            }
+
+            .url-cell {
+                max-width: 150px;
+            }
+            
+            .navbar-title {
+                display: none; 
+            }
+        }
+
+        /* ==================== 夜间模式高亮修正 ==================== */
+        
+        /* 1. 修复统计数字看不清的问题 (去除背景裁剪，强制使用白色) */
+        [data-theme="dark"] .stat-number {
+            background: none !important;
+            -webkit-background-clip: initial !important;
+            -webkit-text-fill-color: initial !important;
+            color: #ffffff !important;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.4); /* 增加发光效果 */
+        }
+
+        /* 2. 修复表格详情(text-muted)和其他文字看不清的问题 */
+        [data-theme="dark"] .text-muted {
+            color: #d0d0d0 !important; /* 浅灰色替代深灰色 */
         }
         
-        .checking-active #startCheck {
-            animation: pulse-blue 2s infinite;
+        [data-theme="dark"] .table td, 
+        [data-theme="dark"] .table th {
+            color: #e6e6e6 !important; /* 表格文字调亮 */
+            border-bottom-color: rgba(255, 255, 255, 0.1) !important;
         }
+
+        /* 3. 修复表格悬停行的高亮背景，防止太亮导致文字反白看不见 */
+        [data-theme="dark"] .table-hover tbody tr:hover {
+            background-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        /* 4. 修复链接颜色，让其在深色背景更清晰 */
+        [data-theme="dark"] a.text-primary {
+            color: #64b5f6 !important; /* 亮蓝色 */
+        }
+
     </style>
 </head>
 
 <body class="page-body">
     <div class="page-container">
         <div class="main-content">
-            <nav class="navbar user-info-navbar" role="navigation">
-                <ul class="user-info-menu left-links list-inline list-unstyled">
-                    <li class="menu-item">
-                        <a href="index.html">
-                            <i class="fa-solid fa-arrow-left"></i>
-                            <span>返回主页</span>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <span style="font-size: 18px; font-weight: bold; padding-left: 10px;">
-                            <i class="fas fa-rocket" style="color: var(--primary-color);"></i> 极速死链检测
-                        </span>
-                    </li>
-                </ul>
-                <ul class="user-info-menu right-links list-inline list-unstyled">
-                    <li class="menu-item night-mode-btn">
-                        <a id="theme-toggle-btn" style="cursor: pointer;">
-                            <i class="fa-solid fa-circle-half-stroke"></i>
-                            <span>模式切换</span>
-                        </a>
-                    </li>
-                </ul>
+            <nav class="navbar user-info-navbar" role="navigation" id="navbar">
+                <div class="navbar-inner-container">
+                    <ul class="user-info-menu left-links list-inline list-unstyled">
+                        <li class="menu-item">
+                            <a href="index.html">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                <span>返回主页</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="navbar-title">链接检测</div>
+                    <ul class="user-info-menu right-links list-inline list-unstyled">
+                        <li class="menu-item night-mode-btn">
+                            <a id="theme-toggle-btn" style="cursor: pointer;">
+                                <i class="fa-solid fa-circle-half-stroke"></i>
+                                <span>模式切换</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
 
-            <div class="container-fluid">
-                <div class="checker-panel">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="text-gray"><i class="fa-solid fa-gauge-high"></i> 控制台</h4>
-                            <hr>
-                            <div class="btn-group" role="group">
-                                <button id="startCheck" class="btn btn-primary"><i class="fa fa-bolt"></i> 开始极速检测</button>
-                                <button id="stopCheck" class="btn btn-danger" disabled><i class="fa fa-stop"></i> 停止</button>
-                            </div>
-                            <span class="text-muted" style="margin-left: 10px; font-size: 12px;">
-                                <i class="fa fa-info-circle"></i> 并行数: 20
-                            </span>
-                            <div class="btn-group pull-right filter-group">
-                                <button class="btn btn-default active" data-filter="all">全部</button>
-                                <button class="btn btn-success" data-filter="success">正常</button>
-                                <button class="btn btn-warning" data-filter="redirect">重定向</button>
-                                <button class="btn btn-danger" data-filter="error">异常</button>
-                            </div>
+            <div class="checker-panel">
+                <h4><i class="fa-solid fa-gauge-high"></i> 检测控制</h4>
+
+                <div class="control-section">
+                    <div class="control-buttons">
+                        <button id="startCheck" class="btn btn-primary"><i class="fa fa-bolt"></i> 开始检测</button>
+                        <button id="stopCheck" class="btn btn-danger" disabled><i class="fa fa-stop"></i> 停止</button>
+                        <div class="parallel-info">
+                            <i class="fa fa-info-circle"></i>
+                            <span>并行数: 20</span>
                         </div>
                     </div>
 
                     <div class="progress">
-                        <div id="progress-bar" class="progress-bar progress-bar-striped active" role="progressbar" style="width: 0%">
-                            0%
-                        </div>
+                        <div id="progress-bar" class="progress-bar progress-bar-striped active" role="progressbar" style="width: 0%"></div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-xs-6 col-md-2">
-                            <div class="stat-card">
-                                <div class="text-gray">总数</div>
-                                <div class="stat-number" id="totalChecked">0</div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-md-2">
-                            <div class="stat-card">
-                                <div class="text-gray">正常</div>
-                                <div class="stat-number text-success" id="successCount">0</div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-md-2">
-                            <div class="stat-card">
-                                <div class="text-gray">异常</div>
-                                <div class="stat-number text-danger" id="failedCount">0</div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-md-2">
-                            <div class="stat-card">
-                                <div class="text-gray">重定向</div>
-                                <div class="stat-number text-warning" id="redirectCount">0</div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-md-2">
-                            <div class="stat-card">
-                                <div class="text-gray">可疑</div>
-                                <div class="stat-number text-danger" id="suspiciousCount">0</div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-md-2">
-                            <div class="stat-card">
-                                <div class="text-gray">成功率</div>
-                                <div class="stat-number" id="successRate">0%</div>
-                            </div>
-                        </div>
+                    <div class="filter-buttons">
+                        <button class="btn active" data-filter="all"><i class="fa fa-list"></i> 全部</button>
+                        <button class="btn" data-filter="success"><i class="fa fa-check-circle" style="color: #28a745;"></i> 正常</button>
+                        <button class="btn" data-filter="redirect"><i class="fa fa-arrow-right" style="color: #ffc107;"></i> 重定向</button>
+                        <button class="btn" data-filter="suspicious"><i class="fa fa-exclamation-triangle" style="color: #fd7e14;"></i> 可疑</button>
+                        <button class="btn" data-filter="error"><i class="fa fa-times-circle" style="color: #dc3545;"></i> 异常</button>
                     </div>
                 </div>
-
-                <div class="checker-panel">
-                    <h4 class="text-gray"><i class="fa-solid fa-list-ul"></i> 检测结果</h4>
-                    <div class="table-responsive">
-                        <table class="table table-hover table-striped">
-                            <thead>
-                                <tr>
-                                    <th style="width: 15%">名称</th>
-                                    <th style="width: 10%">分类</th>
-                                    <th style="width: 25%">原始URL</th>
-                                    <th style="width: 10%">状态码</th>
-                                    <th style="width: 10%">耗时</th>
-                                    <th style="width: 10%">状态</th>
-                                    <th style="width: 20%">详情</th>
-                                </tr>
-                            </thead>
-                            <tbody id="resultsBody">
-                                </tbody>
-                        </table>
-                    </div>
-                    <div id="loading-text" class="text-center text-muted" style="display: none; padding: 20px;">
-                        <i class="fa fa-spinner fa-spin"></i> 正在全速检测中...
-                    </div>
-                    <div id="empty-text" class="text-center text-muted" style="padding: 40px;">
-                        点击"开始极速检测"启动任务
-                    </div>
-                </div>
-                
-                <footer class="main-footer">
-                    <p>Copyright © 2024 DSTBP. All Rights Reserved.</p>
-                </footer>
             </div>
+
+            <div class="checker-panel">
+                <h4><i class="fa-solid fa-chart-bar"></i> 统计数据</h4>
+
+                <div class="row">
+                    <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="stat-card">
+                            <div class="stat-label">总数</div>
+                            <div class="stat-number" id="totalChecked">0</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="stat-card">
+                            <div class="stat-label">正常</div>
+                            <div class="stat-number text-success" id="successCount">0</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="stat-card">
+                            <div class="stat-label">异常</div>
+                            <div class="stat-number text-danger" id="failedCount">0</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="stat-card">
+                            <div class="stat-label">重定向</div>
+                            <div class="stat-number text-warning" id="redirectCount">0</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="stat-card">
+                            <div class="stat-label">可疑</div>
+                            <div class="stat-number text-danger" id="suspiciousCount">0</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="stat-card">
+                            <div class="stat-label">成功率</div>
+                            <div class="stat-number" id="successRate">0%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checker-panel">
+                <h4><i class="fa-solid fa-list-ul"></i> 检测结果</h4>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="width: 15%">名称</th>
+                                <th style="width: 10%">分类</th>
+                                <th style="width: 25%">URL</th>
+                                <th style="width: 10%">状态码</th>
+                                <th style="width: 10%">耗时</th>
+                                <th style="width: 10%">状态</th>
+                                <th style="width: 20%">详情</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsBody"></tbody>
+                    </table>
+                </div>
+                <div id="loading-text" class="loading-text" style="display: none;">
+                    <i class="fa fa-spinner fa-spin"></i> 正在检测中...
+                </div>
+                <div id="empty-text" class="empty-text">
+                    点击"开始检测"启动任务
+                </div>
+            </div>
+
+            <footer class="main-footer">
+                <p>Copyright © 2024 DSTBP. All Rights Reserved.</p>
+                <p>Designed by <a href="https://github.com/DSTBP" target="_blank">DSTBP</a></p>
+            </footer>
         </div>
     </div>
 

@@ -1,6 +1,6 @@
 /**
  * URL 检测工具核心逻辑 - 并行极速版
- * 使用并发池技术加速检测过程
+ * 修复版：解决耗时显示 NaN 问题，包含重试机制与 Cloudflare 检测
  */
 
 // ==================== 主题模块 ====================
@@ -46,6 +46,8 @@ class URLChecker {
     constructor() {
         this.reset();
         this.maliciousDomains = ['phishing.com', 'malware.com', 'scam.com'];
+        // 初始化 startTime 为当前时间，防止某些极端情况下未赋值导致的 NaN
+        this.startTime = Date.now(); 
     }
 
     reset() {
@@ -56,53 +58,111 @@ class URLChecker {
         this.suspiciousCount = 0;
     }
 
-    async checkURL(url, name, category) {
+    /**
+     * Cloudflare 探测逻辑
+     */
+    async checkCloudflare(originalUrl) {
         try {
-            const startTime = Date.now();
-            
-            // 使用 no-cors 模式进行快速探测
-            // 注意：这种模式下无法获取具体的 status code (除了0)，主要用于检测是否网络可达
-            const response = await fetch(url, {
+            const u = new URL(originalUrl);
+            const traceUrl = `${u.origin}/cdn-cgi/trace`;
+
+            await fetch(traceUrl, {
                 method: 'HEAD',
-                mode: 'no-cors', 
+                mode: 'no-cors',
                 cache: 'no-cache'
             });
-
-            const endTime = Date.now();
-            const responseTime = endTime - startTime;
-
-            // 只要没有抛出网络错误，我们暂且认为是通的 (status 0 in opaque response)
-            const status = response.status || 200; 
-            
-            const isSuccess = true; 
-            const isError = false;
-            const isRedirect = false; 
-            
-            const securityChecks = this.performSecurityChecks(url);
-            
-            // 线程安全更新统计（JS是单线程EventLoop，这里是安全的）
-            this.updateStats({
-                isSuccess, isError, isRedirect, isSuspicious: securityChecks.isSuspicious
-            });
-
-            return {
-                name, category, url, status, responseTime,
-                isSuccess, isError, isRedirect,
-                security: securityChecks,
-                timestamp: new Date().toISOString()
-            };
-
-        } catch (error) {
-            this.updateStats({ isError: true });
-            return {
-                name, category, url, 
-                status: 0, 
-                responseTime: 0,
-                isSuccess: false, isError: true, isRedirect: false,
-                error: error.message || '连接失败',
-                security: { isSuspicious: false, details: [] }
-            };
+            return true;
+        } catch (e) {
+            return false;
         }
+    }
+
+    async checkURL(url, name, category) {
+        const startTime = Date.now();
+        
+        // ================= 配置区域 =================
+        const MAX_RETRIES = 2;    // 最大重试次数 (总共尝试 1+2=3 次)
+        const RETRY_DELAY = 1000; // 重试间隔 (毫秒)
+        // ===========================================
+
+        // 1. 标准检测 (带重试逻辑)
+        for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+            try {
+                // 尝试请求
+                await fetch(url, {
+                    method: 'HEAD',
+                    mode: 'no-cors', 
+                    cache: 'no-cache'
+                });
+
+                // 如果代码能执行到这里，说明成功了
+                const endTime = Date.now();
+                return this.finalizeResult(url, name, category, startTime, endTime, true, false, null);
+
+            } catch (error) {
+                // 如果报错了，检查是否还有重试机会
+                if (attempt < MAX_RETRIES) {
+                    await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
+                    continue; // 进入下一次循环
+                }
+            }
+        }
+
+        // 2. 异常处理：尝试 Cloudflare 复活检测
+        let isCloudflare = false;
+        try {
+            isCloudflare = await this.checkCloudflare(url);
+
+            if (isCloudflare) {
+                const endTime = Date.now();
+                // 生成基础结果 (注意：最后一个参数 true 表示检测到了 Cloudflare)
+                return this.finalizeResult(url, name, category, startTime, endTime, true, false, null, true);
+            }
+        } catch (e) {
+            // Cloudflare 检测也挂了，忽略
+        }
+
+        // 3. 确实挂了 (重试多次 + CF检测均失败)
+        this.updateStats({ isError: true });
+        return {
+            name, category, url, 
+            status: 0, 
+            responseTime: 0,
+            isSuccess: false, isError: true, isRedirect: false,
+            error: `连接失败 (重试${MAX_RETRIES}次)`,
+            security: { isSuspicious: false, details: [] }
+        };
+    }
+
+    // 提取公共结果构建逻辑
+    finalizeResult(url, name, category, startTime, endTime, isSuccess, isError, errorMsg, isCloudflareDetected = false) {
+        const responseTime = endTime - startTime;
+        const status = 200; 
+        
+        let securityChecks = this.performSecurityChecks(url);
+        
+        // 处理 Cloudflare 标记
+        if (isCloudflareDetected) {
+            if (!securityChecks.isSuspicious) {
+                this.suspiciousCount++; 
+                securityChecks.isSuspicious = true;
+            }
+            securityChecks.details.push('使用了 Cloudflare');
+        }
+
+        this.updateStats({
+            isSuccess, 
+            isError, 
+            isRedirect: false, 
+            isSuspicious: securityChecks.isSuspicious
+        });
+
+        return {
+            name, category, url, status, responseTime,
+            isSuccess, isError, isRedirect: false,
+            security: securityChecks,
+            timestamp: new Date().toISOString()
+        };
     }
 
     performSecurityChecks(url) {
@@ -114,10 +174,6 @@ class URLChecker {
             if (this.maliciousDomains.some(d => hostname.includes(d))) {
                 isSuspicious = true;
                 details.push('黑名单域名');
-            }
-            // 简单的 http 警告，可视情况移除
-            if (url.startsWith('http://')) {
-                // details.push('非 HTTPS'); // 很多内网或老站还是http，暂不算可疑
             }
         } catch (e) {
             isSuspicious = true;
@@ -144,14 +200,14 @@ let allResults = [];
 let currentFilter = 'all';
 
 // 并发配置
-const MAX_CONCURRENCY = 20; // 同时并行的请求数
+const MAX_CONCURRENCY = 20; 
 
 document.addEventListener('DOMContentLoaded', () => {
     ThemeModule.init();
 
     const startBtn = document.getElementById('startCheck');
     const stopBtn = document.getElementById('stopCheck');
-    const filterBtns = document.querySelectorAll('.filter-group .btn');
+    const filterBtns = document.querySelectorAll('.filter-buttons .btn');
 
     startBtn.addEventListener('click', startCheck);
     stopBtn.addEventListener('click', () => {
@@ -177,7 +233,11 @@ async function startCheck() {
     updateUIState(true);
     document.body.classList.add('checking-active');
     
+    // 1. 创建新实例
     checkerInstance = new URLChecker();
+    // 2. 【关键修复】明确设置开始时间，防止 NaN
+    checkerInstance.startTime = Date.now(); 
+    
     allResults = [];
     document.getElementById('resultsBody').innerHTML = '';
     
@@ -199,15 +259,13 @@ async function startCheck() {
 
     const totalTasks = tasks.length;
     let completedTasks = 0;
-    // 共享的任务指针
     let taskIndex = 0;
 
-    // 定义 Worker 函数：不断从队列取任务直到取完
+    // Worker 函数
     const worker = async () => {
         while (taskIndex < totalTasks) {
             if (shouldStop) break;
             
-            // 原子操作取任务
             const currentIndex = taskIndex++; 
             const task = tasks[currentIndex];
             if (!task) break;
@@ -218,7 +276,6 @@ async function startCheck() {
             allResults.push(result);
             completedTasks++;
 
-            // 实时更新 UI (注意：频繁操作DOM可能会轻微影响性能，但为了视觉效果保留)
             updateStatsDisplay(checkerInstance, completedTasks, totalTasks);
             
             if (shouldShow(result, currentFilter)) {
@@ -229,7 +286,6 @@ async function startCheck() {
 
     // 启动并发池
     const workers = [];
-    // 创建 MAX_CONCURRENCY 个 Worker 或者是 任务总数（如果任务很少）
     const concurrency = Math.min(MAX_CONCURRENCY, totalTasks);
     
     for (let i = 0; i < concurrency; i++) {
@@ -244,9 +300,11 @@ async function startCheck() {
     document.body.classList.remove('checking-active');
     
     if (!shouldStop && typeof iziToast !== 'undefined') {
+        // 计算耗时：确保 checkerInstance.startTime 存在且为数字
+        const duration = ((Date.now() - checkerInstance.startTime) / 1000).toFixed(1);
         iziToast.success({ 
             title: '检测完成', 
-            message: `共耗时: ${((Date.now() - checkerInstance.startTime) / 1000).toFixed(1)}s` 
+            message: `共耗时: ${duration}s` 
         });
     }
 }
@@ -258,19 +316,21 @@ function updateUIState(checking) {
     document.getElementById('stopCheck').disabled = !checking;
     document.getElementById('loading-text').style.display = checking ? 'block' : 'none';
     document.getElementById('empty-text').style.display = 'none';
-    
-    if(checking) {
-        if(checkerInstance) checkerInstance.startTime = Date.now();
-    }
 }
 
 function resetStats() {
     ['totalChecked', 'successCount', 'failedCount', 'redirectCount', 'suspiciousCount'].forEach(id => {
-        document.getElementById(id).textContent = '0';
+        const el = document.getElementById(id);
+        if(el) el.textContent = '0';
     });
-    document.getElementById('successRate').textContent = '0%';
-    document.getElementById('progress-bar').style.width = '0%';
-    document.getElementById('progress-bar').textContent = '0%';
+    const rateEl = document.getElementById('successRate');
+    if(rateEl) rateEl.textContent = '0%';
+    
+    const bar = document.getElementById('progress-bar');
+    if(bar) {
+        bar.style.width = '0%';
+        bar.textContent = '0%';
+    }
 }
 
 function updateStatsDisplay(checker, processed, total) {
@@ -291,9 +351,10 @@ function updateStatsDisplay(checker, processed, total) {
 
 function shouldShow(result, filter) {
     if (filter === 'all') return true;
-    if (filter === 'success') return result.isSuccess && !result.isError;
+    if (filter === 'success') return result.isSuccess && !result.isError && !result.security.isSuspicious;
     if (filter === 'error') return result.isError;
     if (filter === 'redirect') return result.isRedirect; 
+    if (filter === 'suspicious') return result.security.isSuspicious;
     return true;
 }
 
@@ -319,7 +380,11 @@ function addResultRow(result) {
         statusText = '异常';
     } else if (result.security.isSuspicious) {
         statusBadge = 'status-suspicious';
-        statusText = '可疑';
+        if (result.security.details.some(d => d.includes('Cloudflare'))) {
+            statusText = 'CF防护'; 
+        } else {
+            statusText = '可疑';
+        }
     } else {
         statusBadge = 'status-success';
         statusText = '正常';
@@ -335,7 +400,6 @@ function addResultRow(result) {
         <td><small class="text-muted">${result.error || result.security.details.join(', ') || 'OK'}</small></td>
     `;
     
-    // 插入到最前面，方便看到最新进度
     const tbody = document.getElementById('resultsBody');
     tbody.insertBefore(tr, tbody.firstChild);
 }

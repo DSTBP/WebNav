@@ -919,12 +919,6 @@ window.NAV_DATA = {
         "desc": "在线比较文本，并找出两个文本文件之间的差异"
       },
       {
-        "name": "字符串转列表",
-        "url": "https://www.xdtool.com/string_list",
-        "img": "xdtool.png",
-        "desc": "在线文本转列表工具，可以将指定字符（如逗号、空格、分号等）分隔的长字符串，\n 表示回车"
-      },
-      {
         "name": "BugKu工具库",
         "url": "https://ctf.bugku.com/tools.html",
         "img": "bugku.png",
@@ -1016,7 +1010,7 @@ window.NAV_DATA = {
       },
       {
         "name": "Overleaf",
-        "url": "https://www.overleaf.com/project",
+        "url": "https://www.overleaf.com",
         "img": "overleaf.png",
         "desc": "一个在线的LaTeX编辑器，它允许用户使用编码的方式来排版学术风格的文档，包括文字文稿、slides、CV、学术海报等"
       },
@@ -1271,12 +1265,6 @@ window.NAV_DATA = {
         "desc": "直接用中文查找英文文献，直接将所有英文文献标题和摘要翻译成中文"
       },
       {
-        "name": "AI 读文献",
-        "url": "https://resoomer.ai/en/",
-        "img": "resoomer.png",
-        "desc": "导入下载好的文献，AI 自动分析文献重点"
-      },
-      {
         "name": "Algorithm Archive",
         "url": "https://www.algorithm-archive.org/",
         "img": "algorithm-archive.png",
@@ -1350,7 +1338,7 @@ window.NAV_DATA = {
       },
       {
         "name": "安娜的档案",
-        "url": "https://zh.annas-archive.org/",
+        "url": "https://annas-archive.li/",
         "img": "annas.png",
         "desc": "全球最大的开源学术资源聚合平台，整合了读秀、Z-Library、Library Genesis和Sci-Hub等知名资源库"
       },
@@ -1889,12 +1877,6 @@ window.NAV_DATA = {
         "desc": "多站合一音乐搜索"
       },
       {
-        "name": "无损音乐",
-        "url": "https://flac.one/",
-        "img": "flac.png",
-        "desc": "无损生活 - 全网无损音乐免费下载，音乐搜索,音乐在线试听,下载,在线解析网"
-      },
-      {
         "name": "歌曲宝",
         "url": "https://www.gequbao.com/",
         "img": "gequbao.png",
@@ -1911,12 +1893,6 @@ window.NAV_DATA = {
         "url": "https://www.comicat.org/",
         "img": "comicat.png",
         "desc": "免费看番"
-      },
-      {
-        "name": "追剧网",
-        "url": "https://www.zhuiju100.com/",
-        "img": "zhuiju100.png",
-        "desc": "免费追剧-最新电视剧更新"
       },
       {
         "name": "69美剧",
@@ -2057,6 +2033,12 @@ window.NAV_DATA = {
         "url": "https://cybermap.kaspersky.com/cn",
         "img": "cybermap.png",
         "desc": "地图 | 卡巴斯基网络威胁实时地图"
+      },
+      {
+        "name": "全球威胁与事件情报地图",
+        "url": "https://globalthreatmap.up.railway.app/",
+        "img": "globalthreatmap.png",
+        "desc": "一个实时全球态势感知平台，可在互动地图上绘制安全事件、地缘政治发展和威胁指标。可以把它看作是一个开源情报（OSINT）指挥中心"
       },
       {
         "name": "风、气象、海洋状况的全球地图",
@@ -2500,10 +2482,10 @@ window.NAV_DATA = {
         "desc": "免费接码平台（Free SMS Recieve），在线接收短信，接收短信验证码"
       },
       {
-        "name": "SMS-Activate",
-        "url": "https://sms-activate.io/cn",
-        "img": "sms-activate.png",
-        "desc": "在线接受短信的虚拟号码服务"
+        "name": "hero-sms",
+        "url": "https://hero-sms.com/cn/services",
+        "img": "herosms.png",
+        "desc": "SMS-Activate 的新平台，在线接受短信的虚拟号码服务"
       },
       {
         "name": "超级云短信接码平台",
