@@ -1,272 +1,93 @@
-// URL检测工具
 class URLChecker {
-    constructor() {
-        this.results = [];
-        this.totalChecked = 0;
-        this.successCount = 0;
-        this.failedCount = 0;
-        this.redirectCount = 0;
-        this.suspiciousCount = 0;
-        this.lastCheckTime = null;
-        this.checkInterval = null;
-        
-        // 恶意域名列表
-        this.maliciousDomains = [
-            'phishing.com', 'malware.com', 'scam.com', 'virus.com',
-            'hack.com', 'spam.com', 'fraud.com', 'fake.com',
-            'dangerous.com', 'infected.com', 'attack.com',
-            'malicious.com', 'harmful.com', 'danger.com',
-            'threat.com', 'risk.com', 'unsafe.com'
-        ];
-        
-        // 可疑关键词
-        this.suspiciousKeywords = [
-            'hack', 'crack', 'virus', 'malware',
-            'spyware', 'trojan', 'worm', 'exploit',
-            'vulnerability', 'attack', 'bypass',
-            'inject', 'payload', 'shell', 'backdoor'
-        ];
-        
-        // 已知的恶意IP范围
-        this.maliciousIPRanges = [
-            { start: '1.1.1.1', end: '1.1.1.255' }, // 示例范围
-            { start: '2.2.2.1', end: '2.2.2.255' }  // 示例范围
-        ];
+    constructor(timeout = 5000) {
+        this.timeout = timeout;
     }
 
-    // 检查单个URL
-    async checkURL(url, name, category) {
+    async check(url) {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), this.timeout);
+        const startTime = performance.now();
+
         try {
-            const startTime = Date.now();
+            // 使用 no-cors 模式来避免跨域报错，但这只能检测服务器是否响应，无法知道具体状态码
+            // 如果目标站点支持 CORS，可以去掉 mode: 'no-cors' 以获取更精确的结果
             const response = await fetch(url, {
-                method: 'HEAD',
-                mode: 'no-cors',
-                redirect: 'follow',
-                headers: {
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-                }
+                method: 'HEAD', // 尝试只请求头信息
+                mode: 'no-cors', 
+                signal: controller.signal,
+                cache: 'no-cache'
             });
 
-            const endTime = Date.now();
-            const responseTime = endTime - startTime;
+            const endTime = performance.now();
+            const duration = Math.round(endTime - startTime);
+            clearTimeout(timeoutId);
 
-            // 检查重定向
-            const finalUrl = response.url || url;
-            const isRedirected = finalUrl !== url;
-
-            // 检查响应状态
-            const status = response.status;
-            const isSuccess = status >= 200 && status < 300;
-            const isRedirect = status >= 300 && status < 400;
-            const isError = status >= 400;
-
-            // 执行安全检查
-            const securityChecks = await this.performSecurityChecks(url, finalUrl, response);
-            const isSuspicious = securityChecks.isSuspicious;
-            const securityDetails = securityChecks.details;
-
-            // 更新统计信息
-            this.totalChecked++;
-            if (isSuccess) this.successCount++;
-            if (isError) this.failedCount++;
-            if (isRedirect) this.redirectCount++;
-            if (isSuspicious) this.suspiciousCount++;
-
-            // 记录结果
-            const result = {
-                name,
-                category,
-                originalUrl: url,
-                finalUrl,
-                status,
-                responseTime,
-                isRedirected,
-                isSuccess,
-                isError,
-                isSuspicious,
-                securityDetails,
-                timestamp: new Date().toISOString()
+            // 在 no-cors 模式下，response.ok 总是 false，status 总是 0，type 是 'opaque'
+            // 只要没有抛出网络错误，我们就认为它是“存活”的。
+            // 这是一个妥协方案，因为纯前端无法完美检测跨域链接。
+            return {
+                status: 'success',
+                duration: duration,
+                statusText: response.type === 'opaque' ? 'Opaque Response (Live)' : response.statusText,
+                code: response.status
             };
-
-            this.results.push(result);
-            return result;
 
         } catch (error) {
-            console.error(`检查URL失败: ${url}`, error);
-            this.totalChecked++;
-            this.failedCount++;
-
-            const errorResult = {
-                name,
-                category,
-                originalUrl: url,
-                finalUrl: url,
-                status: 0,
-                responseTime: 0,
-                isRedirected: false,
-                isSuccess: false,
-                isError: true,
-                isSuspicious: false,
-                error: this.getDetailedError(error),
-                timestamp: new Date().toISOString()
-            };
-
-            this.results.push(errorResult);
-            return errorResult;
-        }
-    }
-
-    // 执行安全检查
-    async performSecurityChecks(originalUrl, finalUrl, response) {
-        const details = [];
-        let isSuspicious = false;
-
-        // 1. 检查域名
-        const originalDomain = new URL(originalUrl).hostname;
-        const finalDomain = new URL(finalUrl).hostname;
-        
-        if (originalDomain !== finalDomain) {
-            details.push(`域名被重定向: ${originalDomain} -> ${finalDomain}`);
-            isSuspicious = true;
-        }
-
-        // 2. 检查恶意域名
-        if (this.maliciousDomains.some(domain => 
-            finalDomain.includes(domain) || 
-            finalDomain.includes(domain.replace('.com', ''))
-        )) {
-            details.push('检测到恶意域名');
-            isSuspicious = true;
-        }
-
-        // 3. 检查可疑关键词
-        if (this.suspiciousKeywords.some(keyword => 
-            finalUrl.toLowerCase().includes(keyword)
-        )) {
-            details.push('URL包含可疑关键词');
-            isSuspicious = true;
-        }
-
-        // 4. 检查SSL证书
-        if (finalUrl.startsWith('https://')) {
-            try {
-                const certInfo = await this.checkSSL(finalUrl);
-                if (!certInfo.isValid) {
-                    details.push(`SSL证书问题: ${certInfo.details}`);
-                    isSuspicious = true;
-                }
-            } catch (error) {
-                details.push('SSL证书检查失败');
-                isSuspicious = true;
+            clearTimeout(timeoutId);
+            let errorMsg = error.message;
+            if (error.name === 'AbortError') {
+                errorMsg = `超时 (${this.timeout}ms)`;
             }
-        }
-
-        // 5. 检查响应头
-        // const headers = response.headers;
-        // if (!headers.get('X-Frame-Options')) {
-        //     details.push('缺少X-Frame-Options头，可能存在点击劫持风险');
-        //     isSuspicious = true;
-        // }
-
-        // if (!headers.get('X-Content-Type-Options')) {
-        //     details.push('缺少X-Content-Type-Options头，可能存在MIME类型嗅探风险');
-        //     isSuspicious = true;
-        // }
-
-        // if (!headers.get('Content-Security-Policy')) {
-        //     details.push('缺少Content-Security-Policy头，可能存在XSS风险');
-        //     isSuspicious = true;
-        // }
-
-        return {
-            isSuspicious,
-            details
-        };
-    }
-
-    // 检查SSL证书
-    async checkSSL(url) {
-        try {
-            const response = await fetch(url, {
-                method: 'HEAD',
-                mode: 'no-cors'
-            });
-            
             return {
-                isValid: true,
-                details: '证书有效'
-            };
-        } catch (error) {
-            return {
-                isValid: false,
-                details: error.message
+                status: 'failed',
+                duration: this.timeout,
+                error: errorMsg
             };
         }
-    }
-
-    // 获取详细的错误信息
-    getDetailedError(error) {
-        if (error.name === 'TypeError' && error.message.includes('Failed to fetch')) {
-            return '网络连接失败，可能是域名不存在或服务器无响应';
-        }
-        if (error.name === 'SecurityError') {
-            return '安全错误：可能是跨域请求被阻止';
-        }
-        if (error.name === 'AbortError') {
-            return '请求超时';
-        }
-        return error.message || '未知错误';
-    }
-
-    // 生成检测报告
-    generateReport() {
-        return {
-            summary: {
-                totalChecked: this.totalChecked,
-                successCount: this.successCount,
-                failedCount: this.failedCount,
-                redirectCount: this.redirectCount,
-                suspiciousCount: this.suspiciousCount,
-                successRate: (this.successCount / this.totalChecked * 100).toFixed(2) + '%',
-                lastCheckTime: this.lastCheckTime,
-                timestamp: new Date().toISOString()
-            },
-            details: this.results
-        };
-    }
-
-    // 开始定时检测
-    startPeriodicCheck(interval = 3600000) { // 默认1小时
-        this.checkInterval = setInterval(async () => {
-            await this.checkAllURLs();
-            this.lastCheckTime = new Date().toISOString();
-        }, interval);
-    }
-
-    // 停止定时检测
-    stopPeriodicCheck() {
-        if (this.checkInterval) {
-            clearInterval(this.checkInterval);
-            this.checkInterval = null;
-        }
-    }
-
-    // 批量检查URL
-    async checkAllURLs(data) {
-        const results = [];
-        for (const category of Object.keys(data.links)) {
-            for (const item of data.links[category]) {
-                if (item.url) {
-                    const result = await this.checkURL(item.url, item.name, category);
-                    results.push(result);
-                }
-            }
-        }
-        return results;
     }
 }
 
-// 导出URLChecker类
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = URLChecker;
-} 
+// === 以下是需要修改的 UI 渲染函数 ===
+
+function createResultRow(link) {
+    const tr = document.createElement('tr');
+    // 初始化时显示等待状态
+    tr.innerHTML = `
+        <td><span class="status-badge" style="background: #eee; color: #888;"><i class="fa-solid fa-clock"></i> 等待中</span></td>
+        <td><span class="category-tag">${link.category}</span></td>
+        <td style="font-weight: 500;">${link.title}</td>
+        <td class="url-cell" title="${link.url}"><a href="${link.url}" target="_blank">${link.url}</a></td>
+        <td>-</td>
+        <td style="color: #888; font-size: 12px;">Waiting...</td>
+    `;
+    return tr;
+}
+
+function updateResult(link, result) {
+    const row = link.rowElement;
+    if (!row) return;
+
+    const statusCell = row.cells[0];
+    const durationCell = row.cells[4];
+    const detailsCell = row.cells[5];
+
+    // 根据状态生成不同的徽章 HTML
+    if (result.status === 'checking') {
+        statusCell.innerHTML = `<span class="status-badge status-checking"><i class="fa-solid fa-spinner fa-spin"></i> 检测中...</span>`;
+        detailsCell.textContent = '正在连接...';
+    } else if (result.status === 'success') {
+        statusCell.innerHTML = `<span class="status-badge status-success"><i class="fa-solid fa-check-circle"></i> 正常</span>`;
+        durationCell.textContent = result.duration + 'ms';
+        // 如果是 opaque 响应，提示用户可能不准确
+        const detailText = result.code === 0 ? '连接成功 (跨域受限,仅确认存活)' : `HTTP ${result.code} ${result.statusText}`;
+        detailsCell.innerHTML = `<span title="${detailText}">${detailText}</span>`;
+        // 可以选择移除整行，只看错误的
+        // row.remove(); 
+    } else {
+        statusCell.innerHTML = `<span class="status-badge status-failed"><i class="fa-solid fa-circle-xmark"></i> 失败</span>`;
+        durationCell.textContent = result.duration + 'ms';
+        detailsCell.innerHTML = `<span style="color: var(--danger-color);" title="${result.error}">${result.error}</span>`;
+        // 将失败的行移动到表格顶部，方便查看
+        row.parentElement.prepend(row);
+    }
+}
