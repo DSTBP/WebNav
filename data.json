@@ -1659,6 +1659,18 @@
         "desc": "免费素材图片服务"
       },
       {
+        "name": "UserStyles",
+        "url": "https://userstyles.org/styles/browse",
+        "img": "userstyles.png",
+        "desc": "Stylish 官方网站，最大的样式市场，但现在活跃度不高了，国内访问速度慢"
+      },
+      {
+        "name": "Userstyles.world",
+        "url": "https://userstyles.world/explore",
+        "img": "userstylesworld.png",
+        "desc": "由 UserStyles 用户维护的一个全新样式市场，活跃度高，速度也不错"
+      },
+      {
         "name": "2DWallpapers",
         "url": "https://www.2dwallpapers.com/",
         "img": "2dwallpapers.png",
@@ -2614,6 +2626,12 @@
     ],
     "大模型 API 中转站": [
       {
+        "name": "中转站监测",
+        "url": "https://check.linux.do/",
+        "img": "vercel.png",
+        "desc": "实时追踪各大 AI 模型对话接口的可用性、延迟与官方服务状态"
+      },
+      {
         "name": "APIKEY-公益站",
         "url": "https://welfare.apikey.cc/console",
         "img": "welfare.png",
@@ -2630,12 +2648,6 @@
         "url": "https://x666.me/",
         "img": "openclaudecode.png",
         "desc": "提供稳定、快速、高质量的 AI 接口支持，让您的创意轻松实现"
-      },
-      {
-        "name": "中转站监测",
-        "url": "https://check.linux.do/",
-        "img": "vercel.png",
-        "desc": "实时追踪各大 AI 模型对话接口的可用性、延迟与官方服务状态"
       },
       {
         "name": "Privnode",
