@@ -707,9 +707,22 @@
             progress.style.width = '0%';
             allResults = [];
             
+            isChecking = true;
+            shouldStop = false;
+            startCheckBtn.disabled = true;
+            stopCheckBtn.disabled = false;
+            resultsBody.innerHTML = '';
+            progress.style.width = '0%';
+            allResults = [];
+            
             try {
-                const response = await fetch('data.json');
-                const data = await response.json();
+                // 新代码: 直接使用全局变量
+                const data = window.NAV_DATA;
+
+                if (!data) {
+                    throw new Error("未找到数据，请检查 data.js 是否加载成功");
+                }
+                // === 修改结束 ===
                 
                 checker = new URLChecker();
                 const totalUrls = Object.values(data.links).reduce((acc, category) => 
