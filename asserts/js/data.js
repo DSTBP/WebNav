@@ -1985,6 +1985,12 @@ window.NAV_DATA = {
         "desc": "一个专注于提供单机游戏下载的网站。致力于为玩家提供丰富多样的游戏资源"
       },
       {
+        "name": "X游社",
+        "url": "https://xyouacg.com/",
+        "img": "xyouacg.png",
+        "desc": "X游社是一个专注于ACG资源分享的社区平台，提供优质的游戏资源、动漫资讯，打造有温度的二次元交流空间"
+      },
+      {
         "name": "flysheep资源避难所",
         "url": "https://www.flysheep6.com/",
         "img": "flysheep6.png",
@@ -2117,6 +2123,12 @@ window.NAV_DATA = {
         "url": "https://mk48.io",
         "img": "mk48.png",
         "desc": "发射鱼雷、导弹等与其他玩家对战，通过收集海上的板条箱或油桶增加积分升级船只，使用更多武器"
+      },
+      {
+        "name": "美丽国斩杀线",
+        "url": "https://us-killline.com/",
+        "img": "us-killline.png",
+        "desc": "美国底层生存模拟游戏 | 斩杀线上的贫困生存挑战"
       },
       {
         "name": "小霸王游戏机",
