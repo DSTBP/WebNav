@@ -1909,7 +1909,7 @@ window.NAV_DATA = {
       {
         "name": "来看点播",
         "url": "https://www.lkvod.com/",
-        "img": "netflixgc.png",
+        "img": "69mj.png",
         "desc": "聚合最新电影、电视剧、综艺、动漫、在线观看网站平台。做到最新、最快、最全的电影电视剧在线播放平台网站"
       },
       {
