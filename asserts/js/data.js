@@ -2101,6 +2101,12 @@ window.NAV_DATA = {
         "desc": "探索不同历史时期、地区和战争的信息"
       },
       {
+        "name": "Pax Historia",
+        "url": "https://www.paxhistoria.co/games",
+        "img": "paxhistoria.png",
+        "desc": "注重历史真实感与战略沙盒体验，玩家可以在历史框架内进行决策和经营，类似于以历史为背景的文明类游戏"
+      },
+      {
         "name": "城市路网绘制器",
         "url": "https://anvaka.github.io/city-roads/",
         "img": "anvaka.png",
