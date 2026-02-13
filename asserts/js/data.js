@@ -1907,6 +1907,12 @@ window.NAV_DATA = {
         "desc": "一个致力于免费提供 Netflix 影剧动漫的流媒体播放平台"
       },
       {
+        "name": "来看点播",
+        "url": "https://www.lkvod.com/",
+        "img": "netflixgc.png",
+        "desc": "聚合最新电影、电视剧、综艺、动漫、在线观看网站平台。做到最新、最快、最全的电影电视剧在线播放平台网站"
+      },
+      {
         "name": "NyaFun动漫",
         "url": "https://www.nyadm.org/",
         "img": "nyadm.png",
