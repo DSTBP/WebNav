@@ -2758,6 +2758,12 @@ window.NAV_DATA = {
         "url": "https://toolwa.com/websocket/",
         "img": "toolwa.png",
         "desc": "与 WebSocket 建立连接,测试 WebSocket 通讯"
+      },
+      {
+        "name": "在线2FA验证工具",
+        "url": "https://2fa.fun/",
+        "img": "2fa.png",
+        "desc": "谷歌身份验证器(Google Authenticator)的网页版本，支持通过2FA密钥生成6位动态验证码，适用于各种需要二次验证的平台"
       }
     ],
     "论文平台": [
