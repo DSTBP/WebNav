@@ -2848,6 +2848,12 @@ window.NAV_DATA = {
     ],
     "资源种子": [
       {
+        "name": "夸克资源分享站",
+        "url": "https://link3.cc/quarklink",
+        "img": "link3.png",
+        "desc": "夸克网盘资源，要求下载夸克浏览器，才能进行转存和查看（https://touchfish.homes/）"
+      },
+      {
         "name": "「阅读」APP 自用书源",
         "url": "https://yuedu.xiu2.xyz/",
         "img": "xiu2.png",
