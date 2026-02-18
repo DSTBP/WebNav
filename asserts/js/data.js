@@ -2383,6 +2383,12 @@ window.NAV_DATA = {
         "desc": "一个可以不去台球厅就可以打斯诺克的网站"
       },
       {
+        "name": "哄哄模拟器",
+        "url": "https://hong.greatdk.com/",
+        "img": "hong.png",
+        "desc": "一个可以不去台球厅就可以打斯诺克的网站"
+      },
+      {
         "name": "Life Restart",
         "url": "https://liferestart.syaro.io/public/",
         "img": "liferestart.png",
