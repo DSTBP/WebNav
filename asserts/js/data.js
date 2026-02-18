@@ -2493,7 +2493,7 @@ window.NAV_DATA = {
       {
         "name": "星球生成器",
         "url": "https://oskarstalberg.com/game/planet/planet.html",
-        "img": "oskarstalberg.png",
+        "img": "oskarstalberg2.png",
         "desc": "基于 unity 的网页游戏，建造一个超酷的星球"
       },
       {
