@@ -2035,6 +2035,12 @@ window.NAV_DATA = {
         "desc": "国内外妖怪知识图鉴"
       },
       {
+        "name": "海拥🐬游戏大全",
+        "url": "https://game.haiyong.site",
+        "img": "haiyong.png",
+        "desc": "提供最新、最热门的在线游戏。涵盖动作、棋牌、益智、策略、3D、休闲、射击、GBA游戏、fc红白机、经典、赛车、闯关等多种类型"
+      },
+      {
         "name": "食物合成表",
         "url": "https://cook.yunyoujun.cn/",
         "img": "yunyoujuncook.png",
@@ -2137,6 +2143,36 @@ window.NAV_DATA = {
         "desc": "可以加入创建好的房间一起游戏，也可以自己创建房间，无需登录，打开就能玩"
       },
       {
+        "name": "传话游戏",
+        "url": "https://garticphone.com/zh-CN",
+        "img": "garticphone.png",
+        "desc": "一种免费的在线多人绘画传话游戏（又称“你画我猜”接龙版），结合了绘图和文字描述。玩家轮流写下句子并根据前一人的画作进行描述"
+      },
+      {
+        "name": "圈地游戏",
+        "url": "https://tileman.io/",
+        "img": "tileman.png",
+        "desc": "经典的多人战略游戏，你从一个小领域开始游戏。你的主要目标是圈地，扩大你的领土"
+      },
+      {
+        "name": "六边形版俄罗斯方块",
+        "url": "https://hextris.io/",
+        "img": "hextris.png",
+        "desc": "一款创新的六边形版俄罗斯方块游戏，玩家需要在六边形的游戏区域内旋转和放置不同形状的方块，以消除行并获得分数"
+      },
+      {
+        "name": "CodeCombat",
+        "url": "https://codecombat.cn/play",
+        "img": "codecombat.png",
+        "desc": "一使用代码来操控游戏人物，让你一边沉浸在游戏乐趣中一边学习编程技术的在线游戏"
+      },
+      {
+        "name": "刺杀国王",
+        "url": "https://game.haiyong.site/murder/",
+        "img": "haiyong.png",
+        "desc": "玩家将以“刺杀袋鼠”的方式偷偷除掉现任统治者，最终成为下一任国王"
+      },
+      {
         "name": "多人在线海战游戏",
         "url": "https://mk48.io",
         "img": "mk48.png",
@@ -2159,6 +2195,12 @@ window.NAV_DATA = {
         "url": "https://xiaoce.fun/",
         "img": "xiaoce.png",
         "desc": "包含丰富知识问答测验内容的网站，涵盖了多个领域的趣味题目"
+      },
+      {
+        "name": "跳跃装甲",
+        "url": "https://game.haiyong.site/jumping-shell/",
+        "img": "haiyong.png",
+        "desc": "玩家需控制一个可变身的贝壳通过跳跃、改变大小、重力转换和瞬间移动等机制解决逻辑难题"
       },
       {
         "name": "明镜高悬断案录",
