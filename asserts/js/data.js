@@ -2173,6 +2173,12 @@ window.NAV_DATA = {
         "desc": "玩家将以“刺杀袋鼠”的方式偷偷除掉现任统治者，最终成为下一任国王"
       },
       {
+        "name": "城镇叠叠乐",
+        "url": "https://oskarstalberg.com/Townscaper/",
+        "img": "oskarstalberg.png",
+        "desc": "由 Oskar Stålberg 开发的实验性独立建造游戏。玩家通过在海上点击，利用颜色色块自动生成充满欧式风情的城镇、楼梯、拱门和桥梁"
+      },
+      {
         "name": "多人在线海战游戏",
         "url": "https://mk48.io",
         "img": "mk48.png",
@@ -2189,6 +2195,12 @@ window.NAV_DATA = {
         "url": "https://www.yikm.net/",
         "img": "yikm.png",
         "desc": "在线小霸王游戏机，上千款小霸王、红白机、街机游戏等"
+      },
+      {
+        "name": "单机皇室战争（伪）",
+        "url": "https://game.haiyong.site/weijing/",
+        "img": "haiyong.png",
+        "desc": "仿照皇室战争的游戏玩法"
       },
       {
         "name": "猜盐（炒饭小测试）",
@@ -2317,16 +2329,34 @@ window.NAV_DATA = {
         "desc": "Emoji表情素材合成器，轻松拥有emoji合成表情"
       },
       {
+        "name": "读心术",
+        "url": "https://game.haiyong.site/duxinshu/",
+        "img": "haiyong.png",
+        "desc": "瞬间猜出你所想（有点小巧思）"
+      },
+      {
         "name": "在线沙画",
         "url": "https://thisissand.com/",
         "img": "thisissand.png",
         "desc": "鼠标操作，点击左键绘画，右上角可以选择沙子颜色，能画出各种图案"
       },
       {
+        "name": "Kiomet 在线即时战略",
+        "url": "https://kiomet.com/",
+        "img": "kiomet.png",
+        "desc": "一款由 Softbear 工作室于 2022 年发布的在线多人即时战略（RTS）游戏。玩家在动态战场上，通过占据塔楼来扩张领土、调度兵力，核心目标是生存、称霸并获得最高分"
+      },
+      {
         "name": "语气转换器",
         "url": "https://goblin.tools/Formalizer",
         "img": "goblin.png",
         "desc": "功能设置完善，直接上线输入你想说的话，可以直接转换成想要的语气"
+      },
+      {
+        "name": "愤怒的小鸟",
+        "url": "https://angrybirds.wan1234.com/",
+        "img": "angrybirds.png",
+        "desc": "超级热门的物理弹射类游戏。在这个游戏中,玩家需要射出不同的鸟类,毁灭堡垒,消灭里面的小猪"
       },
       {
         "name": "神奇海螺试验场",
