@@ -2113,10 +2113,16 @@ window.NAV_DATA = {
         "desc": "输入城市名字，自动绘制所有城市道路地图"
       },
       {
-        "name": "超耐玩的塔防游戏",
+        "name": "yorg 塔防游戏",
         "url": "https://yorg.io",
         "img": "yorg.png",
         "desc": "搭建自己的防御基地、开采资源、运输物资、升级技能……防御夜晚僵尸来袭"
+      },
+      {
+        "name": "猫国建设者",
+        "url": "https://lolitalibrary.com/maomao/index.html",
+        "img": "lolitalibrary.png",
+        "desc": "一款适合摸鱼的模拟村庄建设的文字放置养成系游戏"
       },
       {
         "name": "在线音乐播放室",
