@@ -2131,6 +2131,12 @@ window.NAV_DATA = {
         "desc": "一款适合摸鱼的模拟村庄建设的文字放置养成系游戏"
       },
       {
+        "name": "进化 Evolve",
+        "url": "https://evolve.g8hh.com/",
+        "img": "evolve.png",
+        "desc": "科幻题材经营放置类，从单细胞进化至宇宙文明。支持本地/汉化服运行（https://g8hh.github.io/evolve）"
+      },
+      {
         "name": "在线音乐播放室",
         "url": "https://music.alang.run",
         "img": "alang.png",
@@ -2167,6 +2173,12 @@ window.NAV_DATA = {
         "desc": "一使用代码来操控游戏人物，让你一边沉浸在游戏乐趣中一边学习编程技术的在线游戏"
       },
       {
+        "name": "星系核心：地平线",
+        "url": "https://yx.g8hh.com/heart-of-galaxy-horizons/",
+        "img": "evolve.png",
+        "desc": "一个放置类的策略优化游戏，在这里你可以建立自己的空间帝国"
+      },
+      {
         "name": "刺杀国王",
         "url": "https://game.haiyong.site/murder/",
         "img": "haiyong.png",
@@ -2201,6 +2213,18 @@ window.NAV_DATA = {
         "url": "https://game.haiyong.site/weijing/",
         "img": "haiyong.png",
         "desc": "仿照皇室战争的游戏玩法"
+      },
+      {
+        "name": "猜单词",
+        "url": "https://www.nytimes.com/games/wordle/index.html",
+        "img": "wordle.png",
+        "desc": "每日网页文字益智游戏，由工程师乔希·沃德尔（Josh Wardle）开发，后被纽约时报收购。玩家每天有6次机会猜一个5个字母的英文单词"
+      },
+      {
+        "name": "喵喵竞赛",
+        "url": "https://cat.llx.life/",
+        "img": "cat.png",
+        "desc": "在线多人横板闯关网页游戏，玩法借鉴自 WTFgame 猫猫竞赛"
       },
       {
         "name": "猜盐（炒饭小测试）",
