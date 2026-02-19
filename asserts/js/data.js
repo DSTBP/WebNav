@@ -2455,9 +2455,9 @@ window.NAV_DATA = {
         "desc": "万物皆可摸头"
       },
       {
-        "name": "元素组合模拟器",
-        "url": "https://neal.fun/infinite-craft/",
-        "img": "neal.png",
+        "name": "万物皆可合成",
+        "url": "https://littlealchemy.com/",
+        "img": "littlealchemy.png",
         "desc": "通过拖动不同元素如水、火、风、土等进行组合,合成新的道具和物品"
       },
       {
