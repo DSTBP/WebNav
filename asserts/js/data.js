@@ -2551,12 +2551,6 @@ window.NAV_DATA = {
         "desc": "专业的性心理健康自我评估工具，基于多个经过验证的心理测量量表，帮助您科学地了解自己的性心理特征，促进性健康和亲密关系的发展"
       },
       {
-        "name": "周易占卜",
-        "url": "https://touchfish.homes/share/%E5%91%A8%E6%98%93%E5%8D%9C%E5%8D%A6/index.html",
-        "img": "touchfish.png",
-        "desc": "传统易经卦象占卜，探寻人生智慧"
-      },
-      {
         "name": "福音戰士標題生成器",
         "url": "https://lab.magiconch.com/eva-title/",
         "img": "magiconch.png",
