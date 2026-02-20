@@ -1475,6 +1475,12 @@ window.NAV_DATA = {
         "desc": "免费,导师评价,导师推荐,导师点评,选导师,科研,分享,教授,交流,研究生,博士生"
       },
       {
+        "name": "动漫日语学习",
+        "url": "https://anime-manga.jp/zh/",
+        "img": "anime-manga.png",
+        "desc": "提供了一个轻松愉快的方式来学习动漫中的角色和主题的日语表达"
+      },
+      {
         "name": "Greasyfork",
         "url": "https://greasyfork.org/zh-CN/scripts",
         "img": "greasyfork.png",
@@ -2539,6 +2545,18 @@ window.NAV_DATA = {
         "desc": "社交平台上通过拼音首字母缩写指代特定词句的情况越来越多，为了让更多人能勉强理解这一门另类沟通方式、做了这一个划词转义工具"
       },
       {
+        "name": "性压抑指数",
+        "url": "https://xyy.gta4.bio/",
+        "img": "xyy.png",
+        "desc": "专业的性心理健康自我评估工具，基于多个经过验证的心理测量量表，帮助您科学地了解自己的性心理特征，促进性健康和亲密关系的发展"
+      },
+      {
+        "name": "周易占卜",
+        "url": "https://touchfish.homes/share/%E5%91%A8%E6%98%93%E5%8D%9C%E5%8D%A6/index.html",
+        "img": "touchfish.png",
+        "desc": "传统易经卦象占卜，探寻人生智慧"
+      },
+      {
         "name": "福音戰士標題生成器",
         "url": "https://lab.magiconch.com/eva-title/",
         "img": "magiconch.png",
@@ -2597,6 +2615,12 @@ window.NAV_DATA = {
         "url": "https://toolwa.com/yxh/",
         "img": "toolwa.png",
         "desc": "营销号是什么？营销号究竟是什么梗？营销号是如何火起来的？这个工具帮你解答！"
+      },
+      {
+        "name": "小故事铺",
+        "url": "https://storynook.cn/",
+        "img": "storynook.png",
+        "desc": "一个专注于精选短篇故事的平台，涵盖睡前、恐怖、亲情、儿童等多个类型。每天更新精彩故事，陪你度过温暖或惊悚的时刻"
       },
       {
         "name": "猜中国省份",
@@ -2842,6 +2866,12 @@ window.NAV_DATA = {
         "url": "https://toolwa.com/timed-refresh/",
         "img": "toolwa.png",
         "desc": "定时刷新网页，网页浏览压力测试，网页刷浏览量"
+      },
+      {
+        "name": "查号吧",
+        "url": "https://www.chahaoba.com/",
+        "img": "chahaoba.png",
+        "desc": "电话查询,电话区号查询,固定电话查询,固定电话区号查询,手机号码归属,国际长途,骗子号码,骚扰电话"
       },
       {
         "name": "域名微信拦截检测",
