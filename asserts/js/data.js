@@ -1409,6 +1409,12 @@ window.NAV_DATA = {
         "desc": "全球专业中文经管百科，专注于经济管理领域的自由百科全书"
       },
       {
+        "name": "医学微视",
+        "url": "https://www.mvyxws.cn/",
+        "img": "mvyxws.png",
+        "desc": "中国医学科普微视频百科全书，提供医学科普视频、医学知识图谱、医学百科全书等内容"
+      },
+      {
         "name": "识典古籍",
         "url": "https://www.shidianguji.com/",
         "img": "shidianguji.png",
@@ -1419,6 +1425,12 @@ window.NAV_DATA = {
         "url": "https://www.lishichelun.com",
         "img": "lishichelun.png",
         "desc": "用时间轴的形式展示历史上的人物生平和事件"
+      },
+      {
+        "name": "全历史（Allhistory）",
+        "url": "https://m2.allhistory.com/",
+        "img": "allhistory.png",
+        "desc": "一个比较全面的全球历史知识库，涵盖了全球多个国家历史、大事件、画作、书籍、古迹等等"
       },
       {
         "name": "维修社区",
@@ -1677,6 +1689,12 @@ window.NAV_DATA = {
         "desc": "全球航拍爱好者和专业摄影师的作品社区"
       },
       {
+        "name": "千亿像素看世界",
+        "url": "https://www.bigpixel.cn/gigapixelAPP/web/index.html",
+        "img": "bigpixel.png",
+        "desc": "一种利用超高清全景摄影技术，将几千张甚至上万张高清照片拼接而成的巨幅互动影像"
+      },
+      {
         "name": "unsplash",
         "url": "https://www.skypixel.com/",
         "img": "skypixel.png",
@@ -1717,6 +1735,12 @@ window.NAV_DATA = {
         "url": "https://www.canva.cn/",
         "img": "canva.png",
         "desc": "各类素材设计制作网站"
+      },
+      {
+        "name": "ColorFlow 渐变背景",
+        "url": "https://colorflow.ls.graphics/",
+        "img": "colorflow.png",
+        "desc": "由 LS Graphics 推出的一款免费的在线工具网站，专注于制作高质量的动画和交互式“网格渐变” (Mesh Gradients) 背景"
       },
       {
         "name": "Color Hunt",
@@ -1849,6 +1873,12 @@ window.NAV_DATA = {
         "url": "https://zitie.xueyuqu.com/",
         "img": "zitie.png",
         "desc": "提供了包括中文、英文、数字、拼音、控笔练习在内的五种类型字帖"
+      },
+      {
+        "name": "PPT 超级市场",
+        "url": "https://www.pptsupermarket.com/",
+        "img": "pptsupermarket.png",
+        "desc": "免费下载PPT模板与PPT作品，提供免费的PPT代做服务，提供一站式PPT(模板、定制、工具、教程)服务"
       },
       {
         "name": "爱下电子书",
@@ -2615,6 +2645,12 @@ window.NAV_DATA = {
         "url": "https://storynook.cn/",
         "img": "storynook.png",
         "desc": "一个专注于精选短篇故事的平台，涵盖睡前、恐怖、亲情、儿童等多个类型。每天更新精彩故事，陪你度过温暖或惊悚的时刻"
+      },
+      {
+        "name": "星火匿名聊天",
+        "url": "https://zzkaiying.com/nmchat_index.html",
+        "img": "zzkaiying.png",
+        "desc": "匿名聊,匿名聊天,虚拟恋人,倾诉,闲聊,叔叔有约,在线聊天,免费,交友,无需注册,匿名,隐私保护,deskry,无注册匿名在线聊天"
       },
       {
         "name": "猜中国省份",
