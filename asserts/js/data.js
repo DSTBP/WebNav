@@ -2432,7 +2432,7 @@ window.NAV_DATA = {
       },
       {
         "name": "疯狂星期四文案生成器",
-        "url": "https://crazyv50.com/",
+        "url": "https://kfc.shadiao.pro/",
         "img": "crazyv50.png",
         "desc": "刚换的qq音乐的会员兑换码，多了一个，发你们用 KFC-CRAZY-THURSDAY-VME50"
       },
