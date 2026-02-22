@@ -1325,10 +1325,16 @@ window.NAV_DATA = {
         "desc": "fastsoso 搜索支持百度云搜索，可快速搜索百度网盘资源中的有效连接，自动识别无效的百度云网盘资源，每天更新海量资源"
       },
       {
-        "name": "热盘搜",
-        "url": "http://www.repanso.com/",
-        "img": "repanso.png",
-        "desc": "百度云网盘搜索引擎，网盘云搜索服务。搜索电影、电视剧、小说、文档、资料等百度云资源"
+        "name": "盘大师",
+        "url": "https://www.pandashi8.com/",
+        "img": "pandashi8.png",
+        "desc": "聚合网盘资源搜索工具，提供 阿里云盘、夸克网盘、百度网盘、蓝奏网盘、迅雷网盘、天翼网盘、彩和网盘 等网盘资源搜索"
+      },
+      {
+        "name": "皮卡搜索",
+        "url": "https://www.pikasoo.top/",
+        "img": "pikasoo.png",
+        "desc": "阿里夸克百度蓝奏天翼五大网盘聚合搜索引擎，10000000+ 网盘资源免费无偿分享"
       },
       {
         "name": "Z-library",
