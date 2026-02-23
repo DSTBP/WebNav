@@ -671,6 +671,18 @@ window.NAV_DATA = {
         "desc": "一款可以批量下载微信公众号文章内容的小工具，无需安装证书，支持Window、Macos支持下载微信公众号的历史消息，可以保存文章为html/mhtml/md/pdf/docx文件"
       },
       {
+        "name": "网页存档",
+        "url": "https://archive.today/",
+        "img": "today.png",
+        "desc": "可以将网页永久保存，即使原来的网页消失了，你仍然可以通过这里的存档查看原网页的内容"
+      },
+      {
+        "name": "互联网档案馆",
+        "url": "https://archive.org/",
+        "img": "archive.png",
+        "desc": "互联网档案馆是一个非营利图书馆，收藏了数百万份免费文本、电影、软件、音乐、网站等"
+      },
+      {
         "name": "任务拆分器",
         "url": "https://goblin.tools/",
         "img": "goblin.png",
