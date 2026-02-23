@@ -1671,6 +1671,12 @@ window.NAV_DATA = {
         "desc": "将图片转换为 ASCII 艺术文本，一堆字母、数字和符号"
       },
       {
+        "name": "多种游戏风格字体生成器",
+        "url": "https://fontmeme.com/zh/stranger-things-font/",
+        "img": "fontmeme.png",
+        "desc": "支持传说之下、GTA系列、乐高、宝可梦、大表哥等等字体（仅支持英文）"
+      },
+      {
         "name": "设计资源平台",
         "url": "https://iconscout.com/",
         "img": "iconscout.png",
@@ -1699,6 +1705,12 @@ window.NAV_DATA = {
         "url": "https://www.2dwallpapers.com/",
         "img": "2dwallpapers.png",
         "desc": "一个免费的二次元、动漫、游戏壁纸下载网站"
+      },
+      {
+        "name": "哲风壁纸",
+        "url": "https://haowallpaper.com/",
+        "img": "haowallpaper.png",
+        "desc": "免费 4K 高清壁纸-电脑背景图片-Mac 壁纸网站"
       },
       {
         "name": "航拍素材",
@@ -1887,10 +1899,46 @@ window.NAV_DATA = {
         "desc": "一款专业精简的在线ps图片处理软件，免下载、免安装，直接在浏览器打开网页版就可随时随地用它修正"
       },
       {
+        "name": "福音戰士標題生成器",
+        "url": "https://lab.magiconch.com/eva-title/",
+        "img": "magiconch.png",
+        "desc": "一个生成福音戰士標題字体和排版的生成工具"
+      },
+      {
+        "name": "蔚蓝档案标题生成器",
+        "url": "https://pro-ivan.com/game/bluearchive-logo/index.html",
+        "img": "pro-ivan.png",
+        "desc": "使用主要字体RoG2サンセリフStd B和未来荧黑，https://github.com/nulla2011/Bluearchive-logo"
+      },
+      {
+        "name": "明日方舟标题生成器",
+        "url": "https://arknights-logo-generator.netlify.app/",
+        "img": "arknights.png",
+        "desc": "可更换背景，支持拖拽及粘贴图片"
+      },
+      {
+        "name": "Minecraft风格字体生成器",
+        "url": "https://textcraft.net/",
+        "img": "textcraft.png",
+        "desc": "在线生成 Minecraft 风格字体的网站，支持中英日等多种语言"
+      },
+      {
+        "name": "线条素描制作",
+        "url": "https://javier.xyz/pintr",
+        "img": "javier.png",
+        "desc": "将你的照片通过线条素描绘制成时尚有趣的艺术画"
+      },
+      {
         "name": "田字格字帖生成器",
         "url": "https://zitie.xueyuqu.com/",
         "img": "zitie.png",
         "desc": "提供了包括中文、英文、数字、拼音、控笔练习在内的五种类型字帖"
+      },
+      {
+        "name": "卢浮宫生成器",
+        "url": "https://lab.magiconch.com/one-last-image/",
+        "img": "magiconch.png",
+        "desc": "One Last Kiss 风格 封面生成 图片转线稿"
       },
       {
         "name": "PPT 超级市场",
@@ -2101,6 +2149,12 @@ window.NAV_DATA = {
         "desc": "好的，今天我们来做菜！"
       },
       {
+        "name": "一饭封神",
+        "url": "https://eat.lz-t.top/",
+        "img": "eat.png",
+        "desc": "专业的AI智能菜谱生成平台，汇聚中华八大菜系厨艺大师，根据您的食材智能生成个性化菜谱"
+      },
+      {
         "name": "网络威胁实时地图",
         "url": "https://cybermap.kaspersky.com/cn",
         "img": "cybermap.png",
@@ -2297,12 +2351,6 @@ window.NAV_DATA = {
         "url": "https://deepnovel.net/judgment",
         "img": "deepnovel.png",
         "desc": "你将扮演青天大老爷，勘破奇案，明镜断案 - 深度写作 DeepNovel - AI写作阅读平台"
-      },
-      {
-        "name": "线条素描制作",
-        "url": "https://javier.xyz/pintr",
-        "img": "javier.png",
-        "desc": "将你的照片通过线条素描绘制成时尚有趣的艺术画"
       },
       {
         "name": "联机棋类游戏平台",
@@ -2597,36 +2645,6 @@ window.NAV_DATA = {
         "url": "https://xyy.gta4.bio/",
         "img": "xyy.png",
         "desc": "专业的性心理健康自我评估工具，基于多个经过验证的心理测量量表，帮助您科学地了解自己的性心理特征，促进性健康和亲密关系的发展"
-      },
-      {
-        "name": "福音戰士標題生成器",
-        "url": "https://lab.magiconch.com/eva-title/",
-        "img": "magiconch.png",
-        "desc": "一个生成福音戰士標題字体和排版的生成工具"
-      },
-      {
-        "name": "蔚蓝档案标题生成器",
-        "url": "https://pro-ivan.com/game/bluearchive-logo/index.html",
-        "img": "pro-ivan.png",
-        "desc": "使用主要字体RoG2サンセリフStd B和未来荧黑，https://github.com/nulla2011/Bluearchive-logo"
-      },
-      {
-        "name": "明日方舟标题生成器",
-        "url": "https://arknights-logo-generator.netlify.app/",
-        "img": "arknights.png",
-        "desc": "可更换背景，支持拖拽及粘贴图片"
-      },
-      {
-        "name": "Minecraft风格字体生成器",
-        "url": "https://textcraft.net/",
-        "img": "textcraft.png",
-        "desc": "在线生成 Minecraft 风格字体的网站，支持中英日等多种语言"
-      },
-      {
-        "name": "多种游戏风格字体生成器",
-        "url": "https://fontmeme.com/zh/stranger-things-font/",
-        "img": "fontmeme.png",
-        "desc": "支持传说之下、GTA系列、乐高、宝可梦、大表哥等等字体（仅支持英文）"
       },
       {
         "name": "纸飞机折叠",
