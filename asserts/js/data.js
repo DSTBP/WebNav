@@ -581,6 +581,12 @@ window.NAV_DATA = {
         "desc": "在线压缩图片"
       },
       {
+        "name": "Wormhole 文件共享",
+        "url": "https://wormhole.app/",
+        "img": "wormhole.png",
+        "desc": "Wormhole 让你能以端到端加密和自动过期链接的方式分享文件。 所以你可以确保你分享的文件私密且不会一直留在互联网上"
+      },
+      {
         "name": "网络剪贴板",
         "url": "https://netcut.cn/",
         "img": "netcut.png",
@@ -599,6 +605,12 @@ window.NAV_DATA = {
         "desc": "独一无二的简历生成器，保护你的隐私。安全、可定制可移植、开源且永久免费"
       },
       {
+        "name": "在线手柄测试",
+        "url": "https://ds.daidr.me/",
+        "img": "daidr.png",
+        "desc": "在线测试手柄、游戏控制器，包括一般手柄、USB手柄、蓝牙手柄。测试包括XBox、Playstation(PS)、Nintendo(任天堂)Switch及其他型号的手柄"
+      },
+      {
         "name": "美国地址生成器",
         "url": "https://www.meiguodizhi.com/usa-address/montana",
         "img": "meiguodizhi.png",
@@ -609,6 +621,12 @@ window.NAV_DATA = {
         "url": "https://cli.im/",
         "img": "cli.png",
         "desc": "二维码解码、文本链接转二维码"
+      },
+      {
+        "name": "识别地标",
+        "url": "https://www.geospy.info/zh",
+        "img": "vercel.png",
+        "desc": "上传图片，让我们的AI使用先进的机器学习技术识别位置，发现您的照片拍摄地点"
       },
       {
         "name": "AbeimAPI",
@@ -1455,6 +1473,12 @@ window.NAV_DATA = {
         "url": "https://jihezn.com",
         "img": "jihezn.png",
         "desc": "包含了各种木工图纸、材料信息和木工相关知识"
+      },
+      {
+        "name": "地铁通",
+        "url": "https://www.metroman.cn/",
+        "img": "metroman.png",
+        "desc": "获取中国地铁信息、线路规划与地图"
       },
       {
         "name": "3D模型分享网站",
