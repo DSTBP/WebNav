@@ -2536,7 +2536,7 @@ window.NAV_DATA = {
         "name": "哄哄模拟器",
         "url": "https://hong.greatdk.com/",
         "img": "hong.png",
-        "desc": "一个可以不去台球厅就可以打斯诺克的网站"
+        "desc": "你需要使用语言技巧和沟通能力，在限定次数内让对方原谅你，这并不容易"
       },
       {
         "name": "Life Restart",
