@@ -2117,6 +2117,12 @@ window.NAV_DATA = {
         "desc": "一个专注于提供单机游戏下载的网站。致力于为玩家提供丰富多样的游戏资源"
       },
       {
+        "name": "itch",
+        "url": "https://itch.io/",
+        "img": "itch.png",
+        "desc": "着重于独立游戏以及Game Jam 的独立数字创作者们缔造的开放市场"
+      },
+      {
         "name": "X游社",
         "url": "https://xyouacg.com/",
         "img": "xyouacg.png",
