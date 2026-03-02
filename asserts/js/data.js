@@ -2275,6 +2275,12 @@ window.NAV_DATA = {
         "desc": "科幻题材经营放置类，从单细胞进化至宇宙文明。支持本地/汉化服运行（https://g8hh.github.io/evolve）"
       },
       {
+        "name": "生火间",
+        "url": "https://adarkroom.doublespeakgames.com/?lang=zh_cn",
+        "img": "adarkroom.png",
+        "desc": "经典耐玩的文字冒险游戏"
+      },
+      {
         "name": "在线音乐播放室",
         "url": "https://music.alang.run",
         "img": "alang.png",
@@ -2309,6 +2315,12 @@ window.NAV_DATA = {
         "url": "https://codecombat.cn/play",
         "img": "codecombat.png",
         "desc": "一使用代码来操控游戏人物，让你一边沉浸在游戏乐趣中一边学习编程技术的在线游戏"
+      },
+      {
+        "name": "CyberCode Online",
+        "url": "https://cybercodeonline.com/",
+        "img": "cybercodeonline.png",
+        "desc": "一款赛博朋克风格的轻量级文字类大型多人在线角色扮演游戏（MMORPG），支持浏览器和移动设备"
       },
       {
         "name": "星系核心：地平线",
@@ -2413,6 +2425,12 @@ window.NAV_DATA = {
         "desc": "20+ 桌游小游戏，可创建房间联机、本地游戏"
       },
       {
+        "name": "Poki (宝玩)",
+        "url": "https://poki.com/zh",
+        "img": "poki.png",
+        "desc": "无需您下载、登录，更无弹窗干扰。我们的游戏支持台式机、平板电脑、移动设备等多种运行环境"
+      },
+      {
         "name": "寻找不动的表情包",
         "url": "http://emojisandearthporn.com/",
         "img": "emojisandearthporn.png",
@@ -2471,6 +2489,12 @@ window.NAV_DATA = {
         "url": "https://rubiks-cube-solver.com/zh/",
         "img": "rubiks-cube-solver.png",
         "desc": "输入魔方各面颜色，网站会自动计算出魔方的复原步骤，点击“求解”，按提示操作即可还原魔方"
+      },
+      {
+        "name": "RAGDOLL HIT",
+        "url": "https://poki.com/zh/g/ragdoll-hit",
+        "img": "poki.png",
+        "desc": "可以控布偶棍人击败各种敌人，结合拳击、踢击、跳跃等 动作，赢得所有战斗"
       },
       {
         "name": "支付宝到账音效生成器",
