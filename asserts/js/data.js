@@ -1229,6 +1229,12 @@ window.NAV_DATA = {
         "desc": "一个面向科技爱好者、开发者及Al技术从业者的中文技术社区，涵盖Linux系统、软件开发、人工智能、自动化运维等多个领域"
       },
       {
+        "name": "IDCFlare",
+        "url": "https://idcflare.com/",
+        "img": "idcflare.png",
+        "desc": "LINUXDO 分站，域名、主机等信息集散地"
+      },
+      {
         "name": "Hello 算法",
         "url": "https://www.hello-algo.com/",
         "img": "hello-algo.png",
@@ -3060,6 +3066,24 @@ window.NAV_DATA = {
         "url": "https://bywa-1.art/",
         "img": "bywave.png",
         "desc": "质量优，https://github.com/winston779/bywave"
+      },
+      {
+        "name": "DMIT",
+        "url": "https://www.dmit.io/aff.php?aff=18685",
+        "img": "dmit.png",
+        "desc": "知名海外高端 VPS 家宽主机服务商，以高性能、高质量的 CN2 GIA/CMIN2 优化线路"
+      },
+      {
+        "name": "丽萨主机",
+        "url": "https://lisahost.com/cart.php",
+        "img": "lisahost.png",
+        "desc": "提供中国香港、美国、新加坡、日本和英国等地的优质机房资源。主打高性价比的双ISP原生IP和住宅IP"
+      },
+      {
+        "name": "Kaze",
+        "url": "https://app.kaze.network/index.php?rp=/store/hkg-nat",
+        "img": "kaze.png",
+        "desc": "移动可直连的优质 HK NAT 机器"
       }
     ],
     "大模型 API 中转站": [
