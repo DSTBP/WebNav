@@ -533,6 +533,12 @@ window.NAV_DATA = {
         "desc": "查找带有您输入的特定字母的单词，更好的设计缩写"
       },
       {
+        "name": "PhET",
+        "url": "https://phet.colorado.edu/zh_CN/",
+        "img": "phet.png",
+        "desc": "免费的在线物理、化学、生物、地理及数学仿真程序"
+      },
+      {
         "name": "文本转语音",
         "url": "https://ttsmaker.cn",
         "img": "ttsmaker.png",
@@ -623,6 +629,18 @@ window.NAV_DATA = {
         "desc": "二维码解码、文本链接转二维码"
       },
       {
+        "name": "Median",
+        "url": "https://median.co/",
+        "img": "median.png",
+        "desc": "将你的网站改造为 PWA，可以离线工作，并且拥有自己的应用图标"
+      },
+      {
+        "name": "黑桃A",
+        "url": "https://blackace.app/",
+        "img": "blackace.png",
+        "desc": "网站秒变 APP,网站转 APP, APP 打包, APK 打包, 安卓打包"
+      },
+      {
         "name": "识别地标",
         "url": "https://www.geospy.info/zh",
         "img": "vercel.png",
@@ -663,6 +681,12 @@ window.NAV_DATA = {
         "url": "https://cimbar.org/",
         "img": "cimbar.png",
         "desc": "无网络环境下利用二维码传输文件，无需互联网/蓝牙/NFC等，所有数据都通过相机镜头传输。选择需要传输的文件，解码器是一个使用手机摄像头读取动画条形码的手机应用程序：手机打开APP，对准屏幕，传输开始会出现进度条。Android APP下载：https://github.com/sz3/cfc/releases"
+      },
+      {
+        "name": "在线 Win7",
+        "url": "https://desk.glitchy.website/",
+        "img": "glitchy.png",
+        "desc": "可以将网页永久保存，即使原来的网页消失了，你仍然可以通过这里的存档查看原网页的内容"
       },
       {
         "name": "图片识别代码",
@@ -1057,6 +1081,12 @@ window.NAV_DATA = {
         "desc": "PlantUML 官方编辑工具，支持主题更换"
       },
       {
+        "name": "临时邮箱专业服务",
+        "url": "https://www.moakt.com/",
+        "img": "moakt.png",
+        "desc": "可替代邮箱, 可替换邮箱, 临时邮箱, moakt, mohmal, 一次性邮箱"
+      },
+      {
         "name": "The-X 密码学库",
         "url": "https://the-x.cn/",
         "img": "thex.png",
@@ -1271,6 +1301,12 @@ window.NAV_DATA = {
         "desc": "面向开发人员的社区驱动型交互式路线图、文章和资源"
       },
       {
+        "name": "Hacksplaining",
+        "url": "https://hacksplaining.com/",
+        "img": "hacksplaining.png",
+        "desc": "一个专为开发人员和安全初学者设计的交互式在线 Web 安全学习平台"
+      },
+      {
         "name": "网安学习文章",
         "url": "http://www.yxfzedu.com",
         "img": "yxfzedu.png",
@@ -1421,16 +1457,34 @@ window.NAV_DATA = {
         "desc": "一个收录了各类经典文献、历史资料和文化资源的在线平台，大致内容有照片、课表、杂志、连环画、古籍、书画、乐谱、摄影、游记、文学、县志和老报纸等"
       },
       {
+        "name": "交互式肌肉图谱",
+        "url": "https://musclewiki.com/zh-cn",
+        "img": "musclewiki.png",
+        "desc": "交互式肌肉图谱发现2000+运动。点击任何肌肉查看针对性运动，包含视频教程和分步指导"
+      },
+      {
         "name": "医药信息查询",
         "url": "https://www.dayi.org.cn/",
         "img": "dayi.png",
         "desc": "中国医药信息查询平台，提供最权威医药、疾病信息查询"
       },
       {
+        "name": "乡间郎中",
+        "url": "https://www.xjlz365.com/",
+        "img": "xjlz365.png",
+        "desc": "中医养生调理-中药大全-中草药查询，让养生深入你我健康生活，女性、男性、老人、儿童，我们用心让中医养生深入每个国人的点滴生活"
+      },
+      {
         "name": "默沙东诊疗手册",
         "url": "https://www.msdmanuals.cn/",
         "img": "msdmanuals.png",
         "desc": "一个涵盖了医学所有领域成千上万主题的广泛医学信息来源"
+      },
+      {
+        "name": "BioDigital",
+        "url": "https://www.biodigital.com/",
+        "img": "biodigital.png",
+        "desc": "一个基于云计算的互动式3D人体解剖学、生理学及健康状况模拟平台"
       },
       {
         "name": "MBA智库百科",
@@ -1463,10 +1517,22 @@ window.NAV_DATA = {
         "desc": "一个比较全面的全球历史知识库，涵盖了全球多个国家历史、大事件、画作、书籍、古迹等等"
       },
       {
+        "name": "学种菜网",
+        "url": "https://m.xuezhongcai.com/",
+        "img": "xuezhongcai.png",
+        "desc": "蔬菜种植_水果、粮食、中药材种植技术方法及花卉养殖技巧知识大全"
+      },
+      {
         "name": "维修社区",
         "url": "https://zh.ifixit.com/",
         "img": "ifixit.png",
         "desc": "号称世界上最大的维修社区，小到消费电子设备和各种小工具、服装，大到汽车卡车都有详细的维修教程"
+      },
+      {
+        "name": "装个机",
+        "url": "https://zhuangit.ababtools.com/",
+        "img": "zhuangit.png",
+        "desc": "一个提供电脑硬件组装和配置建议的网站，帮助用户轻松完成电脑组装"
       },
       {
         "name": "几何指南",
@@ -1481,6 +1547,12 @@ window.NAV_DATA = {
         "desc": "获取中国地铁信息、线路规划与地图"
       },
       {
+        "name": "CarCareKiosk",
+        "url": "https://www.carcarekiosk.com/",
+        "img": "carcarekiosk.png",
+        "desc": "一个提供免费汽车维修和保养教学视频的网站，涵盖多种品牌和型号"
+      },
+      {
         "name": "3D模型分享网站",
         "url": "https://makerworld.com.cn/zh",
         "img": "makerworld.png",
@@ -1491,6 +1563,12 @@ window.NAV_DATA = {
         "url": "https://pt.ziziyi.com",
         "img": "ziziyi.png",
         "desc": "孩子学化学的必备小网站，介绍元素详细信息"
+      },
+      {
+        "name": "全球传统美食地图",
+        "url": "https://www.tasteatlas.com/",
+        "img": "tasteatlas.png",
+        "desc": "提供一个庞大的、基于地理位置的食物数据库，标注了全球超过万种菜肴和9,000多家餐厅"
       },
       {
         "name": "英语真题在线",
@@ -1651,6 +1729,12 @@ window.NAV_DATA = {
         "desc": "AI绘画、艺术二维码和艺术字"
       },
       {
+        "name": "Napkin",
+        "url": "https://app.napkin.ai/",
+        "img": "napkin.png",
+        "desc": "基于 AI 的图形生成工具，能够根据用户提供的文字脚本，快速生成适合幻灯片或博文的插图"
+      },
+      {
         "name": "Nano Banana",
         "url": "https://www.nano-banana.com/zh/nanobananapro#generator",
         "img": "nano.png",
@@ -1767,6 +1851,12 @@ window.NAV_DATA = {
         "desc": "各种类型视频素材网站"
       },
       {
+        "name": "Pngimg",
+        "url": "https://www.pngimg.com/",
+        "img": "pngimg.png",
+        "desc": "国外的png素材网站，涵盖了各大种类的png素材，基本上可以说是应有尽有了"
+      },
+      {
         "name": "hippopx",
         "url": "https://www.hippopx.com/",
         "img": "hippopx.png",
@@ -1839,6 +1929,12 @@ window.NAV_DATA = {
         "desc": "搜图神器官方网站-一键搜索聚合，海量图片资源免费下载！"
       },
       {
+        "name": "3D PC 装机模拟器",
+        "url": "https://www.buildcores.com/",
+        "img": "buildcores.png",
+        "desc": "用户可以在线从 CPU、GPU 到机箱和风扇等部件中选择，并实时通过 3D 模型可视化看到组装成 PC 的的外观"
+      },
+      {
         "name": "英文艺术字",
         "url": "http://www.jiqie.com/a/34.htm",
         "img": "jiqie.png",
@@ -1897,6 +1993,12 @@ window.NAV_DATA = {
         "url": "https://www.processon.com/diagrams",
         "img": "processon.png",
         "desc": "一个专业强大的在线作图工具，支持多种图形绘制，多人实时协作，AI快速生成，海量模板，知识社区等功能"
+      },
+      {
+        "name": "在线 DIY 社区",
+        "url": "https://www.instructables.com/projects",
+        "img": "instructables.png",
+        "desc": "一个专门提供用户创建和上传的DIY项目教程的网站"
       },
       {
         "name": "手写签名",
@@ -2191,6 +2293,12 @@ window.NAV_DATA = {
         "desc": "地图 | 卡巴斯基网络威胁实时地图"
       },
       {
+        "name": "全球情报监控平台",
+        "url": "https://www.worldmonitor.app/",
+        "img": "worldmonitor.png",
+        "desc": "一个基于交互式地图的实时信息可视化平台。它利用AI技术汇总全球新闻、冲突地区、军事基地、能源管线及AI数据中心等数据"
+      },
+      {
         "name": "全球威胁与事件情报地图",
         "url": "https://globalthreatmap.up.railway.app/",
         "img": "globalthreatmap.png",
@@ -2275,10 +2383,16 @@ window.NAV_DATA = {
         "desc": "科幻题材经营放置类，从单细胞进化至宇宙文明。支持本地/汉化服运行（https://g8hh.github.io/evolve）"
       },
       {
-        "name": "生火间",
+        "name": "小黑屋",
         "url": "https://adarkroom.doublespeakgames.com/?lang=zh_cn",
         "img": "adarkroom.png",
         "desc": "经典耐玩的文字冒险游戏"
+      },
+      {
+        "name": "玩沙子",
+        "url": "https://sandspiel.club/",
+        "img": "sandspiel.png",
+        "desc": "化身为创造万物的上帝你可以创造各种元素，不同元素之期间会有新的反应"
       },
       {
         "name": "在线音乐播放室",
@@ -2311,10 +2425,34 @@ window.NAV_DATA = {
         "desc": "一款创新的六边形版俄罗斯方块游戏，玩家需要在六边形的游戏区域内旋转和放置不同形状的方块，以消除行并获得分数"
       },
       {
+        "name": "植物大战僵尸网页版",
+        "url": "https://pvz.wan1234.com/",
+        "img": "pvz.png",
+        "desc": "经典塔防游戏植物大战僵尸的网页版，支持在线游玩"
+      },
+      {
         "name": "CodeCombat",
         "url": "https://codecombat.cn/play",
         "img": "codecombat.png",
         "desc": "一使用代码来操控游戏人物，让你一边沉浸在游戏乐趣中一边学习编程技术的在线游戏"
+      },
+      {
+        "name": "PhotoFunia",
+        "url": "https://photofunia.com/",
+        "img": "photofunia.png",
+        "desc": "基于人脸识别技术，提供数百种创意模板（如换脸、杂志封面、海报等），用户只需上传照片即可在几秒钟内生成趣味合成图"
+      },
+      {
+        "name": "GeoFS",
+        "url": "https://www.geo-fs.com/geofs.php",
+        "img": "geo-fs.png",
+        "desc": "一个飞行模拟器，利用卫星图像和数字地理数据生成全球环境。用户可以在网页浏览器中免费运行该模拟器"
+      },
+      {
+        "name": "ZType",
+        "url": "https://zty.pe/",
+        "img": "zty.png",
+        "desc": "一款基于 HTML5 的太空射击题材打字游戏，用户可以通过在浏览器中输入单词来射击敌人"
       },
       {
         "name": "CyberCode Online",
@@ -2326,6 +2464,12 @@ window.NAV_DATA = {
         "name": "星系核心：地平线",
         "url": "https://yx.g8hh.com/heart-of-galaxy-horizons/",
         "img": "evolve.png",
+        "desc": "一个放置类的策略优化游戏，在这里你可以建立自己的空间帝国"
+      },
+      {
+        "name": "信任的进化",
+        "url": "https://dccxi.com/trust/",
+        "img": "dccxi.png",
         "desc": "一个放置类的策略优化游戏，在这里你可以建立自己的空间帝国"
       },
       {
@@ -2401,6 +2545,12 @@ window.NAV_DATA = {
         "desc": "海战游戏、井字游戏、四子棋、五子棋、国际象棋"
       },
       {
+        "name": "你画我猜国外版",
+        "url": "https://skribbl.io/",
+        "img": "skribbl.png",
+        "desc": "和国内的你画我猜小游戏一样，界面、规则几乎相同，只不过是英文版的，可以说是个寓教于乐的英语练习工具"
+      },
+      {
         "name": "在线版 CS 1.6 游戏",
         "url": "https://play-cs.com/zh/servers",
         "img": "play-cs.png",
@@ -2417,6 +2567,12 @@ window.NAV_DATA = {
         "url": "https://ra2web.com",
         "img": "ra2web.png",
         "desc": "支持联机游戏、排位赛和单机模式，需要注册账号，登录后就可以跟全球玩家在线 PK 了"
+      },
+      {
+        "name": "请画一个小人",
+        "url": "https://www2.webhek.com/post/draw-a-stickman/",
+        "img": "webhek.png",
+        "desc": "画一个小人，能做做一系列的事情，有情节，有故事，有动作，有人物，有冒险，有趣味"
       },
       {
         "name": "桌游合集",
@@ -2461,10 +2617,22 @@ window.NAV_DATA = {
         "desc": "一个修仙题材的网页游戏，可以体验从凡人到仙人的修炼之路"
       },
       {
+        "name": "文字密室逃脱",
+        "url": "https://nodes-escape.hzfe.org/",
+        "img": "nodes-escape.png",
+        "desc": "通过文字节点以思维导图的展示方式去解密通关的密室逃脱游戏"
+      },
+      {
         "name": "Nazo 烧脑游戏",
         "url": "https://nazo.one-story.cn/",
         "img": "nazo.png",
         "desc": "Nazo game 是一个烧脑的在线解密游戏。截至2024年4月，约有11700人通关到51关"
+      },
+      {
+        "name": "破坏小飞机",
+        "url": "https://kickassapp.com/",
+        "img": "kickassapp.png",
+        "desc": "允许用户在任何网页上“发射飞机”并用炮弹击毁网页元素以解压"
       },
       {
         "name": "流体模拟器",
@@ -2591,6 +2759,18 @@ window.NAV_DATA = {
         "url": "https://toolwa.com/durms/",
         "img": "toolwa.png",
         "desc": "架子鼓是一套以鼓为主的组合性打击乐器"
+      },
+      {
+        "name": "Islandoodle",
+        "url": "https://mattstark.itch.io/islandoodle",
+        "img": "islandoodle.png",
+        "desc": "北欧风格的岛屿建造游戏，你可以随意变换地形，建造房屋、公路、稻田等"
+      },
+      {
+        "name": "Tramstertram",
+        "url": "https://mattstark.itch.io/tramstertram",
+        "img": "islandoodle.png",
+        "desc": "该城镇以阿姆斯特丹为原型，将在水上⛲建立美丽都市，你需要设计有轨电车🚎把城镇连接起来"
       },
       {
         "name": "做房子模拟器",
