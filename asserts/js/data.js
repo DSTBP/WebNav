@@ -2195,12 +2195,6 @@ window.NAV_DATA = {
         "desc": "免费提供热门影视作品"
       },
       {
-        "name": "麦田影院",
-        "url": "https://mtyy4.com/",
-        "img": "mtyy4.png",
-        "desc": "免费提供热门影视作品"
-      },
-      {
         "name": "NyaFun动漫",
         "url": "https://www.nyadm.org/",
         "img": "nyadm.png",
