@@ -321,6 +321,12 @@ window.NAV_DATA = {
         "desc": "@WangTaddeo"
       },
       {
+        "name": "爱发电",
+        "url": "https://afdian.com/a/DSTBP",
+        "img": "afdian.png",
+        "desc": "爱发电"
+      },
+      {
         "name": "OKX",
         "url": "https://www.zowebatxp.me/zh-hans",
         "img": "okx.png",
