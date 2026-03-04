@@ -2007,6 +2007,12 @@ window.NAV_DATA = {
         "desc": "一个专门提供用户创建和上传的DIY项目教程的网站"
       },
       {
+        "name": "FirstPalette",
+        "url": "https://www.firstpalette.com/",
+        "img": "firstpalette.png",
+        "desc": "一个专为儿童、家长和老师提供免费手作、创意美术和可打印（printable）着色/剪贴素材的国际化资源网站"
+      },
+      {
         "name": "手写签名",
         "url": "https://www.calligrapher.ai/",
         "img": "calligrapher.png",
@@ -2077,6 +2083,12 @@ window.NAV_DATA = {
         "url": "https://www.pptsupermarket.com/",
         "img": "pptsupermarket.png",
         "desc": "免费下载PPT模板与PPT作品，提供免费的PPT代做服务，提供一站式PPT(模板、定制、工具、教程)服务"
+      },
+      {
+        "name": "FreeSewing",
+        "url": "https://freesewing.eu/",
+        "img": "freesewing.png",
+        "desc": "一个服装纸样设计平台和库，主要面向服装设计师、缝纫爱好者和开发者"
       },
       {
         "name": "爱下电子书",
@@ -2425,6 +2437,12 @@ window.NAV_DATA = {
         "desc": "输入城市名字，自动绘制所有城市道路地图"
       },
       {
+        "name": "Paper2Galgame",
+        "url": "https://paper2gal.com/",
+        "img": "paper2gal.png",
+        "desc": "将学术论文改成二次元恋爱游戏"
+      },
+      {
         "name": "yorg 塔防游戏",
         "url": "https://yorg.io",
         "img": "yorg.png",
@@ -2537,6 +2555,12 @@ window.NAV_DATA = {
         "url": "https://game.haiyong.site/murder/",
         "img": "haiyong.png",
         "desc": "玩家将以“刺杀袋鼠”的方式偷偷除掉现任统治者，最终成为下一任国王"
+      },
+      {
+        "name": "石头剪刀布？",
+        "url": "https://www.whatbeatsrock.com/",
+        "img": "haiyong.png",
+        "desc": "无限的石头剪刀布游戏，每回合你都必须战胜你之前的猜测。你可以使用任何东西，输赢由主持人 AI 决定"
       },
       {
         "name": "城镇叠叠乐",
