@@ -1911,6 +1911,12 @@ window.NAV_DATA = {
         "desc": "阿里巴巴图标库，国内功能很强大且图标内容很丰富的矢量图标库"
       },
       {
+        "name": "lordicon",
+        "url": "https://lordicon.com/",
+        "img": "lordicon.png",
+        "desc": "一个开源动效图标集，可以用在个人和商业项目的免费 GIF 图标"
+      },
+      {
         "name": "菜鸟图标",
         "url": "https://icon.sucai999.com",
         "img": "sucai999.png",
