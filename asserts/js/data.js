@@ -2147,6 +2147,48 @@ window.NAV_DATA = {
         "desc": "聚合最新电影、电视剧、综艺、动漫、在线观看网站平台。做到最新、最快、最全的电影电视剧在线播放平台网站"
       },
       {
+        "name": "Vision TV+",
+        "url": "https://www.visiontv.club/",
+        "img": "visiontv.png",
+        "desc": "电影,电视剧,热播剧集,美剧,美国电影,影视聚合,4K电影,影视资源,流媒体,影视分享,在线观看,在线视频"
+      },
+      {
+        "name": "LIBVIO",
+        "url": "https://www.libvio.app/",
+        "img": "libvio.png",
+        "desc": "专为安卓系统设计的免费影视追剧应用/网站，汇集了海量电影、电视剧、综艺和纪录片等高清资源"
+      },
+      {
+        "name": "非凡资源网",
+        "url": "https://ffzy.tv/",
+        "img": "ffzy.png",
+        "desc": "高清画质,更新最快,速度最快,永久免费的资源站"
+      },
+      {
+        "name": "人人影视",
+        "url": "https://www.renren.pro/",
+        "img": "renren.png",
+        "desc": "PRO-全网影视在线影院|短视频,电视剧,最新电影,视频分享,免费视频,在线视频,预告片"
+      },
+      {
+        "name": "NO 视频",
+        "url": "https://www.novipnoad.net/",
+        "img": "novipnoad.png",
+        "desc": "提供及时的海外热门剧集在线观看，友好无广告，致力于最轻松的追剧体验"
+      },
+      {
+        "name": "麦田影院",
+        "url": "https://mtyy4.com/",
+        "img": "mtyy4.png",
+        "desc": "免费提供热门影视作品"
+      },
+      {
+        "name": "麦田影院",
+        "url": "https://mtyy4.com/",
+        "img": "mtyy4.png",
+        "desc": "免费提供热门影视作品"
+      },
+      {
         "name": "NyaFun动漫",
         "url": "https://www.nyadm.org/",
         "img": "nyadm.png",
@@ -2281,6 +2323,12 @@ window.NAV_DATA = {
         "desc": "提供最新、最热门的在线游戏。涵盖动作、棋牌、益智、策略、3D、休闲、射击、GBA游戏、fc红白机、经典、赛车、闯关等多种类型"
       },
       {
+        "name": "麻局教练",
+        "url": "https://ma.reshub.vip/",
+        "img": "reshub.png",
+        "desc": "支持四川、长沙、武汉等玩法训练，专注提升大局观与决策速度。不是对战平台，而是针对实战弱点的训练工具"
+      },
+      {
         "name": "食物合成表",
         "url": "https://cook.yunyoujun.cn/",
         "img": "yunyoujuncook.png",
@@ -2309,6 +2357,12 @@ window.NAV_DATA = {
         "url": "https://globalthreatmap.up.railway.app/",
         "img": "globalthreatmap.png",
         "desc": "一个实时全球态势感知平台，可在互动地图上绘制安全事件、地缘政治发展和威胁指标。可以把它看作是一个开源情报（OSINT）指挥中心"
+      },
+      {
+        "name": "美伊冲突实时追踪",
+        "url": "https://iran.immersivetranslate.com/zh-CN/",
+        "img": "immersivetranslate.png",
+        "desc": "由沉浸式翻译提供，聚合全球多方信息源，实时追踪事态发展。 打破信息差，直击一手现场"
       },
       {
         "name": "风、气象、海洋状况的全球地图",
@@ -3202,6 +3256,12 @@ window.NAV_DATA = {
         "url": "https://toolwa.com/check-weixin/",
         "img": "toolwa.png",
         "desc": "检查域名在微信中是否被拦截或禁止访问"
+      },
+      {
+        "name": "IP质量 多源数据检测",
+        "url": "https://meowvps.com/tools/ip-check/",
+        "img": "meowvps.png",
+        "desc": "ICMP不可达喵 大佬做的整合网站"
       },
       {
         "name": "Favicon 图标制作",
