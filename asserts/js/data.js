@@ -3174,6 +3174,12 @@ window.NAV_DATA = {
         "url": "https://app.kaze.network/index.php?rp=/store/hkg-nat",
         "img": "kaze.png",
         "desc": "移动可直连的优质 HK NAT 机器"
+      },
+      {
+        "name": "订阅转换",
+        "url": "https://sub.v1.mk/",
+        "img": "sub.png",
+        "desc": "一个在线订阅转换工具网站，主要用于将不同格式的代理订阅链接（如Clash、Shadowsocks、V2Ray等）转换为用户需要的特定格式"
       }
     ],
     "大模型 API 中转站": [
