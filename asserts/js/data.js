@@ -1409,6 +1409,12 @@ window.NAV_DATA = {
         "desc": "阿里夸克百度蓝奏天翼五大网盘聚合搜索引擎，10000000+ 网盘资源免费无偿分享"
       },
       {
+        "name": "人人BT",
+        "url": "https://www.rrbts.org/",
+        "img": "rrbts.png",
+        "desc": "百度云网盘搜索,BT种子搜索,磁力链接搜索,p2p种子搜索神器,好用的云资源搜索器"
+      },
+      {
         "name": "Z-library",
         "url": "https://zh.z-library.sk/",
         "img": "z-lib.png",
@@ -3390,6 +3396,24 @@ window.NAV_DATA = {
         "url": "https://dl.acm.org/",
         "img": "acm.png",
         "desc": "美国计算机协会数字图书馆全文数据库，所有 ICPS 论文都可免费获取"
+      },
+      {
+        "name": "S.H.I.T",
+        "url": "https://shitjournal.org/",
+        "img": "shitjournal.png",
+        "desc": "真理会过时，构石永恒"
+      },
+      {
+        "name": "Rubbish-Journal",
+        "url": "https://rubbish-journal.org/zh",
+        "img": "vercel.png",
+        "desc": "一个面向非常规、实验性和跨学科学术成果的同行评审平台"
+      },
+      {
+        "name": "R.U.B.B.I.S.H. Journal",
+        "url": "https://rubbishjournal.org/",
+        "img": "rubbishjournal.png",
+        "desc": "R.U.B.B.I.S.H. Journal 是一个去中心化论文评分与公开讨论平台，支持投稿、社区评分、评论与垃圾分级"
       },
       {
         "name": "DOI 查询",
