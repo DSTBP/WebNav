@@ -1397,6 +1397,12 @@ window.NAV_DATA = {
         "desc": "fastsoso 搜索支持百度云搜索，可快速搜索百度网盘资源中的有效连接，自动识别无效的百度云网盘资源，每天更新海量资源"
       },
       {
+        "name": "海搜",
+        "url": "https://haisou.cc/",
+        "img": "haisou.png",
+        "desc": "一款重量级的网盘搜索网站，截至目前共收录一亿+个文件，总计2万+TB大小，包含阿里、百度、夸克、迅雷、天翼等主流网盘"
+      },
+      {
         "name": "盘大师",
         "url": "https://www.pandashi8.com/",
         "img": "pandashi8.png",
@@ -1557,6 +1563,12 @@ window.NAV_DATA = {
         "url": "https://jihezn.com",
         "img": "jihezn.png",
         "desc": "包含了各种木工图纸、材料信息和木工相关知识"
+      },
+      {
+        "name": "Musicca 乐理学习",
+        "url": "https://www.musicca.com/exercises",
+        "img": "musicca.png",
+        "desc": "免费在线乐理学习平台，专为音乐初学者、学生和教育工作者设计"
       },
       {
         "name": "地铁通",
@@ -1757,6 +1769,12 @@ window.NAV_DATA = {
         "url": "https://www.nano-banana.com/zh/nanobananapro#generator",
         "img": "nano.png",
         "desc": "专业在线NanoAI绘画与智能图片编辑平台，支持一键AI生成图片、在线修改与优化，高精度纳米级图像处理"
+      },
+      {
+        "name": "雾象",
+        "url": "https://fogsight.ai/?ref=openi.cn",
+        "img": "fogsight.png",
+        "desc": "一款由大型语言模型驱动的动画引擎。用户输入抽象概念或词语，雾象会将其转化为高水平的生动动画"
       },
       {
         "name": "AI写作",
@@ -2341,6 +2359,12 @@ window.NAV_DATA = {
         "desc": "国内外妖怪知识图鉴"
       },
       {
+        "name": "创业墓地",
+        "url": "https://www.loot-drop.io/",
+        "img": "loot-drop.png",
+        "desc": "一个有 1500 多个失败的初创公司和重建想法的墓地"
+      },
+      {
         "name": "海拥🐬游戏大全",
         "url": "https://game.haiyong.site",
         "img": "haiyong.png",
@@ -2521,6 +2545,12 @@ window.NAV_DATA = {
         "desc": "经典塔防游戏植物大战僵尸的网页版，支持在线游玩"
       },
       {
+        "name": "这b班上得值不值",
+        "url": "https://worthjob.zippland.com/",
+        "img": "vercel.png",
+        "desc": "工作性价比计算器（这b班上得值不值·测算版）支持全面评估工作的实际价值，不仅仅局限于薪资水平(https://fw.soxo.cc/)"
+      },
+      {
         "name": "CodeCombat",
         "url": "https://codecombat.cn/play",
         "img": "codecombat.png",
@@ -2531,6 +2561,12 @@ window.NAV_DATA = {
         "url": "https://photofunia.com/",
         "img": "photofunia.png",
         "desc": "基于人脸识别技术，提供数百种创意模板（如换脸、杂志封面、海报等），用户只需上传照片即可在几秒钟内生成趣味合成图"
+      },
+      {
+        "name": "无名杀",
+        "url": "https://adefulodgu.github.io/noname/",
+        "img": "adefulodgu.png",
+        "desc": "一款基于HTML5、CSS和JavaScript技术开发、遵循GPLv3协议的开源、免费三国杀卡牌策略游戏"
       },
       {
         "name": "GeoFS",
