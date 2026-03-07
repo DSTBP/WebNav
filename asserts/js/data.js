@@ -581,6 +581,12 @@ window.NAV_DATA = {
         "desc": "在任何设备上解锁已购的加密音乐！支持 网易云音乐(ncm), QQ音乐(qmc, mflac, mgg), 酷狗音乐(kgm), 虾米音乐(xm), 酷我音乐(.kwm)"
       },
       {
+        "name": "字体格式转换器",
+        "url": "https://cloudconvert.com/ttf-to-woff2",
+        "img": "cloudconvert.png",
+        "desc": "允许您将许多字体格式（包括稀有格式）转换为当今最流行的格式，例如TTF、OTF、WOFF 等"
+      },
+      {
         "name": "在线字体查看器",
         "url": "https://www.bejson.com/ui/font/",
         "img": "bejson.png",
