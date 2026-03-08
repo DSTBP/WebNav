@@ -2353,6 +2353,30 @@ window.NAV_DATA = {
     ],
     "摸鱼娱乐": [
       {
+        "name": "S.H.I.T",
+        "url": "https://shitjournal.org/",
+        "img": "shitjournal.png",
+        "desc": "真理会过时，构石永恒"
+      },
+      {
+        "name": "Rubbish-Journal",
+        "url": "https://rubbish-journal.org/zh",
+        "img": "vercel.png",
+        "desc": "一个面向非常规、实验性和跨学科学术成果的同行评审平台"
+      },
+      {
+        "name": "R.U.B.B.I.S.H. Journal",
+        "url": "https://rubbishjournal.org/",
+        "img": "rubbishjournal.png",
+        "desc": "R.U.B.B.I.S.H. Journal 是一个去中心化论文评分与公开讨论平台，支持投稿、社区评分、评论与垃圾分级"
+      },
+      {
+        "name": "Joker of Academics",
+        "url": "https://jokerofacademics.com/",
+        "img": "jokerofacademics.png",
+        "desc": "学术界的“小丑”来了！ 收留你的一切稿件，只要足够垃圾！"
+      },
+      {
         "name": "SCP Wiki",
         "url": "https://scp-wiki-cn.wikidot.com/",
         "img": "scp.png",
@@ -3450,24 +3474,6 @@ window.NAV_DATA = {
         "url": "https://dl.acm.org/",
         "img": "acm.png",
         "desc": "美国计算机协会数字图书馆全文数据库，所有 ICPS 论文都可免费获取"
-      },
-      {
-        "name": "S.H.I.T",
-        "url": "https://shitjournal.org/",
-        "img": "shitjournal.png",
-        "desc": "真理会过时，构石永恒"
-      },
-      {
-        "name": "Rubbish-Journal",
-        "url": "https://rubbish-journal.org/zh",
-        "img": "vercel.png",
-        "desc": "一个面向非常规、实验性和跨学科学术成果的同行评审平台"
-      },
-      {
-        "name": "R.U.B.B.I.S.H. Journal",
-        "url": "https://rubbishjournal.org/",
-        "img": "rubbishjournal.png",
-        "desc": "R.U.B.B.I.S.H. Journal 是一个去中心化论文评分与公开讨论平台，支持投稿、社区评分、评论与垃圾分级"
       },
       {
         "name": "DOI 查询",
