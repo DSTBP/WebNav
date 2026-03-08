@@ -8,9 +8,9 @@
 
 
 <p align="center">
-  <a href="https://github.com/DSTBP/WebNav/stargazers"><img src="https://img.shields.io/github/stars/r0xanne/WebNav?style=flat-square" alt="Stars"></a>
-  <a href="https://github.com/DSTBP/WebNav/network/members"><img src="https://img.shields.io/github/forks/r0xanne/WebNav?style=flat-square" alt="Forks"></a>
-  <a href="https://github.com/DSTBP/WebNav/blob/main/LICENSE"><img src="https://img.shields.io/github/license/r0xanne/WebNav?style=flat-square" alt="License"></a>
+  <a href="https://github.com/DSTBP/WebNav/stargazers"><img src="https://img.shields.io/github/stars/DSTBP/WebNav?style=flat-square" alt="Stars"></a>
+  <a href="https://github.com/DSTBP/WebNav/network/members"><img src="https://img.shields.io/github/forks/DSTBP/WebNav?style=flat-square" alt="Forks"></a>
+  <a href="https://github.com/DSTBP/WebNav/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DSTBP/WebNav?style=flat-square" alt="License"></a>
   <img src="https://img.shields.io/badge/Language-HTML/JS/CSS-orange?style=flat-square" alt="Language">
 </p>
 
