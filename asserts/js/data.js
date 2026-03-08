@@ -2321,6 +2321,12 @@ window.NAV_DATA = {
         "desc": "着重于独立游戏以及Game Jam 的独立数字创作者们缔造的开放市场"
       },
       {
+        "name": "仄言资源社",
+        "url": "https://www.ziyxfxs.top/",
+        "img": "ziyxfxs.png",
+        "desc": "仄言资源社为大家提供绿色软件、单机游戏、游戏源码、模拟器资源、技术教程"
+      },
+      {
         "name": "X游社",
         "url": "https://xyouacg.com/",
         "img": "xyouacg.png",
