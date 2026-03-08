@@ -16,7 +16,7 @@
 
 WebNav is a lightweight, responsive personal navigation site template. It helps developers, students, and web enthusiasts efficiently manage, organize, and quickly access frequently used tools and websites. With simple configuration, you can have a personalized browser homepage of your own.
 
-CH: [README_CH.md](README_CH.md)
+English | [简体中文](README_zh-CN.md)
 
 ## ✨ Project Features
 
