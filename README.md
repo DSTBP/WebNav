@@ -1,113 +1,110 @@
 <div align="center">
-<img width="100" height="100" src="./images/favicon.png">
-<h1>WebNav</h1>
-<p>一个简单美观的个人网址导航主页</p>
-<p>依托 GitHubPages 和 Workflows 无服务器部署</p>
-<p>Powered by 
-<a href="https://github.com/geneasy/geneasy" target="_blank"><strong>GenEasy</strong></a> & 
-<a href="https://github.com/imsyy/OneNav" target="_blank"><strong>OneNav</strong></a> & 
-<a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank"><strong>WebStackPage</strong></a>
+  <h1>WebNav - A Minimal and Efficient Personal Navigation Page</h1>
 </div>
 
+<p align="center">
+  <img src="images/favicon.png" alt="WebNav Logo" width="100">
+</p>
 
+<p align="center">
+  <a href="https://github.com/DSTBP/WebNav/stargazers"><img src="https://img.shields.io/github/stars/DSTBP/WebNav?style=flat-square" alt="Stars"></a>
+  <a href="https://github.com/DSTBP/WebNav/network/members"><img src="https://img.shields.io/github/forks/DSTBP/WebNav?style=flat-square" alt="Forks"></a>
+  <a href="https://github.com/DSTBP/WebNav/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DSTBP/WebNav?style=flat-square" alt="License"></a>
+  <img src="https://img.shields.io/badge/Language-HTML/JS/CSS-orange?style=flat-square" alt="Language">
+</p>
 
+WebNav is a lightweight, responsive personal start page template. It helps developers, students, and web enthusiasts manage, organize, and quickly access frequently used tools and websites. With a simple configuration, you can have a customized browser homepage of your own.
 
-## 项目简介
+## Features
 
-DSTBP Navigation 是一个简洁、优雅的个人网址导航页面，为用户提供了丰富多样的实用网址分类集合，涵盖学术资源、赛题平台、AI 站点、设计素材等多个领域。用户可以通过该导航页快速访问各类常用网站，提高上网效率。
+- Responsive design based on Bootstrap, works well on desktop, tablet, and mobile.
+- Dark mode with one-click theme switch for eye comfort.
+- Category management with a sidebar to jump between sections.
+- Built-in URL checker (`url-checker.html`) to verify link availability.
+- Minimal static architecture with fast loading and no backend; can be deployed to GitHub Pages or Vercel.
+- Highly customizable: all navigation data is maintained in local JS files for easy editing.
 
-## 项目结构
+## Preview
 
-```plaintext
-123/
-├── css/
-│   ├── animation.min.css
-│   ├── background.css
-│   ├── bootstrap.min.css
-│   ├── dark.min.css
-│   ├── loading.min.css
-│   ├── mobile.min.css
-│   └── style.min.css
-├── js/
-│   ├── background.js
-│   ├── lozad.min.js
-│   ├── jquery.min.js
-│   ├── search.js
-│   └── url-checker.js
-├── data.json
-├── favicon.ico
-└── index.html
-```
+![homepage](images/homepage.png)
 
-### 主要文件说明
+- Home: shows all category cards.
+- Sidebar: quick navigation to categories.
+- Tools: URL checker demo.
 
-- **index.html**：项目的主页面，负责页面的整体布局和结构，包括侧边栏菜单、搜索区域和链接内容区等。页面加载完成后，会根据 data.json 文件动态生成侧边栏菜单和链接内容。
-- **data.json**：存储了所有导航链接的信息，包括网站名称、URL、图标和描述等，并且按照不同的类别进行了分组，如 “赛题平台”、“学术资源”、“AI 站点” 等。
-- **css/ 文件夹**：包含了项目所需的所有 CSS 样式文件，用于美化页面，实现不同的主题效果（如夜间模式）和响应式布局。
-- **js/ 文件夹**：包含了项目所需的 JavaScript 脚本文件，实现了页面的交互功能，如搜索功能、背景设置、URL 检查等。
+## Quick Start
 
-## 功能特性
-
-### 1. 主题切换
-
-支持夜间 / 日间模式切换，用户可以根据自己的喜好在 localStorage 中设置 `darkMode` 为 `true` 或 `false` 来切换主题。夜间模式采用了现代、简洁且稍亮的深色主题，提升了用户在低光环境下的视觉体验。
-
-### 2. 搜索功能
-
-- 提供多种搜索引擎供用户选择，用户可以在不同的搜索引擎之间切换。
-- 支持在新窗口中打开搜索结果，用户可以通过勾选 “在新窗口中打开” 复选框来设置。
-- 搜索框会根据当前选中的搜索引擎显示相应的占位提示文字。
-
-### 3. 背景设置
-
-用户可以通过点击设置按钮打开背景设置面板，自定义页面的背景图片和透明度。支持使用 Bing 每日壁纸作为背景，也可以输入自定义的图片 URL。设置会保存到 localStorage 中，下次打开页面时会自动应用。
-
-### 4. URL 检查
-
-项目中包含了 url-checker.js 文件，用于检查单个 URL 的可用性、响应时间、重定向情况和安全性。检查结果会记录下来，方便用户了解链接的状态。
-
-## 使用方法
-
-### 1. 克隆项目
+### 1. Clone the repository
 
 ```bash
-git clone <项目仓库地址>
+git clone https://github.com/DSTBP/WebNav.git
+cd WebNav
 ```
 
-### 2. 打开项目
+### 2. Run locally
 
-将项目文件夹中的 index.html 文件在浏览器中打开，即可看到导航页面。
+This project is purely static. Open `index.html` in your browser to see the result.
 
-### 3. 搜索功能使用
+### 3. Deploy
 
-- 在搜索框中输入关键词，选择合适的搜索引擎，点击搜索按钮即可进行搜索。
-- 若要切换搜索引擎，点击相应的搜索引擎选项，搜索框的占位提示文字和表单的 action 属性会自动更新。
-- 若要在新窗口中打开搜索结果，勾选 “在新窗口中打开” 复选框。
+Push the repo to GitHub and enable GitHub Pages in the repository settings. Then visit:
 
-### 4. 背景设置使用
+```
+https://<your-username>.github.io/WebNav
+```
 
-点击页面上的设置按钮，打开背景设置面板。在面板中可以输入自定义的图片 URL，调整背景透明度，点击 “应用” 按钮即可应用设置。若要恢复默认设置，点击 “重置” 按钮。
+## Customize Navigation Content
 
-### 5. 主题切换
+You do not need to change the HTML structure. All navigation data is stored in:
 
-在 localStorage 中设置 `darkMode` 为 `true` 或 `false`，刷新页面即可切换主题。
+```
+asserts/js/data.js
+```
 
-## 贡献指南
+Edit the file using the following structure:
 
-如果你想为这个项目做出贡献，可以按照以下步骤进行：
+```js
+const navData = [
+  {
+    category: "Common Tools",
+    links: [
+      { name: "GitHub", url: "https://github.com", icon: "github" },
+      { name: "Google", url: "https://google.com", icon: "google" }
+    ]
+  }
+];
+```
 
-1. Fork 这个项目到你的 GitHub 账户。
-2. 创建一个新的分支：`git checkout -b your-feature-branch`。
-3. 进行代码修改和功能添加。
-4. 提交你的更改：`git commit -m "Add your commit message"`。
-5. 推送分支到你的 GitHub 仓库：`git push origin your-feature-branch`。
-6. 在原项目仓库中创建一个 Pull Request。
+## Community and Contributions
 
-## 注意事项
+Contributions are welcome. If you have ideas or suggestions, you can:
 
-- 部分网站可能需要科学上网才能访问，请确保你有合法的网络访问权限。
-- 项目中的一些功能可能依赖于特定的浏览器特性，请使用现代浏览器（如 Chrome、Firefox 等）打开页面。
+- Submit an issue for bugs or feature requests: https://github.com/DSTBP/WebNav/issues
+- Open a PR for style improvements or new features.
+- Join the GitHub Discussions or comment on issues to share feedback.
 
-## 许可证
+Before contributing, keep your code style consistent with the project and run basic local checks.
 
-本项目采用 [MIT 许可证](https://opensource.org/licenses/MIT)，你可以自由使用、修改和分发该项目。
+## Project Structure
+
+```
+WebNav/
+  asserts/
+    css/          # Stylesheets (app, Bootstrap, FontAwesome)
+    js/           # Core logic and data (app.js, data.js)
+  images/         # Icons and static assets
+  index.html      # Main page
+  url-checker.html# URL checker tool page
+  LICENSE         # License
+  README.md       # Documentation
+```
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+WebNav - Bringing web navigation back to simplicity.
+
+If this project helps you, please consider giving it a Star.

@@ -741,6 +741,12 @@ window.NAV_DATA = {
         "url": "https://www.5118.com/",
         "img": "5118.png",
         "desc": "自媒体必备的工具网站，通过多维度数据分析，掌握关键词趋势和竞争情况，还可以进行高频词、疑问词快捷提取"
+      },
+      {
+        "name": "旅途星辰",
+        "url": "https://modelscope.cn/studios/lcclxy/Journey-to-the-China",
+        "img": "modelscope.png",
+        "desc": "告诉我你的目的地与偏好，AI 将为你定制一份独一无二的旅程方案"
       }
     ],
     "技术工具": [
