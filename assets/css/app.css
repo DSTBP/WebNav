@@ -602,22 +602,29 @@ body[data-theme="dark"] #search-text:focus {
     opacity: 1;
 }
 
+.xe-comment-entry {
+    display: flex !important;
+    align-items: center;  /* 垂直居中 */
+    height: 100%;         /* 填满 box2 的 86px 高度 */
+}
+
+/* 2. 强制图片进行 1:1 裁剪并渲染为正圆形 */
 .xe-comment-entry img {
-    float: left;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;         /* 覆盖原有的 padding: 7px 0，防止变成椭圆 */
+    border-radius: 50% !important; /* 强制正圆 */
+    object-fit: cover !important;  /* 核心：如果不是1:1，自动居中裁剪为1:1，绝不拉伸 */
+    float: none !important;        /* 移除原有的左浮动 */
+    margin-right: 15px !important; /* 图标与右侧文字的间距 */
     display: block;
-    margin-right: 10px;
-    /* 新增以下样式 */
-    width: 40px !important;     /* 强制宽度 */
-    height: 40px !important;    /* 强制高度，形成 1:1 */
-    object-fit: cover;          /* 将图片内容按比例裁剪填充，防止拉伸变形 */
-    border-radius: 50%;         /* 强制渲染为正圆形 */
 }
 
 .xe-comment {
-    transform: translateY(-50%);
-    position: absolute;
-    margin-left: 50px;
-    top: 50%;
+    position: static !important;
+    transform: none !important;
+    margin-left: 0 !important;
+    flex: 1; /* 占据剩余空间 */
 }
 
 .xe-comment p {
@@ -655,7 +662,7 @@ body[data-theme="dark"] #search-text:focus {
 }
 
 .img-circle {
-    padding: 0;
+    padding: 7px 0;
 }
 
 .visually-hidden {
