@@ -2395,6 +2395,12 @@ window.NAV_DATA = {
         "desc": "R.U.B.B.I.S.H. Journal 是一个去中心化论文评分与公开讨论平台，支持投稿、社区评分、评论与垃圾分级"
       },
       {
+        "name": "Rubbish Publishing",
+        "url": "https://www.rubbish.press/",
+        "img": "rubbish.png",
+        "desc": "R.U.B.B.I.S.H. Journal 是一个去中心化论文评分与公开讨论平台，支持投稿、社区评分、评论与垃圾分级"
+      },
+      {
         "name": "Joker of Academics",
         "url": "https://jokerofacademics.com/",
         "img": "jokerofacademics.png",
