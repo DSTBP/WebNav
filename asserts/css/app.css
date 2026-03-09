@@ -608,14 +608,6 @@ body[data-theme="dark"] #search-text:focus {
     margin-right: 10px;
 }
 
-.xe-comment-entry .card-icon {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    object-position: center;
-    padding: 0;
-}
-
 .xe-comment {
     transform: translateY(-50%);
     position: absolute;

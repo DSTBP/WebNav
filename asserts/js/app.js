@@ -334,7 +334,7 @@ const ContentModule = {
             name,
             desc,
             url: item.url || '#',
-            img: item.img || ''
+            img: item.img || 'default.svg'
         });
         this.itemsCache.push({
             html: cardHTML,
@@ -345,8 +345,6 @@ const ContentModule = {
     },
 
     _createCardHTML({ name, desc, url, img }) {
-        const fallbackSrc = './images/favicon.png';
-        const imageSrc = img ? `./images/logos/${img}` : fallbackSrc;
         return `
             <div class="col-sm-3">
                 <div class="xe-widget xe-conversations box2 label-info"
@@ -356,13 +354,11 @@ const ContentModule = {
                     title="${url}">
                     <div class="xe-comment-entry">
                         <a class="xe-user-img">
-                            <img data-src="${imageSrc}"
-                                class="lozad img-circle card-icon"
+                            <img data-src="./images/logos/${img}"
+                                class="lozad img-circle"
                                 width="40"
-                                height="40"
                                 src="./images/loading.svg"
-                                alt="${name}"
-                                onerror="this.onerror=null;this.src='${fallbackSrc}';" />
+                                alt="${name}" />
                         </a>
                         <div class="xe-comment">
                             <a href="#" class="xe-user-name overflowClip_1">
