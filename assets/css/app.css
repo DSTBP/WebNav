@@ -606,9 +606,11 @@ body[data-theme="dark"] #search-text:focus {
     float: left;
     display: block;
     margin-right: 10px;
-    width: 40px;           /* 设定固定宽度 */
-    height: 40px;          /* 设定固定高度，强制 1:1 比例 */
-    object-fit: cover;     /* 使图片保持比例缩放并裁剪多余部分，避免拉伸变形 */
+    /* 新增以下样式 */
+    width: 40px !important;     /* 强制宽度 */
+    height: 40px !important;    /* 强制高度，形成 1:1 */
+    object-fit: cover;          /* 将图片内容按比例裁剪填充，防止拉伸变形 */
+    border-radius: 50%;         /* 强制渲染为正圆形 */
 }
 
 .xe-comment {
@@ -653,7 +655,7 @@ body[data-theme="dark"] #search-text:focus {
 }
 
 .img-circle {
-    padding: 7px 0;
+    padding: 0;
 }
 
 .visually-hidden {

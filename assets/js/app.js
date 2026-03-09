@@ -357,9 +357,10 @@ const ContentModule = {
                             <img data-src="./assets/img/logos/${img}"
                                 class="lozad img-circle"
                                 width="40"
+                                height="40"
                                 src="./assets/img/loading.svg"
-                                alt="${name}" 
-                                onerror="this.onerror=null; this.src='./assets/favicon.png';" />
+                                onerror="this.onerror=null; this.src='assets/favicon.png';"
+                                alt="${name}" />
                         </a>
                         <div class="xe-comment">
                             <a href="#" class="xe-user-name overflowClip_1">
