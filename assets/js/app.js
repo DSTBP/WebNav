@@ -354,10 +354,10 @@ const ContentModule = {
                     title="${url}">
                     <div class="xe-comment-entry">
                         <a class="xe-user-img">
-                            <img data-src="./images/logos/${img}"
+                            <img data-src="./assets/img/logos/${img}"
                                 class="lozad img-circle"
                                 width="40"
-                                src="./images/loading.svg"
+                                src="./assets/img/loading.svg"
                                 alt="${name}" 
                                 onerror="this.onerror=null; this.src='./assets/favicon.png';" />
                         </a>
