@@ -447,6 +447,11 @@ window.NAV_DATA = {
         "url": "https://remeins.com/index/app/voice2text",
         "img": "remeins.png",
         "desc": "提取视频、音频中的文字，将其转换为文本文件，完全免费使用，支持mp3、mp4、wav等格式"
+      },{
+        "name": "记灵-1221313",
+        "url": "https://remeins.com/index/app/voice2text",
+        "img": "2222.png",
+        "desc": "提取视频、音频中的文字，将其转换为文本文件，完全免费使用，支持mp3、mp4、wav等格式"
       },
       {
         "name": "在线PDF工具",
