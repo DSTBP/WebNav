@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-  <img src="images/favicon.png" alt="WebNav Logo" width="100">
+  <img src="assets/img/favicon.png" alt="WebNav Logo" width="100">
 </p>
 
 
@@ -29,7 +29,7 @@ English | [简体中文](README_zh-CN.md)
 
 ## 📸 Interface Preview
 
-![image-20260308164958027](images/homepage.png)
+![image-20260308164958027](assets/img/homepage.png)
 - Home: displays tiled links for all categories.
 - Sidebar: quick jump to category locations.
 - Tools page: URL checking feature demo.
@@ -89,10 +89,10 @@ Before contributing code, please ensure your code style stays consistent with th
 
 ```
 WebNav/
-├── asserts/
+├── assets/
 │   ├── css/          # Stylesheets (App, Bootstrap, FontAwesome)
-│   └── js/           # Core logic and data config (app.js, data.js)
-├── images/           # Icons and static assets
+│   ├── js/           # Core logic and data config (app.js, data.js)
+│   └── img/          # Icons and static assets
 ├── index.html        # Project homepage
 ├── url-checker.html  # Link checking tool page
 ├── LICENSE           # Open-source license

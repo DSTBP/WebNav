@@ -606,6 +606,9 @@ body[data-theme="dark"] #search-text:focus {
     float: left;
     display: block;
     margin-right: 10px;
+    width: 40px;           /* 设定固定宽度 */
+    height: 40px;          /* 设定固定高度，强制 1:1 比例 */
+    object-fit: cover;     /* 使图片保持比例缩放并裁剪多余部分，避免拉伸变形 */
 }
 
 .xe-comment {
