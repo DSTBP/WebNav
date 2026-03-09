@@ -1403,6 +1403,12 @@ window.NAV_DATA = {
         "desc": "下次一定 - 专门为白嫖怪开发的宝藏网站"
       },
       {
+        "name": "Applnn",
+        "url": "https://www.applnn.com/",
+        "img": "applnn.png",
+        "desc": "分享网络资源,视频课程,下载链接,AI工具,BT种子,磁力链接,AI工具,羊毛福利和提供软件和APP下载安装指南"
+      },
+      {
         "name": "Fastsoso",
         "url": "https://www.fastsoso.cc/",
         "img": "fastsoso.png",
@@ -2333,10 +2339,22 @@ window.NAV_DATA = {
         "desc": "仄言资源社为大家提供绿色软件、单机游戏、游戏源码、模拟器资源、技术教程"
       },
       {
+        "name": "蒸汽游戏宝库",
+        "url": "https://www.steambk.com/",
+        "img": "steambk.png",
+        "desc": "专注免费提供高质量Steam及经典单机、联机游戏资源，目前游戏容量超100TB，每天持续更新中"
+      },
+      {
         "name": "X游社",
         "url": "https://xyouacg.com/",
         "img": "xyouacg.png",
         "desc": "X游社是一个专注于ACG资源分享的社区平台，提供优质的游戏资源、动漫资讯，打造有温度的二次元交流空间"
+      },
+      {
+        "name": "卡通游戏",
+        "url": "https://cartoongames.io/",
+        "img": "cartoongames.png",
+        "desc": "一个专为卡通爱好者、儿童与青少年设计的免费在线游戏平台，旨在通过浏览器即玩方式，为用户提供快速、轻松的游戏体验"
       },
       {
         "name": "flysheep资源避难所",
