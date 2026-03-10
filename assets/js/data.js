@@ -1681,6 +1681,12 @@ window.NAV_DATA = {
     ],
     "AI站点": [
       {
+        "name": "OpenClaw101",
+        "url": "https://openclaw101.dev/zh",
+        "img": "openclaw101.png",
+        "desc": "从零开始，7天掌握你的 OpenClaw（另一个网站：https://www.openclaw101.club/）"
+      },
+      {
         "name": "AI绘画提示词生成器",
         "url": "https://gen.kejilion.pro/",
         "img": "kejilion.png",
