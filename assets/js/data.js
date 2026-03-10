@@ -3434,6 +3434,12 @@ window.NAV_DATA = {
     ],
     "论文平台": [
       {
+        "name": "CCF Conference Deadlines",
+        "url": "https://ccfddl.com/",
+        "img": "ccfddl.png",
+        "desc": "全球 CCF 会议截止日期倒计时（https://ccfddl.cn/）"
+      },
+      {
         "name": "密码学电子印刷档案",
         "url": "https://eprint.iacr.org/",
         "img": "eprint.png",
