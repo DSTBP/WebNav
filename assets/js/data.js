@@ -1684,7 +1684,7 @@ window.NAV_DATA = {
         "name": "Arena AI",
         "url": "https://arena.ai/leaderboard",
         "img": "arena.png",
-        "desc": "加州大学伯克利分校推出的AI模型评估平台，基于让用户对不同AI模型的回答进行匿名投票，衡量模型的表现，可在 leaderboard 看到排行榜"
+        "desc": "AI模型评估平台，基于让用户对不同AI模型的回答进行匿名投票，衡量模型的表现，可在 leaderboard 看到排行榜"
       },
       {
         "name": "GPT 合租平台",
