@@ -719,6 +719,12 @@ window.NAV_DATA = {
         "desc": "CAJ转PDF工具是一款功能强大的软件，可以将中国知网文献格式CAJ转换成PDF格式，方便用户进行阅读和使用"
       },
       {
+        "name": "学术雷达",
+        "url": "https://shenhao-stu.github.io/openclaw-academic-radar/",
+        "img": "openclaw.png",
+        "desc": "自动将最新的 AI 研究论文、行业新闻和会议截止日期汇聚到一个漂亮的仪表盘中"
+      },
+      {
         "name": "微信公众号文章下载",
         "url": "https://changfengbox.top/wechat",
         "img": "changfengbox.png",
