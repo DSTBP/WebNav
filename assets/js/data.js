@@ -1681,9 +1681,9 @@ window.NAV_DATA = {
         "desc": "支持: Stable Diffusion / Midjourney / Flux"
       },
       {
-        "name": "LMArena",
-        "url": "https://lmarena.ai/",
-        "img": "lmarena.png",
+        "name": "Arena AI",
+        "url": "https://arena.ai/leaderboard",
+        "img": "arena.png",
         "desc": "加州大学伯克利分校推出的AI模型评估平台，基于让用户对不同AI模型的回答进行匿名投票，衡量模型的表现，可在 leaderboard 看到排行榜"
       },
       {
