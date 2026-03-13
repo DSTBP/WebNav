@@ -401,6 +401,12 @@ window.NAV_DATA = {
         "desc": "拥有良好的兼容性、海量主题样式、免费的图床、强大的技术团队，提供文章一键排版，同时支持知乎、掘金、微信订阅号等多个平台"
       },
       {
+        "name": "PaywallBuster",
+        "url": "https://paywallbuster.com/",
+        "img": "paywallbuster.png",
+        "desc": "专注于绕过部分新闻网站的软付费墙（内容存在但被遮挡），通过合法中介跳转至第三方页面显示完整内容"
+      },
+      {
         "name": "照片转电子扫描件/复印件",
         "url": "https://tugaigai.com/image_scanner",
         "img": "tugaigai.png",
@@ -1805,6 +1811,12 @@ window.NAV_DATA = {
         "url": "https://fogsight.ai/?ref=openi.cn",
         "img": "fogsight.png",
         "desc": "一款由大型语言模型驱动的动画引擎。用户输入抽象概念或词语，雾象会将其转化为高水平的生动动画"
+      },
+      {
+        "name": "NanoPhoto.AI",
+        "url": "https://nanophoto.ai/",
+        "img": "nanophoto.png",
+        "desc": "提供视频生成、图片生成、提示词工具等一站式 AI 创作服务，还支持视频转成提示词"
       },
       {
         "name": "AI写作",
@@ -3445,6 +3457,12 @@ window.NAV_DATA = {
       }
     ],
     "论文平台": [
+      {
+        "name": "SCImago",
+        "url": "https://www.scimagojr.com/",
+        "img": "scimagojr.png",
+        "desc": "一个基于Scopus数据库数据，包括SCImago期刊排名（SJR）和机构排名（SIR），提供全球学术期刊、科研机构和国家科学水平评估的专业平台"
+      },
       {
         "name": "CCF Conference Deadlines",
         "url": "https://ccfddl.com/",
