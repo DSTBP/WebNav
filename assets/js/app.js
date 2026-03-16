@@ -356,7 +356,7 @@ const ContentModule = {
                         <a class="xe-user-img">
                             <img data-src="./assets/img/logos/${img}"
                                 class="lozad img-circle"
-                                src="./assets/img/loading.svg"
+                                src="./assets/img/svg/loading.svg"
                                 alt="${name}" 
                                 onerror="this.onerror=null; this.src='assets/img/favicon.png';" />
                         </a>

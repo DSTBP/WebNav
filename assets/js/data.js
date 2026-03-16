@@ -1711,10 +1711,40 @@ window.NAV_DATA = {
         "desc": "一家提供号池类型、均衡负载使用的面板产品，主要用于 GPT4 合租"
       },
       {
+        "name": "Scholarcy",
+        "url": "https://library.scholarcy.com/",
+        "img": "scholarcy.png",
+        "desc": "AI 文献阅读辅助工具，从文档中提取结构化数据，并通过知识归纳引擎生成文章概要，帮助用户快速理解和总结学术论文、书籍章节等学术资料"
+      },
+      {
+        "name": "O-DataMap",
+        "url": "https://o-datamap.oall.com/",
+        "img": "odatamap.png",
+        "desc": "科研地图，AI 驱动的全球科学家社区，旨在通过将散落在全球论文中的实验数据提取出来，并在一个二维坐标系中重新组织，从而将整个人类科技研究领域以“科技地图”的形式呈现出来"
+      },
+      {
+        "name": "WisPaper",
+        "url": "https://www.wispaper.ai/app/search",
+        "img": "wispaper.png",
+        "desc": "专注于提升科研效率的 AI 学术工具，帮助学者进行学术检索、观点提炼、文献翻译等科研工作"
+      },
+      {
+        "name": "Rayyan",
+        "url": "https://rayyan.ai",
+        "img": "rayyan.png",
+        "desc": "AI 文献管理协作工具，支持自定义规则、多人实时协作标注，还能自动生成 PRISMA 流程图，完美适配系统综述 /meta 分析的规范"
+      },
+      {
         "name": "Consensus 学术搜索引擎",
         "url": "https://consensus.app/",
         "img": "consensus.png",
         "desc": "人工智能在论文库中寻找见解的搜索引擎，信息来源于更为专业、可信的论文库"
+      },
+      {
+        "name": "Paper Digest",
+        "url": "https://www.paperdigest.org/review/",
+        "img": "paperdigest.png",
+        "desc": "Paper digest是一个通过 AI 进行搜索相关领域文献的网站，且可以帮助科研人员整理和总结研究内容，以便研究者快速掌握研究领域成果"
       },
       {
         "name": "Notebooklm",
