@@ -1741,6 +1741,18 @@ window.NAV_DATA = {
         "desc": "从零开始，7天掌握你的 OpenClaw（另一个网站：https://www.openclaw101.club/）"
       },
       {
+        "name": "Prompt123",
+        "url": "https://prompt123.cn/",
+        "img": "prompt123.png",
+        "desc": "完全免费的中文AI提示词，发现并使用高质量的AI提示词，释放人工智能的无限潜能"
+      },
+      {
+        "name": "AiShort",
+        "url": "https://www.aishort.top/",
+        "img": "aishort.png",
+        "desc": "AI提示词库 | 精选Prompt模板，即刻提升AI效率"
+      },
+      {
         "name": "AI绘画提示词生成器",
         "url": "https://gen.kejilion.pro/",
         "img": "kejilion.png",
