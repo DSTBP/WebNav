@@ -563,6 +563,12 @@ window.NAV_DATA = {
         "desc": "旋转视频、剪辑视频、合并视频、比较视频、压缩视频、格式转换"
       },
       {
+        "name": "DataTool",
+        "url": "https://www.video2edit.com/zh",
+        "img": "video2edit.png",
+        "desc": "多平台在线视频下载器网站，提供一键抓取抖音、快手、TikTok 等主流社交媒体的视频、图片、文字、互动数据等多维信息"
+      },
+      {
         "name": "B站视频下载",
         "url": "https://xbeibeix.com/api/bilibili/",
         "img": "xbeibeix.png",
@@ -815,6 +821,12 @@ window.NAV_DATA = {
         "url": "https://gchq.github.io/CyberChef/",
         "img": "CyberChef.png",
         "desc": "赛博厨子，加解密工具库"
+      },
+      {
+        "name": "Cymath",
+        "url": "https://www.cymath.com/cn/",
+        "img": "cymath.png",
+        "desc": "数学问题求解器，只需要在其中输入问题，它就可以帮我们进行推导"
       },
       {
         "name": "SageMath",
@@ -1253,6 +1265,12 @@ window.NAV_DATA = {
         "desc": "一个网上可搜索的整数数列资料库，常用于解析数论"
       },
       {
+        "name": "Learn-Anything",
+        "url": "https://learn-anything.xyz/",
+        "img": "learn-anything.png",
+        "desc": "帮你学任何东西的平台，专门帮助你组织和连接世界上的知识，探索概念间的联系，并策划个性化的学习路径"
+      },
+      {
         "name": "LINUX DO",
         "url": "https://linux.do/",
         "img": "linuxdo.png",
@@ -1329,6 +1347,18 @@ window.NAV_DATA = {
         "url": "https://www.jiamisoft.com/blog/jiamiyingyong",
         "img": "jiamisoft.png",
         "desc": "分享加密算法、加密技术、加密应用相关文章"
+      },
+      {
+        "name": "原装系统聚集地",
+        "url": "https://next.itellyou.cn/Original",
+        "img": "itellyou.png",
+        "desc": "MSDN 系统库，提供纯净版、原版 windows、Linux 生态服务"
+      },
+      {
+        "name": "资源银行",
+        "url": "https://www.ziyuanbank.com/",
+        "img": "ziyuanbank.png",
+        "desc": "下载软件第一选择，全免费直接下"
       },
       {
         "name": "码农学习路线图",
@@ -1493,12 +1523,6 @@ window.NAV_DATA = {
         "desc": "免费论文、书籍下载 将知识带给每个人"
       },
       {
-        "name": "arXiv",
-        "url": "https://arxiv.org/",
-        "img": "arxiv.png",
-        "desc": "论文预印本收集网站"
-      },
-      {
         "name": "笔杆网",
         "url": "https://www.bigan.net/",
         "img": "bigan.png",
@@ -1559,6 +1583,12 @@ window.NAV_DATA = {
         "desc": "涵盖众多古籍的免费线上文库，有Al问答和网友读书笔记功能"
       },
       {
+        "name": "中国家谱知识服务平台",
+        "url": "https://jiapu.library.sh.cn/",
+        "img": "jiapu.png",
+        "desc": "家谱检索-踏上寻根问祖的文化之旅"
+      },
+      {
         "name": "历史车轮",
         "url": "https://www.lishichelun.com",
         "img": "lishichelun.png",
@@ -1599,6 +1629,12 @@ window.NAV_DATA = {
         "url": "https://www.musicca.com/exercises",
         "img": "musicca.png",
         "desc": "免费在线乐理学习平台，专为音乐初学者、学生和教育工作者设计"
+      },
+      {
+        "name": "全球儿歌乐园",
+        "url": "https://beddysongs.com/zh/",
+        "img": "beddysongs.png",
+        "desc": "汇聚世界各地的经典与原创儿歌，让孩子在熟悉与新奇的旋律中快乐成长，感受音乐带来的温暖与陪伴"
       },
       {
         "name": "地铁通",
@@ -1683,6 +1719,18 @@ window.NAV_DATA = {
         "url": "https://www.reddit.com/",
         "img": "reddit.png",
         "desc": "全球最大的社交新闻聚合网站，用户可以分享、讨论和投票各种话题（贴吧、知乎、微博聚合体）"
+      },
+      {
+        "name": "SaltyLeo 的书架",
+        "url": "https://tstrs.me/",
+        "img": "tstrs.png",
+        "desc": "整合全球电子书资源的智能阅读平台，提供千万级正版与开源书籍的即时检索服务"
+      },
+      {
+        "name": "爱下电子书",
+        "url": "https://ixdzs8.com/",
+        "img": "ixdzs8.png",
+        "desc": "输入小说名、作者, 下载常见网文"
       }
     ],
     "AI站点": [
@@ -2198,12 +2246,6 @@ window.NAV_DATA = {
         "img": "freesewing.png",
         "desc": "一个服装纸样设计平台和库，主要面向服装设计师、缝纫爱好者和开发者"
       },
-      {
-        "name": "爱下电子书",
-        "url": "https://ixdzs8.com/",
-        "img": "ixdzs8.png",
-        "desc": "输入小说名、作者, 下载常见网文"
-      }
     ],
     "影音游戏": [
       {
@@ -2495,6 +2537,12 @@ window.NAV_DATA = {
         "url": "https://ma.reshub.vip/",
         "img": "reshub.png",
         "desc": "支持四川、长沙、武汉等玩法训练，专注提升大局观与决策速度。不是对战平台，而是针对实战弱点的训练工具"
+      },
+      {
+        "name": "城市租房生存指南",
+        "url": "https://zufang.ababtools.com/",
+        "img": "ababtools.png",
+        "desc": "租房小白修炼手册，掌握租房硬核知识，找到理想住所！"
       },
       {
         "name": "食物合成表",
@@ -3175,6 +3223,12 @@ window.NAV_DATA = {
         "desc": "匿名聊,匿名聊天,虚拟恋人,倾诉,闲聊,叔叔有约,在线聊天,免费,交友,无需注册,匿名,隐私保护,deskry,无注册匿名在线聊天"
       },
       {
+        "name": "汉语拼音在线学习",
+        "url": "https://hanyupinyin.net/",
+        "img": "hanyupinyin.png",
+        "desc": "提供标准拼音发音、声母韵母表、整体认读音节等学习资源，是学习汉语拼音的最佳工具"
+      },
+      {
         "name": "猜中国省份",
         "url": "https://ekvis.com/zh/g-cn-01/",
         "img": "ekvis.png",
@@ -3504,6 +3558,12 @@ window.NAV_DATA = {
         "url": "https://eprint.iacr.org/",
         "img": "eprint.png",
         "desc": "提供快速访问密码学最新研究成果的途径。论文由作者自行发布，未经任何审阅，仅核实其是否符合密码学范畴，并符合一些最低限度的录用标准和出版条件"
+      },
+      {
+        "name": "arXiv",
+        "url": "https://arxiv.org/",
+        "img": "arxiv.png",
+        "desc": "论文预印本收集网站"
       },
       {
         "name": "超星发现",
