@@ -1433,6 +1433,12 @@ window.NAV_DATA = {
         "desc": "⾯向全球科研⼯作者的专业社交⽹络平台，覆盖⾃然科学、⼯程、医学、社会科学等多个学科领域"
       },
       {
+        "name": "智汇学术",
+        "url": "https://www.zhihuixueshu.cn/conferences",
+        "img": "zhihuixueshu.png",
+        "desc": "AI 顶会论文列表"
+      },
+      {
         "name": "学者网",
         "url": "https://www.scholat.com/scholarsearch-home.html",
         "img": "scholat.png",
