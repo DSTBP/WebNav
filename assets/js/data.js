@@ -3324,6 +3324,26 @@ window.NAV_DATA = {
         "desc": "同时提供免费和付费IP，标注了每个IP的响应速度。优先选择响应时间<1秒的IP"
       }
     ],
+    "云服务器租赁": [
+      {
+        "name": "优云智算",
+        "url": "https://www.compshare.cn/price-list",
+        "img": "compshare.png",
+        "desc": "GPU 云服务器、云硬盘、云存储、镜像存储，提供按量、包日、包月和抢占式计费"
+      },
+      {
+        "name": "蒜粒方块",
+        "url": "https://www.featurize.cn/vm/available",
+        "img": "featurize.png",
+        "desc": "高性能 GPU 资源. 提供最新的NVIDIA GPU,满足各类计算需求。 集成开发环境. 预装主流机器学习框架"
+      },
+      {
+        "name": "矩池云",
+        "url": "https://matpool.com/host-market/gpu",
+        "img": "matpool.png",
+        "desc": "专注于人工智能领域的GPU云服务商。提供稳定的人工智能云服务器、人工智能教学实训环境、高速网盘等服务"
+      }
+    ],
     "梯子平台": [
       {
         "name": "iKuuu VPN",
