@@ -341,6 +341,12 @@ window.NAV_DATA = {
     ],
     "网页工具": [
       {
+        "name": "Apple App 最低价格查询",
+        "url": "https://www.findcheapsubs.com/zh",
+        "img": "findcheapsubs.png",
+        "desc": "发现 App 全球最低订阅价格，通过礼品卡安全地进行跨区支付，并以极低的成本获得高级订阅服务"
+      },
+      {
         "name": "MikuTools",
         "url": "https://tools.miku.ac",
         "img": "miku.png",
