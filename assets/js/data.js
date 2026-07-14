@@ -1191,6 +1191,12 @@ window.NAV_DATA = {
         "desc": "nssctf by 探姬"
       },
       {
+        "name": "CTF²",
+        "url": "https://ctf2.dasctf.com/dashboard",
+        "img": "CTF2.png",
+        "desc": "CTF² 是一个集成的网络安全实践平台，适用于竞赛操作、挑战训练、课程和课堂学习以及漏洞分析评审"
+      },
+      {
         "name": "攻防世界",
         "url": "https://adworld.xctf.org.cn/home/index",
         "img": "xctf.png",
