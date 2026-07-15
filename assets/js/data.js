@@ -1789,6 +1789,12 @@ window.NAV_DATA = {
         "desc": "一家提供号池类型、均衡负载使用的面板产品，主要用于 GPT4 合租"
       },
       {
+        "name": "CSPaper",
+        "url": "https://cspaper.org/",
+        "img": "cspaper.png",
+        "desc": "面向**计算机科学顶会投稿**的 AI 自动化论文预审平台，主打「可验证、可复现优先（Verification-First）」学术辅助工具"
+      },
+      {
         "name": "Scholarcy",
         "url": "https://library.scholarcy.com/",
         "img": "scholarcy.png",
