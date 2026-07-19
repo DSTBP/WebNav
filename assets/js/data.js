@@ -2453,6 +2453,12 @@ window.NAV_DATA = {
         "desc": "巴哈姆特电玩资讯站（简称巴哈姆特或巴哈）是以ACG为主的台湾网络论坛与新闻网站"
       },
       {
+        "name": "APKVision",
+        "url": "https://apkvision.org/",
+        "img": "apkvision.png",
+        "desc": "一个提供 Android 应用和游戏 APK 文件下载的第三方应用库网站，收集并更新了大量的手机软件和修改版、已付费或特定地区的游戏资源"
+      },
+      {
         "name": "koyso",
         "url": "https://koyso.com/",
         "img": "koyso.png",
