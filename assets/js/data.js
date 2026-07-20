@@ -2483,6 +2483,12 @@ window.NAV_DATA = {
         "desc": "专注免费提供高质量Steam及经典单机、联机游戏资源，目前游戏容量超100TB，每天持续更新中"
       },
       {
+        "name": "时空侦探局",
+        "url": "https://www.agencyoftime.com/",
+        "img": "agencyoftime.png",
+        "desc": "一个全自动的线上剧本杀（谋杀之谜）工具与游戏平台"
+      },
+      {
         "name": "X游社",
         "url": "https://xyouacg.com/",
         "img": "xyouacg.png",
