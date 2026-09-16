@@ -3468,6 +3468,12 @@ window.NAV_DATA = {
         "desc": "实时追踪各大 AI 模型对话接口的可用性、延迟与官方服务状态"
       },
       {
+        "name": "中转站排行",
+        "url": "https://apiranking.com/",
+        "img": "apiranking.png",
+        "desc": "AI API 中转站 实测排行榜, 在线检查质量"
+      },
+      {
         "name": "APIKEY-公益站",
         "url": "https://welfare.apikey.cc/console",
         "img": "welfare.png",
