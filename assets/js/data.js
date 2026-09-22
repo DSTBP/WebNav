@@ -1445,12 +1445,6 @@ window.NAV_DATA = {
         "desc": "⾯向全球科研⼯作者的专业社交⽹络平台，覆盖⾃然科学、⼯程、医学、社会科学等多个学科领域"
       },
       {
-        "name": "智汇学术",
-        "url": "https://www.zhihuixueshu.cn/conferences",
-        "img": "zhihuixueshu.png",
-        "desc": "AI 顶会论文列表"
-      },
-      {
         "name": "学者网",
         "url": "https://www.scholat.com/scholarsearch-home.html",
         "img": "scholat.png",
@@ -3710,6 +3704,20 @@ window.NAV_DATA = {
         "url": "http://www.chinadoi.cn/",
         "img": "wanfangdata.png",
         "desc": "DOI 解析与 DOI 查询服务"
+      }
+    ],
+    "论文辑录": [
+      {
+        "name": "安全顶会论文",
+        "url": "https://sec.c01dkit.com/zh/search/",
+        "img": "c01dkit.png",
+        "desc": "检索历年安全顶会论文：按会议、年份、主题与类型筛选，按标题搜索，收藏感兴趣的条目"
+      },
+      {
+        "name": "智汇学术",
+        "url": "https://www.zhihuixueshu.cn/conferences",
+        "img": "zhihuixueshu.png",
+        "desc": "AI 顶会论文列表"
       }
     ],
     "资源种子": [
