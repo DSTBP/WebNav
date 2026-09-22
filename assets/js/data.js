@@ -3310,6 +3310,118 @@ window.NAV_DATA = {
         "desc": "一种免费服务，用于在线接收手机短信验证码，不需要注册"
       }
     ],
+    "论文平台": [
+      {
+        "name": "SCImago",
+        "url": "https://www.scimagojr.com/",
+        "img": "scimagojr.png",
+        "desc": "一个基于Scopus数据库数据，包括SCImago期刊排名（SJR）和机构排名（SIR），提供全球学术期刊、科研机构和国家科学水平评估的专业平台"
+      },
+      {
+        "name": "CCF Conference Deadlines",
+        "url": "https://ccfddl.com/",
+        "img": "ccfddl.png",
+        "desc": "全球 CCF 会议截止日期倒计时（https://ccfddl.cn/）"
+      },
+      {
+        "name": "密码学电子印刷档案",
+        "url": "https://eprint.iacr.org/",
+        "img": "eprint.png",
+        "desc": "提供快速访问密码学最新研究成果的途径。论文由作者自行发布，未经任何审阅，仅核实其是否符合密码学范畴，并符合一些最低限度的录用标准和出版条件"
+      },
+      {
+        "name": "arXiv",
+        "url": "https://arxiv.org/",
+        "img": "arxiv.png",
+        "desc": "论文预印本收集网站"
+      },
+      {
+        "name": "超星发现",
+        "url": "https://ss.zhizhen.com/",
+        "img": "zhizhen.png",
+        "desc": "超星发现系统，整合各高校内外的图书、期刊、报纸、学位论文、标准、专利等各类文献"
+      },
+      {
+        "name": "维普期刊",
+        "url": "https://qikan.cqvip.com/",
+        "img": "cqvip.png",
+        "desc": "【维普期刊官网】- 中文期刊服务平台"
+      },
+      {
+        "name": "中国知网",
+        "url": "https://www.cnki.net/",
+        "img": "cnki.png",
+        "desc": "提供中国学术文献、外文文献、学位论文、报纸、会议、年鉴、工具书等各类资源"
+      },
+      {
+        "name": "万方数据",
+        "url": "https://wanfangdata.com.cn/",
+        "img": "wanfangdata.png",
+        "desc": "万方数据知识服务平台-科研学习全流程支持服务平台"
+      },
+      {
+        "name": "论文评审和讨论平台",
+        "url": "https://openreview.net/",
+        "img": "openreview.png",
+        "desc": "致力于推动科学交流开放性的学术平台，提供开放同行评审、出版、访问、讨论等功能，还设有开放目录、推荐系统、API，且部分代码开源，汇聚众多学术会议资源，方便科研人员交流互动、获取前沿成果"
+      },
+      {
+        "name": "谷歌学术",
+        "url": "https://scholar.google.com/",
+        "img": "googlescholar.png",
+        "desc": "借助Google 学术搜索，您可以轻松地大范围搜索学术文献。搜索范围囊括众多知识领域和来源：文章、论文、图书、摘要和法院判决意见书"
+      },
+      {
+        "name": "DBLP-计算机科学参考文献",
+        "url": "https://dblp.uni-trier.de/",
+        "img": "dblp.png",
+        "desc": "计算机领域文献的统计网站，为每篇文章提供索引和记录。与此同时也会从文章作者的角度进行统计，为每个作者生成其科研工作发表记录"
+      },
+      {
+        "name": "IEEE Xplore",
+        "url": "https://ieeexplore.ieee.org/",
+        "img": "ieeexplore.png",
+        "desc": "学术文献数据库，主要提供计算机科学、电机工程学和电子学等相关领域文献"
+      },
+      {
+        "name": "USENIX",
+        "url": "https://www.usenix.org/conferences/all",
+        "img": "usenix.png",
+        "desc": "计算机安全领域四大顶级会议 USENIX 全部文献"
+      },
+      {
+        "name": "Web Of Science",
+        "url": "https://webofscience.clarivate.cn/",
+        "img": "webofscience.png",
+        "desc": "一个领先的科学研究平台，提供全面的数据、指标和跨学科的见解"
+      },
+      {
+        "name": "ACM Digital Library",
+        "url": "https://dl.acm.org/",
+        "img": "acm.png",
+        "desc": "美国计算机协会数字图书馆全文数据库，所有 ICPS 论文都可免费获取"
+      },
+      {
+        "name": "DOI 查询",
+        "url": "http://www.chinadoi.cn/",
+        "img": "wanfangdata.png",
+        "desc": "DOI 解析与 DOI 查询服务"
+      }
+    ],
+    "论文辑录": [
+      {
+        "name": "安全顶会论文",
+        "url": "https://sec.c01dkit.com/zh/search/",
+        "img": "c01dkit.png",
+        "desc": "检索历年安全顶会论文：按会议、年份、主题与类型筛选，按标题搜索，收藏感兴趣的条目"
+      },
+      {
+        "name": "智汇学术",
+        "url": "https://www.zhihuixueshu.cn/conferences",
+        "img": "zhihuixueshu.png",
+        "desc": "AI 顶会论文列表"
+      }
+    ],
     "代理池": [
       {
         "name": "公共代理池",
@@ -3606,118 +3718,6 @@ window.NAV_DATA = {
         "url": "https://2fa.fun/",
         "img": "2fa.png",
         "desc": "谷歌身份验证器(Google Authenticator)的网页版本，支持通过2FA密钥生成6位动态验证码，适用于各种需要二次验证的平台"
-      }
-    ],
-    "论文平台": [
-      {
-        "name": "SCImago",
-        "url": "https://www.scimagojr.com/",
-        "img": "scimagojr.png",
-        "desc": "一个基于Scopus数据库数据，包括SCImago期刊排名（SJR）和机构排名（SIR），提供全球学术期刊、科研机构和国家科学水平评估的专业平台"
-      },
-      {
-        "name": "CCF Conference Deadlines",
-        "url": "https://ccfddl.com/",
-        "img": "ccfddl.png",
-        "desc": "全球 CCF 会议截止日期倒计时（https://ccfddl.cn/）"
-      },
-      {
-        "name": "密码学电子印刷档案",
-        "url": "https://eprint.iacr.org/",
-        "img": "eprint.png",
-        "desc": "提供快速访问密码学最新研究成果的途径。论文由作者自行发布，未经任何审阅，仅核实其是否符合密码学范畴，并符合一些最低限度的录用标准和出版条件"
-      },
-      {
-        "name": "arXiv",
-        "url": "https://arxiv.org/",
-        "img": "arxiv.png",
-        "desc": "论文预印本收集网站"
-      },
-      {
-        "name": "超星发现",
-        "url": "https://ss.zhizhen.com/",
-        "img": "zhizhen.png",
-        "desc": "超星发现系统，整合各高校内外的图书、期刊、报纸、学位论文、标准、专利等各类文献"
-      },
-      {
-        "name": "维普期刊",
-        "url": "https://qikan.cqvip.com/",
-        "img": "cqvip.png",
-        "desc": "【维普期刊官网】- 中文期刊服务平台"
-      },
-      {
-        "name": "中国知网",
-        "url": "https://www.cnki.net/",
-        "img": "cnki.png",
-        "desc": "提供中国学术文献、外文文献、学位论文、报纸、会议、年鉴、工具书等各类资源"
-      },
-      {
-        "name": "万方数据",
-        "url": "https://wanfangdata.com.cn/",
-        "img": "wanfangdata.png",
-        "desc": "万方数据知识服务平台-科研学习全流程支持服务平台"
-      },
-      {
-        "name": "论文评审和讨论平台",
-        "url": "https://openreview.net/",
-        "img": "openreview.png",
-        "desc": "致力于推动科学交流开放性的学术平台，提供开放同行评审、出版、访问、讨论等功能，还设有开放目录、推荐系统、API，且部分代码开源，汇聚众多学术会议资源，方便科研人员交流互动、获取前沿成果"
-      },
-      {
-        "name": "谷歌学术",
-        "url": "https://scholar.google.com/",
-        "img": "googlescholar.png",
-        "desc": "借助Google 学术搜索，您可以轻松地大范围搜索学术文献。搜索范围囊括众多知识领域和来源：文章、论文、图书、摘要和法院判决意见书"
-      },
-      {
-        "name": "DBLP-计算机科学参考文献",
-        "url": "https://dblp.uni-trier.de/",
-        "img": "dblp.png",
-        "desc": "计算机领域文献的统计网站，为每篇文章提供索引和记录。与此同时也会从文章作者的角度进行统计，为每个作者生成其科研工作发表记录"
-      },
-      {
-        "name": "IEEE Xplore",
-        "url": "https://ieeexplore.ieee.org/",
-        "img": "ieeexplore.png",
-        "desc": "学术文献数据库，主要提供计算机科学、电机工程学和电子学等相关领域文献"
-      },
-      {
-        "name": "USENIX",
-        "url": "https://www.usenix.org/conferences/all",
-        "img": "usenix.png",
-        "desc": "计算机安全领域四大顶级会议 USENIX 全部文献"
-      },
-      {
-        "name": "Web Of Science",
-        "url": "https://webofscience.clarivate.cn/",
-        "img": "webofscience.png",
-        "desc": "一个领先的科学研究平台，提供全面的数据、指标和跨学科的见解"
-      },
-      {
-        "name": "ACM Digital Library",
-        "url": "https://dl.acm.org/",
-        "img": "acm.png",
-        "desc": "美国计算机协会数字图书馆全文数据库，所有 ICPS 论文都可免费获取"
-      },
-      {
-        "name": "DOI 查询",
-        "url": "http://www.chinadoi.cn/",
-        "img": "wanfangdata.png",
-        "desc": "DOI 解析与 DOI 查询服务"
-      }
-    ],
-    "论文辑录": [
-      {
-        "name": "安全顶会论文",
-        "url": "https://sec.c01dkit.com/zh/search/",
-        "img": "c01dkit.png",
-        "desc": "检索历年安全顶会论文：按会议、年份、主题与类型筛选，按标题搜索，收藏感兴趣的条目"
-      },
-      {
-        "name": "智汇学术",
-        "url": "https://www.zhihuixueshu.cn/conferences",
-        "img": "zhihuixueshu.png",
-        "desc": "AI 顶会论文列表"
       }
     ],
     "资源种子": [
