@@ -2507,6 +2507,12 @@ window.NAV_DATA = {
         "desc": "目前全世界最大的游戏 Mod 分享平台"
       },
       {
+        "name": "风灵工坊",
+        "url": "https://yokelumen.cn/%E9%A3%8E%E7%81%B5%E6%9C%88%E5%BD%B1%E4%BF%AE%E6%94%B9%E5%99%A8.html",
+        "img": "yokelumen.png",
+        "desc": "风灵月影修改器合集，海量单机游戏修改器 · 安全无毒 · 轻松畅玩"
+      },
+      {
         "name": "风灵月影",
         "url": "https://flingtrainer.com/",
         "img": "flingtrainer.png",
