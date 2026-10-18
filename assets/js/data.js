@@ -509,6 +509,12 @@ window.NAV_DATA = {
         "desc": "支持批量转换，支持画布扩展"
       },
       {
+        "name": "TXT 转 EPUB",
+        "url": "https://nbtools.cn/tools/txt-to-epub/",
+        "img": "nbtools.png",
+        "desc": "免费的TXT转EPUB在线工具，把 TXT 小说一键生成为可在阅读器打开的 EPUB 电子书"
+      },
+      {
         "name": "文件压缩器",
         "url": "https://tiny.imagestool.com/zh-CN/",
         "img": "imagestool.png",
