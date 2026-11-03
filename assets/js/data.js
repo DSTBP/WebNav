@@ -3500,6 +3500,12 @@ window.NAV_DATA = {
     ],
     "梯子平台": [
       {
+        "name": "素心Network",
+        "url": "https://suxins.life/",
+        "img": "suxins.png",
+        "desc": "月租 21.90 元 250GB，质量优"
+      },
+      {
         "name": "iKuuu VPN",
         "url": "https://ikuuu.ch/user",
         "img": "iKuuu.png",
@@ -3664,6 +3670,12 @@ window.NAV_DATA = {
         "url": "https://ippure.com/",
         "img": "shadersmods.png",
         "desc": "致力打造最专业、易用的 IP 纯净度检测平台"
+      },
+      {
+        "name": "Claude IP 检测",
+        "url": "https://ip.net.coffee/claude/",
+        "img": "ipnet.png",
+        "desc": "检测当前Claude AI出口 IP 纯净度、风险、属性（住宅/机房/原生）、DNS、UDP、时区、指纹、历史和安全性"
       },
       {
         "name": "Whois 查询",
