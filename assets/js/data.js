@@ -3507,7 +3507,7 @@ window.NAV_DATA = {
       },
       {
         "name": "iKuuu VPN",
-        "url": "https://ikuuu.ch/user",
+        "url": "https://ikuuu.top/auth/login",
         "img": "iKuuu.png",
         "desc": "注册有免费 50GB 可供使用，月租 12 元 300GB，质量一般"
       },
