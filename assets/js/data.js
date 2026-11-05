@@ -328,7 +328,7 @@ window.NAV_DATA = {
       },
       {
         "name": "OKX",
-        "url": "https://www.zowebatxp.me/zh-hans",
+        "url": "https://www.okx.com/en-us",
         "img": "okx.png",
         "desc": "欧易数字货币"
       },
@@ -387,12 +387,6 @@ window.NAV_DATA = {
         "url": "https://www.jyshare.com/more/svgeditor/",
         "img": "svgeditor.png",
         "desc": "支持通过浏览器访问，实现打开本地 SVG 文件在线编辑"
-      },
-      {
-        "name": "技术公众号编辑器",
-        "url": "https://md.weixinwriter.com/",
-        "img": "weixinwriter.png",
-        "desc": "Markdown 语法实时预览、代码高亮与复制、支持 LaTeX 公式语法，适合发布数学、物理类干货内容，适合技术博主"
       },
       {
         "name": "Markdown 公众号排版器",
@@ -683,12 +677,6 @@ window.NAV_DATA = {
         "desc": "上传图片，让我们的AI使用先进的机器学习技术识别位置，发现您的照片拍摄地点"
       },
       {
-        "name": "AbeimAPI",
-        "url": "https://res.abeim.cn/api/",
-        "img": "abeim.png",
-        "desc": "稳定、快速、免费的 API 接口服务"
-      },
-      {
         "name": "UApi",
         "url": "https://uapis.cn/",
         "img": "UApi.png",
@@ -949,22 +937,10 @@ window.NAV_DATA = {
         "desc": "一款强大的MD5查询软件，专为解密MD5哈希值而设计"
       },
       {
-        "name": "md5.so",
-        "url": "http://md5.so/",
-        "img": "md5so.png",
-        "desc": "新晋强大的MD5查询软件"
-      },
-      {
         "name": "SOMD5",
         "url": "https://www.somd5.com/",
         "img": "somd5.png",
         "desc": "输入让你无语的MD5"
-      },
-      {
-        "name": "MD5",
-        "url": "http://md5.cn/",
-        "img": "md5.png",
-        "desc": "强大的MD5查询软件，解密MD5哈希值"
       },
       {
         "name": "文件 hash 对比",
@@ -1469,10 +1445,10 @@ window.NAV_DATA = {
         "desc": "分享网络资源,视频课程,下载链接,AI工具,BT种子,磁力链接,AI工具,羊毛福利和提供软件和APP下载安装指南"
       },
       {
-        "name": "Fastsoso",
-        "url": "https://www.fastsoso.cc/",
+        "name": "猫狸盘捜",
+        "url": "https://alipansou.com/",
         "img": "fastsoso.png",
-        "desc": "fastsoso 搜索支持百度云搜索，可快速搜索百度网盘资源中的有效连接，自动识别无效的百度云网盘资源，每天更新海量资源"
+        "desc": "猫狸盘捜支持百度云搜索，可快速搜索百度网盘资源中的有效连接，自动识别无效的百度云网盘资源，每天更新海量资源"
       },
       {
         "name": "海搜",
@@ -1566,7 +1542,7 @@ window.NAV_DATA = {
       },
       {
         "name": "乡间郎中",
-        "url": "https://www.xjlz365.com/",
+        "url": "https://xjlz.sodanav.com/",
         "img": "xjlz365.png",
         "desc": "中医养生调理-中药大全-中草药查询，让养生深入你我健康生活，女性、男性、老人、儿童，我们用心让中医养生深入每个国人的点滴生活"
       },
@@ -1913,12 +1889,6 @@ window.NAV_DATA = {
         "url": "https://app.napkin.ai/",
         "img": "napkin.png",
         "desc": "基于 AI 的图形生成工具，能够根据用户提供的文字脚本，快速生成适合幻灯片或博文的插图"
-      },
-      {
-        "name": "Nano Banana",
-        "url": "https://www.nano-banana.com/zh/nanobananapro#generator",
-        "img": "nano.png",
-        "desc": "专业在线NanoAI绘画与智能图片编辑平台，支持一键AI生成图片、在线修改与优化，高精度纳米级图像处理"
       },
       {
         "name": "雾象",
@@ -2316,7 +2286,7 @@ window.NAV_DATA = {
       },
       {
         "name": "音乐魔石",
-        "url": "https://yym4.com/",
+        "url": "https://www.yym4cn.com/",
         "img": "yym4.png",
         "desc": "一个可以免费无损下载全网所有音乐的网站"
       },
@@ -2542,12 +2512,6 @@ window.NAV_DATA = {
         "name": "R.U.B.B.I.S.H. Journal",
         "url": "https://rubbishjournal.org/",
         "img": "rubbishjournal.png",
-        "desc": "R.U.B.B.I.S.H. Journal 是一个去中心化论文评分与公开讨论平台，支持投稿、社区评分、评论与垃圾分级"
-      },
-      {
-        "name": "Rubbish Publishing",
-        "url": "https://www.rubbish.press/",
-        "img": "rubbish.png",
         "desc": "R.U.B.B.I.S.H. Journal 是一个去中心化论文评分与公开讨论平台，支持投稿、社区评分、评论与垃圾分级"
       },
       {
@@ -2966,7 +2930,7 @@ window.NAV_DATA = {
       },
       {
         "name": "云灵修仙传",
-        "url": "http://yunling.xyvan.cn/",
+        "url": "https://react-xiuxian-game.vercel.app/",
         "img": "yunling.png",
         "desc": "一个修仙题材的网页游戏，可以体验从凡人到仙人的修炼之路"
       },
@@ -3691,7 +3655,7 @@ window.NAV_DATA = {
       },
       {
         "name": "图标抓取工具",
-        "url": "https://gonglue.qinggl.com/app/img/icon.jsp",
+        "url": "https://favicon.im/zh/",
         "img": "gonglue.png",
         "desc": "快速的定位网页的 favicon.ico 图标网址"
       },
