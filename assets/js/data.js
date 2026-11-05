@@ -3525,7 +3525,7 @@ window.NAV_DATA = {
       },
       {
         "name": "红杏云",
-        "url": "https://hongxingyun.club/web/#/login?code=BqrmEics",
+        "url": "https://hongxing3s.com/",
         "img": "hongxingyun.png",
         "desc": "月租 12 元 222GB，月付 25 元 555GB，质量较高"
       },
