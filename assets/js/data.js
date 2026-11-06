@@ -3556,6 +3556,12 @@ window.NAV_DATA = {
     ],
     "大模型 API 中转站": [
       {
+        "name": "卡网订阅比价",
+        "url": "https://priceai.cc/channels",
+        "img": "priceai.png",
+        "desc": "PriceAI 聚合 AI 订阅卡网渠道报价。本站不卖货、不担保，价格仅供参考，实际交易和售后规则以原平台为准"
+      },
+      {
         "name": "中转站监测",
         "url": "https://check.linux.do/",
         "img": "vercel.png",
