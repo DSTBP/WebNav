@@ -2187,6 +2187,12 @@ window.NAV_DATA = {
         "desc": "免费的前端代码托管服务，可以用来制作和测试页面的网站"
       },
       {
+        "name": "HTMLrev",
+        "url": "https://htmlrev.com/",
+        "img": "htmlrev.png",
+        "desc": "一个免费前端模板聚合站（Devluc 维护），专门收集、筛选、收录网上开源可商用网页模板"
+      },
+      {
         "name": "美璟世界",
         "url": "https://www.mzgf.com/world",
         "img": "mzgf.png",
