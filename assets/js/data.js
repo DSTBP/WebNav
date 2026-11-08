@@ -3586,6 +3586,18 @@ window.NAV_DATA = {
         "desc": "更好的价格，更好的稳定性"
       },
       {
+        "name": "Agent Router",
+        "url": "https://agentrouter.org/",
+        "img": "openclaudecode.png",
+        "desc": "AI Coding 公益站，支持 Claude Code、Codex、Gemini Cli 等多款工具"
+      },
+      {
+        "name": "Any Router",
+        "url": "https://anyrouter.top/",
+        "img": "openclaudecode.png",
+        "desc": "一个端点，接入 Claude 与 GPT，只支持 LinuxDo 注册用户使用"
+      },
+      {
         "name": "Wong-公益站",
         "url": "https://wzw.pp.ua",
         "img": "openclaudecode.png",
