@@ -3466,6 +3466,30 @@ window.NAV_DATA = {
         "url": "https://matpool.com/host-market/gpu",
         "img": "matpool.png",
         "desc": "专注于人工智能领域的GPU云服务商。提供稳定的人工智能云服务器、人工智能教学实训环境、高速网盘等服务"
+      },
+      {
+        "name": "算家云",
+        "url": "https://suanjiayun.com/",
+        "img": "suanjiayun.png",
+        "desc": "算力租赁平台，训练推理 / 模型微调 / AI 绘画 / 视频生成，最大支持 250 GB 硬盘"
+      },
+      {
+        "name": "vast.ai",
+        "url": "https://cloud.vast.ai/",
+        "img": "vast.png",
+        "desc": "一个基于市场机制的分布式 GPU（图形处理器）、NVMe SSD 高速硬盘云算力租赁平台"
+      },
+      {
+        "name": "TensorDock",
+        "url": "https://dashboard.tensordock.com/deploy",
+        "img": "tensordock.png",
+        "desc": "一家提供 GPU 虚拟机与云算力市场的公司，通过聚合独立硬件供应商，让用户按需租用 GPU、CPU、内存和存储资源"
+      },
+      {
+        "name": "OctaSpace",
+        "url": "https://cube.octa.computer/marketplace/compute",
+        "img": "octaspace.png",
+        "desc": "一个基于区块链技术的去中心化 GPU 云计算平台，NVMe SSD 高速硬盘（2GB/s）、属于去中心化物理基础设施网络（DePIN）领域"
       }
     ],
     "梯子平台": [
