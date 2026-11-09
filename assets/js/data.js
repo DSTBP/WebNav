@@ -3486,6 +3486,12 @@ window.NAV_DATA = {
         "desc": "一家提供 GPU 虚拟机与云算力市场的公司，通过聚合独立硬件供应商，让用户按需租用 GPU、CPU、内存和存储资源"
       },
       {
+        "name": "Clore.ai",
+        "url": "https://clore.ai/marketplace",
+        "img": "clore.png",
+        "desc": "一个去中心化点对点 GPU 租赁市场，提供两千多个 GPU 服务器，支持按需租用和按小时计费"
+      },
+      {
         "name": "OctaSpace",
         "url": "https://cube.octa.computer/marketplace/compute",
         "img": "octaspace.png",
