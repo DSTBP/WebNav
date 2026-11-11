@@ -2557,6 +2557,12 @@ window.NAV_DATA = {
         "desc": "提供最新、最热门的在线游戏。涵盖动作、棋牌、益智、策略、3D、休闲、射击、GBA游戏、fc红白机、经典、赛车、闯关等多种类型"
       },
       {
+        "name": "Deskland",
+        "url": "https://deskland.app/#pricing",
+        "img": "deskland.png",
+        "desc": "一款面向 Windows 系统、可感知桌面图标位置并随之自适应变化动态壁纸软件"
+      },
+      {
         "name": "麻局教练",
         "url": "https://ma.reshub.vip/",
         "img": "reshub.png",
