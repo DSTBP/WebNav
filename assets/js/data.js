@@ -3590,12 +3590,24 @@ window.NAV_DATA = {
         "desc": "一个在线订阅转换工具网站，主要用于将不同格式的代理订阅链接（如Clash、Shadowsocks、V2Ray等）转换为用户需要的特定格式"
       }
     ],
-    "大模型 API 中转站": [
+    "LLM 中转站 / 卡网": [
       {
         "name": "卡网订阅比价",
         "url": "https://priceai.cc/channels",
         "img": "priceai.png",
         "desc": "PriceAI 聚合 AI 订阅卡网渠道报价。本站不卖货、不担保，价格仅供参考，实际交易和售后规则以原平台为准"
+      },
+      {
+        "name": "🦄OOO的小店",
+        "url": "https://oooai.one/products",
+        "img": "oooai.png",
+        "desc": "OOO的gpt小屋 | 可售后 · 可长期合作 · 支持对公 · 可开发票"
+      },
+      {
+        "name": "AI 科技城",
+        "url": "https://aiyogpt.cn/cat/2",
+        "img": "chatgpt.png",
+        "desc": "科技公司名下5年老店，正规充值、稳定长期续费。可开发票，放心下单！"
       },
       {
         "name": "中转站监测",
