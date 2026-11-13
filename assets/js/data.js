@@ -3628,6 +3628,18 @@ window.NAV_DATA = {
         "desc": "AI API 中转站 实测排行榜, 在线检查质量"
       },
       {
+        "name": "无限银河",
+        "url": "https://infistar.ai/",
+        "img": "infistar.png",
+        "desc": "面向个人和企业，提供主流 AI 模型 API 调用入口和聚合对话站"
+      },
+      {
+        "name": "非线智能",
+        "url": "https://nonelinear.com.cn/static/models.html",
+        "img": "nonelinear.png",
+        "desc": "面向个人和企业，提供主流 AI 模型 API 调用入口和聚合对话站"
+      },
+      {
         "name": "APIKEY-公益站",
         "url": "https://welfare.apikey.cc/console",
         "img": "welfare.png",
