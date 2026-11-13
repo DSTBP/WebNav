@@ -2085,6 +2085,12 @@ window.NAV_DATA = {
         "desc": "一个协作平台，其中托管了大量的用于机器学习的开源模型和数据集"
       },
       {
+        "name": "魔塔社区",
+        "url": "https://www.modelscope.cn/",
+        "img": "modelscope.png",
+        "desc": "huggingface 国内站点"
+      },
+      {
         "name": "Whimsical",
         "url": "https://whimsical.com/",
         "img": "whimsical.png",
