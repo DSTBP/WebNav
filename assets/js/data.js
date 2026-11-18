@@ -3326,13 +3326,13 @@ window.NAV_DATA = {
       {
         "name": "IEEE 期刊论文格式检查",
         "url": "https://ieee-pdfchecker.org/",
-        "img": "ieee.png",
+        "img": "ieeexplore.png",
         "desc": "IEEE 期刊论文格式检查工具，帮助作者确保提交的论文符合 IEEE 的格式要求"
       },
       {
         "name": "IEEE 会议论文格式检查",
         "url": "https://ieee-pdf-express.org/",
-        "img": "ieee.png",
+        "img": "ieeexplore.png",
         "desc": "IEEE 会议论文格式检查工具，须输入会议当年专属 Conference ID"
       },
       {
