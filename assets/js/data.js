@@ -3324,10 +3324,16 @@ window.NAV_DATA = {
         "desc": "全球 CCF 会议截止日期倒计时（https://ccfddl.cn/）"
       },
       {
-        "name": "IEEE 论文格式检查",
+        "name": "IEEE 期刊论文格式检查",
         "url": "https://ieee-pdfchecker.org/",
         "img": "ieee.png",
-        "desc": "IEEE 论文格式检查工具，帮助作者确保提交的论文符合 IEEE 的格式要求"
+        "desc": "IEEE 期刊论文格式检查工具，帮助作者确保提交的论文符合 IEEE 的格式要求"
+      },
+      {
+        "name": "IEEE 会议论文格式检查",
+        "url": "https://ieee-pdf-express.org/",
+        "img": "ieee.png",
+        "desc": "IEEE 会议论文格式检查工具，须输入会议当年专属 Conference ID"
       },
       {
         "name": "密码学电子印刷档案",
