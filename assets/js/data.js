@@ -3602,7 +3602,7 @@ window.NAV_DATA = {
         "desc": "一个在线订阅转换工具网站，主要用于将不同格式的代理订阅链接（如Clash、Shadowsocks、V2Ray等）转换为用户需要的特定格式"
       }
     ],
-    "LLM 中转站 / 卡网": [
+    "LLM 卡网 / 中转站": [
       {
         "name": "卡网订阅比价",
         "url": "https://priceai.cc/channels",
@@ -3650,6 +3650,12 @@ window.NAV_DATA = {
         "url": "https://welfare.apikey.cc/console",
         "img": "welfare.png",
         "desc": "更好的价格，更好的稳定性"
+      },
+      {
+        "name": "xfastapi",
+        "url": "https://xfastapi.ai/dashboard",
+        "img": "xfastapi.png",
+        "desc": "猿人学旗下的 AI API 聚合平台"
       },
       {
         "name": "Agent Router",
